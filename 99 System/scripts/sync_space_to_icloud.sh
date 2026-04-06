@@ -13,7 +13,8 @@ rsync -a --delete \
   --exclude '.obsidian/workspace-mobile.json' \
   --exclude '.obsidian/cache/' \
   --exclude '.obsidian/plugins/obsidian-local-rest-api/data.json' \
+  --exclude '07 Resources/' \
   --exclude '.smart-env/' \
   "$LOCAL_VAULT/" "$ICLOUD_VAULT/"
 
-echo "Mirrored $LOCAL_VAULT to $ICLOUD_VAULT"
+echo "Mirrored markdown and settings from $LOCAL_VAULT to $ICLOUD_VAULT"

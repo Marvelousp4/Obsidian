@@ -5,6 +5,8 @@ The primary vault should live locally for speed:
 - primary path: `/Users/bai/Documents/Obsidian/Space`
 - optional mirror path: `/Users/bai/Library/Mobile Documents/iCloud~md~obsidian/Documents/Space`
 
+`07 Resources` remains anchored to the iCloud copy through local subdirectory symlinks, so the mirror script syncs markdown and settings but intentionally skips `07 Resources`.
+
 ## Rule
 
 - Write locally
