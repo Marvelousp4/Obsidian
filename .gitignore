@@ -7,5 +7,6 @@
 .obsidian/graph.json
 99 System/scripts/.env
 __pycache__/
+*.base
 07 Resources/*
 !07 Resources/.gitkeep

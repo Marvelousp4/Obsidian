@@ -10,6 +10,14 @@ These are the operating docs that matter. Keep this as the single reference page
 - [[99 System/AI and Automation|AI and Automation]]
 - [[99 System/GitHub Sync|GitHub Sync]]
 
+## Structural Indices
+
+- [[03 Areas/Areas Index|Areas Index]]
+- [[04 Projects/Projects Index|Projects Index]]
+- [[05 Knowledge/Knowledge Index|Knowledge Index]]
+- [[06 People/People Index|People Index]]
+- [[09 Work/Work Index|Work Index]]
+
 ## Reference Docs
 
 - [[99 System/Plugin Fit Guide|Plugin Fit Guide]]

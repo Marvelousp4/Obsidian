@@ -14,7 +14,7 @@ Focus on only four outputs:
 ## Before The Event
 
 1. Use the MODEX site to complete `Register to Attend`, `Find Exhibitors`, `Search Seminars`, and `My Show Planner`.
-2. Write the ten highest-priority target companies in [[05 Projects/MODEX 2026/MODEX 2026 Event Sprint]].
+2. Write the ten highest-priority target companies in [[04 Projects/Work/MODEX 2026/MODEX 2026 Event Sprint]].
 3. Prepare these three capture entries in advance:
    `Capture: Expo Conversation`
    `Capture: Event Note`

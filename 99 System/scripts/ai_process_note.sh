@@ -12,8 +12,8 @@ Usage:
   ai_process_note.sh <relative-note-path> [mode]
 
 Examples:
-  ai_process_note.sh "06 Meetings/Account A Discovery.md" discovery
-  ai_process_note.sh "06 Meetings/Account B Support.md" support
+  ai_process_note.sh "09 Work/Meetings/Account A Discovery.md" discovery
+  ai_process_note.sh "09 Work/Meetings/Account B Support.md" support
   ai_process_note.sh "01 Inbox/Field Issue - Emergency Stop.md" issue
   ai_process_note.sh "02 Daily/2026-04-06.md" daily
 
@@ -69,8 +69,8 @@ detect_mode() {
   local path="$1"
   case "$path" in
     02\ Daily/* ) echo "daily" ;;
-    06\ Meetings/*discovery*|06\ Meetings/*Discovery* ) echo "discovery" ;;
-    06\ Meetings/*support*|06\ Meetings/*Support* ) echo "support" ;;
+    09\ Work/Meetings/*discovery*|09\ Work/Meetings/*Discovery* ) echo "discovery" ;;
+    09\ Work/Meetings/*support*|09\ Work/Meetings/*Support* ) echo "support" ;;
     *Field*|*Issue*|*issue* ) echo "issue" ;;
     *News* ) echo "news" ;;
     *Video* ) echo "video" ;;
@@ -94,15 +94,15 @@ Output requirements:
 5. The output must include these sections:
    - # AI Draft
    - For a normal note: ## One-Line Summary / ## Key Facts / ## Action Items / ## Knowledge Worth Promoting / ## Suggested Links
-   - For a daily note: ## Today Summary / ## Suggested Account Updates / ## Suggested Project Or Site Updates / ## Suggested Meetings / ## Suggested Issues / ## Suggested Knowledge Notes / ## Next Priorities
-6. In "Suggested Links", use Obsidian wiki-link format such as [[Account A]], [[Project B]], or [[Technical Topic]].
+   - For a daily note: ## Today Summary / ## Suggested Area Updates / ## Suggested Project Updates / ## Suggested People Updates / ## Suggested Work Updates / ## Suggested Knowledge Notes / ## Next Priorities
+6. In "Suggested Links", use Obsidian wiki-link format such as [[Health]], [[Project B]], [[Jane Doe]], or [[Technical Topic]].
 7. In "Knowledge Worth Promoting", decide whether the note should become one or more formal knowledge notes. If yes, propose one to three titles.
 EOF
 )
 
 case "$MODE" in
   daily)
-    MODE_PROMPT="This is a daily note. Route the content into suggested account, contact, project, meeting, issue, and knowledge updates. Do not invent facts. For each suggestion, provide a proposed title, target folder, preserved fact summary, and suggested links. The main goal is to help the user turn the daily note into formal notes at the end of the day."
+    MODE_PROMPT="This is a daily note for a personal operating system. Route the content into suggested area, project, people, work, and knowledge updates across work, finance, health, learning, research, and personal life. Do not invent facts. For each suggestion, provide a proposed title, target folder, preserved fact summary, and suggested links. The main goal is to help the user turn the daily note into formal notes at the end of the day."
     ;;
   discovery)
     MODE_PROMPT="This is a new customer discovery conversation. Extract requirements, decision context, budget and timeline signals, major risks, and next actions."
@@ -123,7 +123,7 @@ case "$MODE" in
     MODE_PROMPT="This is an event or frontier-activity note. Extract trends, competitor signals, customer opportunities, and the people or directions worth following up after the event."
     ;;
   *)
-    MODE_PROMPT="This is a general work note. Extract facts, action items, reusable knowledge, and suggested links."
+    MODE_PROMPT="This is a general note. Extract facts, action items, reusable knowledge, and suggested links."
     ;;
 esac
 

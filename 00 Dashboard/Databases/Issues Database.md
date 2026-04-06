@@ -200,8 +200,8 @@ config:
   show_metadata_outlinks: false
   show_metadata_tags: false
   source_data: query
-  source_form_result: "FROM \"08 Issues\" WHERE type = \"issue\""
-  source_destination_path: 08 Issues
+  source_form_result: "FROM \"09 Work/Issues\" WHERE type = \"issue\""
+  source_destination_path: 09 Work/Issues
   row_templates_folder: /
   current_row_template: ""
   pagination_size: 50

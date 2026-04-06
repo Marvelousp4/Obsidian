@@ -20,6 +20,7 @@ You do not need every command. You need a small set that keeps capture, retrieva
 - `CRM Capture`: accounts, contacts, discovery meetings, expo conversations
 - `Delivery And Support Capture`: projects, sites, field issues, support meetings, formal issue records
 - `Research And Intel Capture`: industry news, videos, event observations, knowledge notes
+- `Personal Capture`: area notes, person notes, personal projects, personal knowledge notes
 
 ## Direct Commands Used Most Often
 
@@ -34,6 +35,10 @@ You do not need every command. You need a small set that keeps capture, retrieva
 - `Capture: Industry News`
 - `Capture: Event Note`
 - `Capture: Knowledge Note`
+- `Capture: Area Note`
+- `Capture: Person Note`
+- `Capture: Personal Project`
+- `Capture: Personal Knowledge`
 
 ## Periodic Reviews
 
@@ -91,7 +96,7 @@ Use this in daily notes and meetings when a thought naturally becomes nested.
 Use QuickAdd only when the note deserves a formal object right now.
 
 - Use the daily note first when the input is still raw, mixed, or unclear.
-- Use `Capture:*` when you already know this should become an account, contact, project, meeting, issue, or knowledge note now.
+- Use `Capture:*` when you already know this should become an area, person, project, meeting, issue, or knowledge note now.
 - Use `QuickAdd: Run QuickAdd` when you remember the category but not the exact command name.
 
 If you forget the command name:

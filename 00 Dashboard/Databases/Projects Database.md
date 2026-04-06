@@ -156,8 +156,8 @@ config:
   show_metadata_outlinks: false
   show_metadata_tags: false
   source_data: query
-  source_form_result: "FROM \"05 Projects\" WHERE type = \"project\""
-  source_destination_path: 05 Projects
+  source_form_result: "FROM \"04 Projects/Work\" WHERE type = \"project\""
+  source_destination_path: 04 Projects/Work
   row_templates_folder: /
   current_row_template: ""
   pagination_size: 30

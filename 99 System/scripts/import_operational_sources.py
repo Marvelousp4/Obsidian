@@ -166,7 +166,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Joe Fautas",
         "organization": "Devonics",
-        "account_path": "04 Clients/Devonics.md",
+        "account_path": "09 Work/Accounts/Devonics.md",
         "team": "Commercial",
         "title": "Co-founder; sales and marketing",
         "relationship": "active",
@@ -180,7 +180,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Frank Handel",
         "organization": "Devonics",
-        "account_path": "04 Clients/Devonics.md",
+        "account_path": "09 Work/Accounts/Devonics.md",
         "team": "Engineering",
         "title": "CTO; VP Engineering",
         "relationship": "active",
@@ -194,7 +194,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Joy",
         "organization": "Devonics",
-        "account_path": "04 Clients/Devonics.md",
+        "account_path": "09 Work/Accounts/Devonics.md",
         "team": "Supplier Coordination",
         "title": "China-based supplier and project coordination",
         "relationship": "active",
@@ -207,7 +207,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Darshan",
         "organization": "Outland Robotics",
-        "account_path": "04 Clients/Outland Robotics.md",
+        "account_path": "09 Work/Accounts/Outland Robotics.md",
         "team": "Founding Team",
         "title": "Co-founder",
         "relationship": "active",
@@ -220,7 +220,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Leo",
         "organization": "Outland Robotics",
-        "account_path": "04 Clients/Outland Robotics.md",
+        "account_path": "09 Work/Accounts/Outland Robotics.md",
         "team": "Founding Team",
         "title": "CEO; CTO",
         "relationship": "active",
@@ -234,7 +234,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Samantha",
         "organization": "Wellwit Robotics",
-        "account_path": "04 Clients/Wellwit Robotics.md",
+        "account_path": "09 Work/Accounts/Wellwit Robotics.md",
         "team": "Sales",
         "title": "Overseas sales manager",
         "relationship": "active",
@@ -247,7 +247,7 @@ DEVONICS_CONTACTS = [
     {
         "name": "Vincent",
         "organization": "Wellwit Robotics",
-        "account_path": "04 Clients/Wellwit Robotics.md",
+        "account_path": "09 Work/Accounts/Wellwit Robotics.md",
         "team": "Software",
         "title": "Software engineer",
         "relationship": "active",
@@ -414,28 +414,28 @@ def build_account_note(
         f"## Stakeholder Map\n\n"
         f"```dataview\n"
         f"TABLE team AS Team, title AS Role, relationship AS Relationship, verification_status AS Verification\n"
-        f'FROM "04 Clients/{title}"\n'
+        f'FROM "09 Work/Accounts/{title}"\n'
         f'WHERE type = "contact"\n'
         f"SORT team ASC, file.name ASC\n"
         f"```\n\n"
         f"## Active Deployments / Projects\n\n"
         f"```dataview\n"
         f"TABLE project_kind AS Type, site AS Site, status AS Status, next AS Next\n"
-        f'FROM "05 Projects"\n'
+        f'FROM "04 Projects/Work"\n'
         f'WHERE type = "project" AND account = "{title}"\n'
         f"SORT file.name ASC\n"
         f"```\n\n"
         f"## Recent Meetings\n\n"
         f"```dataview\n"
         f"TABLE date AS Date, organizations AS Organizations, project AS Project\n"
-        f'FROM "06 Meetings"\n'
+        f'FROM "09 Work/Meetings"\n'
         f'WHERE type = "meeting" AND contains(organizations, "{title}")\n'
         f"SORT date DESC\n"
         f"```\n\n"
         f"## Open Issues\n\n"
         f"```dataview\n"
         f"TABLE site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated\n"
-        f'FROM "08 Issues"\n'
+        f'FROM "09 Work/Issues"\n'
         f'WHERE type = "issue" AND client = "{title}" AND status != "resolved"\n'
         f"SORT last_updated_date DESC\n"
         f"```\n\n"
@@ -484,7 +484,7 @@ def import_greyorange():
             "Review high-frequency unresolved issues every week and prioritize the sites that keep repeating.",
         ],
     )
-    write_note(VAULT / "04 Clients/GreyOrange.md", account_fm, account_body)
+    write_note(VAULT / "09 Work/Accounts/GreyOrange.md", account_fm, account_body)
 
     current_team = ""
     contact_count = 0
@@ -548,13 +548,13 @@ def import_greyorange():
 
             ```dataview
             TABLE site, status, next
-            FROM "05 Projects"
+            FROM "04 Projects/Work"
             WHERE type = "project" AND account = "GreyOrange"
             SORT file.name ASC
             ```
             """
         ).strip()
-        write_note(VAULT / f"04 Clients/GreyOrange/Contacts/{safe_name(name)}.md", fm, body)
+        write_note(VAULT / f"09 Work/Accounts/GreyOrange/Contacts/{safe_name(name)}.md", fm, body)
 
     site_count = 0
     for row in addresses.iter_rows(min_row=3, values_only=True):
@@ -609,12 +609,12 @@ def import_greyorange():
             f"## Open Issues\n\n"
             f"```dataview\n"
             f"TABLE category, status, severity, last_updated_date\n"
-            f'FROM "08 Issues/GreyOrange"\n'
+            f'FROM "09 Work/Issues/GreyOrange"\n'
             f'WHERE type = "issue" AND site = "{site}"\n'
             f"SORT last_updated_date DESC\n"
             f"```"
         )
-        write_note(VAULT / f"05 Projects/GreyOrange/{safe_name(site)}.md", fm, body)
+        write_note(VAULT / f"04 Projects/Work/GreyOrange/{safe_name(site)}.md", fm, body)
 
     return {"contacts": contact_count, "sites": site_count}
 
@@ -637,7 +637,7 @@ def import_devonics():
             "Track package-space, battery, and API integration follow-ups in one opportunity thread.",
         ],
     )
-    write_note(VAULT / "04 Clients/Devonics.md", devonics_fm, devonics_body)
+    write_note(VAULT / "09 Work/Accounts/Devonics.md", devonics_fm, devonics_body)
 
     outland_fm, outland_body = build_account_note(
         "Outland Robotics",
@@ -654,7 +654,7 @@ def import_devonics():
             "Keep all technical trade-offs visible in one place so product assumptions do not drift.",
         ],
     )
-    write_note(VAULT / "04 Clients/Outland Robotics.md", outland_fm, outland_body)
+    write_note(VAULT / "09 Work/Accounts/Outland Robotics.md", outland_fm, outland_body)
 
     wellwit_fm, wellwit_body = build_account_note(
         "Wellwit Robotics",
@@ -672,7 +672,7 @@ def import_devonics():
             "Link future field issues to both customer site and Wellwit platform context.",
         ],
     )
-    write_note(VAULT / "04 Clients/Wellwit Robotics.md", wellwit_fm, wellwit_body)
+    write_note(VAULT / "09 Work/Accounts/Wellwit Robotics.md", wellwit_fm, wellwit_body)
 
     for contact in DEVONICS_CONTACTS:
         org = contact["organization"]
@@ -700,7 +700,7 @@ def import_devonics():
             f"## Related Projects / Sites\n\n"
             f"```dataview\n"
             f"TABLE site, status, next\n"
-            f'FROM "05 Projects"\n'
+            f'FROM "04 Projects/Work"\n'
             f'WHERE type = "project" AND account = "{org}"\n'
             f"SORT file.name ASC\n"
             f"```"
@@ -722,7 +722,7 @@ def import_devonics():
             "tags": [],
         }
         write_note(
-            VAULT / f"04 Clients/{org}/Contacts/{safe_name(contact['name'])}.md",
+            VAULT / f"09 Work/Accounts/{org}/Contacts/{safe_name(contact['name'])}.md",
             fm,
             body,
         )
@@ -750,7 +750,7 @@ def import_devonics():
         ## Background
 
         - Source transcript: {DEVONICS_TRANSCRIPT}
-        - Core organizations: [[04 Clients/Devonics|Devonics]], [[04 Clients/Outland Robotics|Outland Robotics]], [[04 Clients/Wellwit Robotics|Wellwit Robotics]]
+        - Core organizations: [[09 Work/Accounts/Devonics|Devonics]], [[09 Work/Accounts/Outland Robotics|Outland Robotics]], [[09 Work/Accounts/Wellwit Robotics|Wellwit Robotics]]
         - Candidate base discussed: 300J
         - Arm discussed: FR10
 
@@ -777,7 +777,7 @@ def import_devonics():
         - [ ] Decide what belongs in a standard package versus semi-custom upgrade path.
         """
     ).strip()
-    write_note(VAULT / "05 Projects/Devonics/Outland Mobile Manipulation Platform.md", project_fm, project_body)
+    write_note(VAULT / "04 Projects/Work/Devonics/Outland Mobile Manipulation Platform.md", project_fm, project_body)
 
     meeting_fm = {
         "type": "meeting",
@@ -830,7 +830,7 @@ def import_devonics():
         """
     ).strip()
     write_note(
-        VAULT / "06 Meetings/Devonics/2026-04-05 Devonics - Outland - Wellwit Discovery.md",
+        VAULT / "09 Work/Meetings/Devonics/2026-04-05 Devonics - Outland - Wellwit Discovery.md",
         meeting_fm,
         meeting_body,
     )
@@ -928,16 +928,16 @@ def import_wellwit_issues():
 
             ## Related Links
 
-            - Account: [[04 Clients/GreyOrange|GreyOrange]]
-            - Site note: {wiki(f"05 Projects/GreyOrange/{safe_name(site)}.md") if site != "Unspecified" else ""}
-            - Vendor note: [[04 Clients/Wellwit Robotics|Wellwit Robotics]]
+            - Account: [[09 Work/Accounts/GreyOrange|GreyOrange]]
+            - Site note: {wiki(f"04 Projects/Work/GreyOrange/{safe_name(site)}.md") if site != "Unspecified" else ""}
+            - Vendor note: [[09 Work/Accounts/Wellwit Robotics|Wellwit Robotics]]
             """
         ).strip()
-        issue_path = VAULT / f"08 Issues/GreyOrange/{safe_name(site)}/{created or 'undated'} - {safe_name(title)} - {safe_name(source_id)}.md"
+        issue_path = VAULT / f"09 Work/Issues/GreyOrange/{safe_name(site)}/{created or 'undated'} - {safe_name(title)} - {safe_name(source_id)}.md"
         write_note(issue_path, fm, body)
 
     for site in sorted(generated_sites):
-        project_path = VAULT / f"05 Projects/GreyOrange/{safe_name(site)}.md"
+        project_path = VAULT / f"04 Projects/Work/GreyOrange/{safe_name(site)}.md"
         if project_path.exists():
             continue
         placeholder_fm = {
@@ -964,7 +964,7 @@ def import_wellwit_issues():
             f"## Open Issues\n\n"
             f"```dataview\n"
             f"TABLE category, status, severity, last_updated_date\n"
-            f'FROM "08 Issues/GreyOrange"\n'
+            f'FROM "09 Work/Issues/GreyOrange"\n'
             f'WHERE type = "issue" AND site = "{site}"\n'
             f"SORT last_updated_date DESC\n"
             f"```"
@@ -989,7 +989,7 @@ def import_wellwit_issues():
         f"## How To Use\n\n"
         f"- Treat each imported issue as historical support context, not as a pristine ticket.\n"
         f"- Link repeated patterns into site notes, SOPs, or product-quality reviews.\n"
-        f"- Use [[08 Issues/Issue Index|Issue Index]] and site pages to review current support surface."
+        f"- Use [[09 Work/Issues/Issue Index|Issue Index]] and site pages to review current support surface."
     )
     write_note(VAULT / "99 System/Wellwit Issue Import Summary.md", summary_fm, summary_body)
 
@@ -998,8 +998,8 @@ def import_wellwit_issues():
 
 def clean_obsolete():
     obsolete = [
-        VAULT / "04 Clients/GreyOrange.md",
-        VAULT / "04 Clients/Devonics.md",
+        VAULT / "09 Work/Accounts/GreyOrange.md",
+        VAULT / "09 Work/Accounts/Devonics.md",
     ]
     # These files are intentionally rewritten by the import functions above.
     return {"rewritten_account_notes": len(obsolete)}

@@ -5,57 +5,49 @@
 1. Open the dashboard and today's daily note in the morning
 2. Capture all information during the day without over-classifying in real time
 3. Do one pass of sorting and linking in the afternoon or evening
-4. Update account and project next steps before the workday ends
+4. Update area and project next steps before the day ends
 5. Run Git sync before closing the day
 
 ## Weekly And Monthly Rhythm
 
-- Use the weekly note to review account movement, project risk, and reusable technical lessons
-- Use the monthly note to collapse multiple weeks into operating direction
+- Use the weekly note to review work, health, finance, learning, and relationship movement
+- Use the monthly note to collapse multiple weeks into direction
 - Use the weekly focus board for active execution, not archival reference
 - If a task survives multiple weekly reviews, either redefine it or delete it
 
-## How Your Six Input Types Enter The System
+## How Input Enters The System
 
-### 1. Robotics Industry News
+### 1. Daily Notes
 
-- Start with `Industry News`
-- If it is just a short update, keep the body under five lines
-- Focus on why it matters to the market and to your customers
+- This is the default input path
+- Write work, health, finance, learning, research, and personal notes together first
+- Use AI nightly triage to split the day into formal notes later
 
-### 2. Long-Form Technical Videos
+### 2. Work Capture
 
-- Start with `Video Note`
-- Do not transcribe the video; write conclusions, methods, and examples
-- Promote reusable material into formal tech notes later
+- Use `Account`, `Contact`, `Discovery Meeting`, `Support Meeting`, `Issue`, and work project notes when the record is already formal
+- Keep customer and delivery context under `09 Work`
 
-### 3. Fragmented Field Technical Problems
+### 3. Personal Capture
 
-- Start with `Field Issue`
-- After resolution, decide whether it should become knowledge
-- High-reuse problems must be promoted into reusable notes
+- Use `Person`, `Project`, and `Knowledge Note` when a personal or non-work note is already clear enough to formalize
+- Use area notes when you need stable home pages for long-term domains like health and finance
 
-### 4. New Customer Discovery Meetings
+### 4. Learning And Research
 
-- Create the account first, then create a `Discovery Meeting`
-- If the opportunity becomes real, create a project note
+- Put reusable methods, summaries, and models into `05 Knowledge`
+- Keep raw source files in `07 Resources`
 
-### 5. Existing Customer Support Meetings
+### 5. Reviews
 
-- Record them as `Support Meeting`
-- After the call, move action items back to the account, project, or issue note
-
-### 6. GTC / Trade Shows / Frontier Events
-
-- Start with `Event Note`
-- After the event, split it into industry trends, competitors, and customer opportunities
-- If you had a real booth conversation or spoke with a concrete person, prefer `Expo Conversation`
+- Use weekly and monthly reviews to compress drift into decisions
+- Reviews are for direction, not raw capture
 
 ## Required End-Of-Day Actions
 
 - Add at least one useful link to every meaningful note
 - Add frontmatter fields to important notes
-- Pull action items out of meetings and issue notes
+- Pull action items out of meetings, projects, and knowledge notes
 - Reduce the inbox close to empty
-- Make sure every project, meeting, and issue links to at least one account
-- Run the AI processing script on important meetings or field issues
+- Make sure important notes connect to at least one area, project, person, or work object
+- Run the AI processing script on the daily note or on important work notes

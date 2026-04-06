@@ -11,8 +11,8 @@ These plugins are not equal. Some belong in the core operating system. Some are 
 
 ### Periodic Notes
 
-- Weekly reviews live in `09 Reviews/Weekly`
-- Monthly reviews live in `09 Reviews/Monthly`
+- Weekly reviews live in `08 Reviews/Weekly`
+- Monthly reviews live in `08 Reviews/Monthly`
 - Use it for review rhythm, not for raw capture
 
 ### Kanban

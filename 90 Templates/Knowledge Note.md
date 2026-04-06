@@ -1,7 +1,9 @@
 ---
 type: knowledge
-domain: tech
+area: learning
+domain:
 source:
+source_type:
 created: <% tp.date.now("YYYY-MM-DD") %>
 updated: <% tp.date.now("YYYY-MM-DD") %>
 tags: []
@@ -23,7 +25,8 @@ tags: []
 
 ## Links
 
+- area:
 - project:
-- client:
+- account:
 - people:
 - topic:

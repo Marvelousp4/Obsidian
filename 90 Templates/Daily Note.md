@@ -18,15 +18,31 @@ tags:
 
 Write anything here first. Do not worry about classification yet.
 
-### Accounts / Projects / Field
+### Work
 
 - 
 
-### Learning / Industry / Product
+### Finance
 
 - 
 
-### Ideas / Decisions / Open Questions
+### Health
+
+- 
+
+### Learning
+
+- 
+
+### Research
+
+- 
+
+### Personal / Relationships
+
+- 
+
+### Mind / Decisions / Open Questions
 
 - 
 
@@ -41,7 +57,7 @@ Write anything here first. Do not worry about classification yet.
 ## AI Nightly Triage
 
 - [ ] Run AI daily triage tonight
-- [ ] Move AI suggestions into account / project / meeting / issue / knowledge notes
+- [ ] Move AI suggestions into area / project / knowledge / people / work notes
 
 ## Next Day
 

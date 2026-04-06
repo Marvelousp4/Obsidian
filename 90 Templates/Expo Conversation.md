@@ -47,4 +47,4 @@ tags:
 
 - account:
 - contacts:
-- project: [[05 Projects/MODEX 2026/MODEX 2026 Event Sprint]]
+- project: [[04 Projects/Work/MODEX 2026/MODEX 2026 Event Sprint]]

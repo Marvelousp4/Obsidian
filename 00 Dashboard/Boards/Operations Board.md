@@ -4,13 +4,13 @@
 
 - [[00 Dashboard/Start Here|Operating Hub]]
 - [[00 Dashboard/Boards/Weekly Focus Board|Weekly Focus Board]]
-- [[09 Reviews/Reviews Index|Reviews Index]]
+- [[08 Reviews/Reviews Index|Reviews Index]]
 
 ## Active Accounts
 
 ```dataview
 TABLE industry AS Industry, region AS Region, last_contact AS "Last Contact", next_contact AS "Next Contact"
-FROM "04 Clients"
+FROM "09 Work/Accounts"
 WHERE type = "account"
 SORT file.mtime DESC
 ```
@@ -19,7 +19,7 @@ SORT file.mtime DESC
 
 ```dataview
 TABLE account AS Account, project_kind AS Type, site AS Site, status AS Status, next AS Next
-FROM "05 Projects"
+FROM "04 Projects/Work"
 WHERE type = "project"
 SORT file.mtime DESC
 ```
@@ -28,7 +28,7 @@ SORT file.mtime DESC
 
 ```dataview
 TABLE client, site, category, status, severity, last_updated_date
-FROM "08 Issues"
+FROM "09 Work/Issues"
 WHERE type = "issue"
 SORT last_updated_date DESC
 LIMIT 15
@@ -38,7 +38,7 @@ LIMIT 15
 
 ```dataview
 TABLE date, organizations, project, account
-FROM "06 Meetings"
+FROM "09 Work/Meetings"
 WHERE type = "meeting"
 SORT date DESC
 LIMIT 15
@@ -48,7 +48,7 @@ LIMIT 15
 
 ```tasks
 not done
-path includes 04 Clients
+path includes 09 Work/Accounts
 sort by due
 ```
 
@@ -56,6 +56,6 @@ sort by due
 
 ```tasks
 not done
-path includes 05 Projects
+path includes 04 Projects/Work
 sort by due
 ```

@@ -1,5 +1,6 @@
 ---
 type: project
+area: work
 account:
 client:
 project_kind:
@@ -19,14 +20,11 @@ tags: []
 ## Background
 
 
-## Site / Deployment Information
+## Scope
 
-- Customer:
-- Site:
-- Deployment Type:
-- Fleet Size:
-- Address:
-
+- Area:
+- Time horizon:
+- Success criteria:
 
 ## Current Status
 
@@ -35,12 +33,22 @@ tags: []
 
 - [ ] 
 
+## Optional Work Context
+
+- Account:
+- Site:
+- Deployment Type:
+- Fleet Size:
+- Address:
+
 ## Key Resources
 
 - 
 
 ## Links
 
+- area:
 - account:
 - client:
+- people:
 - notes:

@@ -12,15 +12,23 @@ tags:
 
 - 
 
-## Account Changes
+## Work
 
 - 
 
-## Project Changes
+## Health
 
 - 
 
-## High-Reuse Problems / Solutions
+## Finance
+
+- 
+
+## Learning / Research
+
+- 
+
+## Personal / Relationships
 
 - 
 

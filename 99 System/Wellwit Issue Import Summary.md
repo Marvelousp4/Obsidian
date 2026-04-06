@@ -34,4 +34,4 @@ tags: []
 
 - Treat each imported issue as historical support context, not as a pristine ticket.
 - Link repeated patterns into site notes, SOPs, or product-quality reviews.
-- Use [[08 Issues/Issue Index|Issue Index]] and site pages to review current support surface.
+- Use [[09 Work/Issues/Issue Index|Issue Index]] and site pages to review current support surface.

@@ -27,7 +27,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "04 Clients"
+                  "09 Work/Accounts"
                 ]
               },
               "openFile": true,
@@ -46,7 +46,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "04 Clients"
+                  "09 Work/Accounts"
                 ]
               },
               "openFile": true,
@@ -65,7 +65,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "06 Meetings"
+                  "09 Work/Meetings"
                 ]
               },
               "openFile": true,
@@ -84,7 +84,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "06 Meetings/MODEX 2026"
+                  "09 Work/Meetings/MODEX 2026"
                 ]
               },
               "openFile": true,
@@ -112,7 +112,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "05 Projects"
+                  "04 Projects/Work"
                 ]
               },
               "openFile": true,
@@ -131,7 +131,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "05 Projects"
+                  "04 Projects/Work"
                 ]
               },
               "openFile": true,
@@ -169,7 +169,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "08 Issues"
+                  "09 Work/Issues"
                 ]
               },
               "openFile": true,
@@ -188,7 +188,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "06 Meetings"
+                  "09 Work/Meetings"
                 ]
               },
               "openFile": true,
@@ -216,7 +216,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "03 Knowledge/Industry"
+                  "05 Knowledge/Work/Industry"
                 ]
               },
               "openFile": true,
@@ -235,7 +235,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "03 Knowledge/Tech"
+                  "05 Knowledge/Work/Tech"
                 ]
               },
               "openFile": true,
@@ -254,7 +254,7 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "03 Knowledge/Industry"
+                  "05 Knowledge/Work/Industry"
                 ]
               },
               "openFile": true,
@@ -273,7 +273,92 @@
               "folder": {
                 "enabled": true,
                 "folders": [
-                  "03 Knowledge/Tech"
+                  "05 Knowledge/Work/Tech"
+                ]
+              },
+              "openFile": true,
+              "onePageInput": "always"
+            }
+          ]
+        },
+        {
+          "id": "qa-personal-root",
+          "name": "Personal Capture",
+          "type": "Multi",
+          "command": false,
+          "placeholder": "Capture areas, people, personal projects, and personal knowledge",
+          "choices": [
+            {
+              "id": "qa-area-note",
+              "name": "Capture: Area Note",
+              "type": "Template",
+              "command": true,
+              "templatePath": "90 Templates/Area.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:title}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "03 Areas"
+                ]
+              },
+              "openFile": true,
+              "onePageInput": "always"
+            },
+            {
+              "id": "qa-person-note",
+              "name": "Capture: Person Note",
+              "type": "Template",
+              "command": true,
+              "templatePath": "90 Templates/Person.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:title}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "06 People/Personal"
+                ]
+              },
+              "openFile": true,
+              "onePageInput": "always"
+            },
+            {
+              "id": "qa-personal-project",
+              "name": "Capture: Personal Project",
+              "type": "Template",
+              "command": true,
+              "templatePath": "90 Templates/Project.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:title}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "04 Projects/Personal"
+                ]
+              },
+              "openFile": true,
+              "onePageInput": "always"
+            },
+            {
+              "id": "qa-personal-knowledge",
+              "name": "Capture: Personal Knowledge",
+              "type": "Template",
+              "command": true,
+              "templatePath": "90 Templates/Knowledge Note.md",
+              "fileNameFormat": {
+                "enabled": true,
+                "format": "{{VALUE:title}}"
+              },
+              "folder": {
+                "enabled": true,
+                "folders": [
+                  "05 Knowledge/Personal"
                 ]
               },
               "openFile": true,
@@ -294,7 +379,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "04 Clients"
+              "09 Work/Accounts"
             ]
           },
           "openFile": true,
@@ -313,7 +398,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "04 Clients"
+              "09 Work/Accounts"
             ]
           },
           "openFile": true,
@@ -332,7 +417,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "06 Meetings"
+              "09 Work/Meetings"
             ]
           },
           "openFile": true,
@@ -351,7 +436,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "06 Meetings/MODEX 2026"
+              "09 Work/Meetings/MODEX 2026"
             ]
           },
           "openFile": true,
@@ -370,7 +455,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "05 Projects"
+              "04 Projects/Work"
             ]
           },
           "openFile": true,
@@ -389,7 +474,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "05 Projects"
+              "04 Projects/Work"
             ]
           },
           "openFile": true,
@@ -427,7 +512,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "08 Issues"
+              "09 Work/Issues"
             ]
           },
           "openFile": true,
@@ -446,7 +531,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "06 Meetings"
+              "09 Work/Meetings"
             ]
           },
           "openFile": true,
@@ -465,7 +550,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "03 Knowledge/Industry"
+              "05 Knowledge/Work/Industry"
             ]
           },
           "openFile": true,
@@ -484,7 +569,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "03 Knowledge/Tech"
+              "05 Knowledge/Work/Tech"
             ]
           },
           "openFile": true,
@@ -503,7 +588,7 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "03 Knowledge/Industry"
+              "05 Knowledge/Work/Industry"
             ]
           },
           "openFile": true,
@@ -522,7 +607,83 @@
           "folder": {
             "enabled": true,
             "folders": [
-              "03 Knowledge/Tech"
+              "05 Knowledge/Work/Tech"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-area-note",
+          "name": "Capture: Area Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Area.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "03 Areas"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-person-note",
+          "name": "Capture: Person Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Person.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "06 People/Personal"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-personal-project",
+          "name": "Capture: Personal Project",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Project.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "04 Projects/Personal"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-personal-knowledge",
+          "name": "Capture: Personal Knowledge",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Knowledge Note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "05 Knowledge/Personal"
             ]
           },
           "openFile": true,

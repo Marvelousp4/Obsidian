@@ -24,15 +24,15 @@ In this system, one customer is not one note. It is a linked set of objects.
 
 ## Folder Convention
 
-- `04 Clients/<Account>.md`
+- `09 Work/Accounts/<Account>.md`
   account overview
-- `04 Clients/<Account>/Contacts/*.md`
+- `09 Work/Accounts/<Account>/Contacts/*.md`
   contacts
-- `05 Projects/<Account>/*.md`
+- `04 Projects/Work/<Account>/*.md`
   projects / sites
-- `06 Meetings/<Account>/*.md`
+- `09 Work/Meetings/<Account>/*.md`
   meetings
-- `08 Issues/<Account>/**/*.md`
+- `09 Work/Issues/<Account>/**/*.md`
   issues
 
 ## Operating Rules
@@ -48,7 +48,7 @@ In this system, one customer is not one note. It is a linked set of objects.
 - `GreyOrange` is the account
 - `Harshita / Mohit / Sumit ...` are contacts
 - `Sam's ATL / Kenco Kansas / Sodimac Colombia ...` are projects / sites
-- Site-specific support history goes into `08 Issues/GreyOrange`
+- Site-specific support history goes into `09 Work/Issues/GreyOrange`
 
 ## Devonics Example
 

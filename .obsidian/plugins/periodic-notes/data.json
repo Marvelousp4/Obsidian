@@ -12,13 +12,13 @@
     "enabled": true,
     "format": "gggg-[W]ww",
     "template": "90 Templates/Weekly Review",
-    "folder": "09 Reviews/Weekly"
+    "folder": "08 Reviews/Weekly"
   },
   "monthly": {
     "enabled": true,
     "format": "YYYY-MM",
     "template": "90 Templates/Monthly Review",
-    "folder": "09 Reviews/Monthly"
+    "folder": "08 Reviews/Monthly"
   },
   "quarterly": {
     "enabled": false,

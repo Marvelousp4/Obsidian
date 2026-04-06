@@ -178,8 +178,8 @@ config:
   show_metadata_outlinks: false
   show_metadata_tags: false
   source_data: query
-  source_form_result: "FROM \"04 Clients\" WHERE type = \"contact\""
-  source_destination_path: 04 Clients
+  source_form_result: "FROM \"09 Work/Accounts\" WHERE type = \"contact\""
+  source_destination_path: 09 Work/Accounts
   row_templates_folder: /
   current_row_template: ""
   pagination_size: 50

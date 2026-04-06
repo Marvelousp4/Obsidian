@@ -4,7 +4,7 @@
 
 ```dataview
 TABLE client, site, category, status, severity, priority, last_updated_date
-FROM "08 Issues"
+FROM "09 Work/Issues"
 WHERE type = "issue" AND status != "resolved"
 SORT last_updated_date DESC
 LIMIT 30
@@ -14,7 +14,7 @@ LIMIT 30
 
 ```dataview
 TABLE account, site, status, next
-FROM "05 Projects"
+FROM "04 Projects/Work"
 WHERE type = "project" AND (project_kind = "site_deployment" OR project_kind = "site_issue_bucket")
 SORT account ASC, site ASC
 ```
@@ -23,7 +23,7 @@ SORT account ASC, site ASC
 
 ```dataview
 TABLE date, organizations, project
-FROM "06 Meetings"
+FROM "09 Work/Meetings"
 WHERE type = "meeting"
 SORT date DESC
 LIMIT 20

@@ -24,7 +24,7 @@ tags: []
 
 ```dataview
 TABLE team AS Team, title AS Role, relationship AS Relationship, verification_status AS Verification
-FROM "04 Clients/<% tp.file.title %>"
+FROM "09 Work/Accounts/<% tp.file.title %>"
 WHERE type = "contact"
 SORT team ASC, file.name ASC
 ```
@@ -33,7 +33,7 @@ SORT team ASC, file.name ASC
 
 ```dataview
 TABLE project_kind AS Type, site AS Site, status AS Status, next AS Next
-FROM "05 Projects"
+FROM "04 Projects/Work"
 WHERE type = "project" AND account = "<% tp.file.title %>"
 SORT file.name ASC
 ```

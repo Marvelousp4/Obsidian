@@ -5,7 +5,7 @@
 - `Omnisearch`: keyword retrieval
 - `Smart Connections`: semantic related-note discovery
 - `Local REST API`: interface for local scripts and agents
-- `ai_process_note.sh`: turn raw meetings or issue notes into AI drafts
+- `ai_process_note.sh`: turn daily notes or work notes into AI drafts
 - `verify_local_rest_api.sh`: verify that the local API is working
 
 ## Layer 2: Worth Adding Within A Week
@@ -13,16 +13,16 @@
 - Voice to text
   Option: Mac recording plus transcription, or the transcript feature from a meeting tool
 - Daily or weekly automated summaries
-  Sources: `02 Daily`, `06 Meetings`, `05 Projects`
+  Sources: `02 Daily`, `04 Projects`, `05 Knowledge`, `09 Work/Meetings`
 - Customer follow-up reminders
-  Source: `next_contact` in `04 Clients`
+  Source: `next_contact` in `09 Work/Accounts`
 
 ## Layer 3: Stronger, But Not For Day One
 
 - Automatically split event and news notes into customer opportunities
 - Automatically extract FAQ / SOP candidates from field issues
 - Automatically propose tags and candidate links for knowledge notes
-- Automatically generate weekly briefings and customer reviews
+- Automatically generate weekly briefings and cross-area reviews
 
 ## Visualization
 

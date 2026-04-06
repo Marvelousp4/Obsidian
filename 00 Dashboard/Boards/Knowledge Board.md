@@ -4,7 +4,7 @@
 
 ```dataview
 TABLE source, updated, tags
-FROM "03 Knowledge/Tech"
+FROM "05 Knowledge/Work/Tech"
 WHERE type = "knowledge"
 SORT file.mtime DESC
 LIMIT 20
@@ -14,7 +14,7 @@ LIMIT 20
 
 ```dataview
 TABLE source_type, source, updated, tags
-FROM "03 Knowledge/Industry"
+FROM "05 Knowledge/Work/Industry"
 WHERE type = "knowledge"
 SORT file.mtime DESC
 LIMIT 20
@@ -24,7 +24,7 @@ LIMIT 20
 
 ```dataview
 TABLE client, site, category, priority, last_updated_date
-FROM "08 Issues"
+FROM "09 Work/Issues"
 WHERE type = "issue" AND status != "resolved"
 SORT category ASC, last_updated_date DESC
 LIMIT 30

@@ -4,7 +4,7 @@
 
 ```dataview
 TABLE industry, region, last_contact, next_contact
-FROM "04 Clients"
+FROM "09 Work/Accounts"
 WHERE type = "account"
 SORT file.mtime DESC
 ```
@@ -13,7 +13,7 @@ SORT file.mtime DESC
 
 ```dataview
 TABLE organization, team, title, relationship, last_contact, verification_status
-FROM "04 Clients"
+FROM "09 Work/Accounts"
 WHERE type = "contact"
 SORT organization ASC, team ASC, file.name ASC
 ```
@@ -22,7 +22,7 @@ SORT organization ASC, team ASC, file.name ASC
 
 ```dataview
 TABLE account, project_kind, site, status, next
-FROM "05 Projects"
+FROM "04 Projects/Work"
 WHERE type = "project"
 SORT account ASC, file.name ASC
 ```
@@ -31,7 +31,7 @@ SORT account ASC, file.name ASC
 
 ```dataview
 TABLE date, organizations, project
-FROM "06 Meetings"
+FROM "09 Work/Meetings"
 WHERE type = "meeting"
 SORT date DESC
 LIMIT 20
