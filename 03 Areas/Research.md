@@ -23,3 +23,8 @@ Track open questions, sources, experiments, and synthesis.
 - Robotics methods
 - Simulation to real transfer
 - Industry shifts
+
+## Core Notes
+
+- [[05 Knowledge/Personal/2026-04-06 - Going with the Flow - Koopman Behavioral Models|Going with the Flow - Koopman Behavioral Models]]
+- [[06 People/Professional/STAR Lab|STAR Lab]]

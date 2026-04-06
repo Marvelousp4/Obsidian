@@ -1,11 +1,11 @@
 # People Index
 
-Use this page for people across your whole system. Professional contacts remain nested under work accounts. Personal people notes live directly under `06 People`.
+Use this page for people across your whole system. Direct person notes live under `06 People`. Work contacts tied to accounts remain nested under `09 Work/Accounts`.
 
-## Personal People
+## Direct People Notes
 
 ```dataview
-TABLE person_kind AS Kind, relationship AS Relationship, organization AS Organization, last_contact AS "Last Contact"
+TABLE person_kind AS Kind, relationship AS Relationship, organization AS Organization, title AS Title, last_contact AS "Last Contact"
 FROM "06 People"
 WHERE type = "person"
 SORT file.name ASC

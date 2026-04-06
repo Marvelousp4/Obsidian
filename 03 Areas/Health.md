@@ -23,3 +23,8 @@ Support performance with sleep, movement, nutrition, and recovery.
 - Sleep
 - Training
 - Recovery
+
+## Core Notes
+
+- [[05 Knowledge/Personal/2026-03 Fitness And Diet Baseline|2026-03 Fitness And Diet Baseline]]
+- [[04 Projects/Personal/Spring 2026 Health Reset|Spring 2026 Health Reset]]
