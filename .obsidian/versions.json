@@ -1,6 +1,7 @@
 {
   "calendar": "1.5.10",
   "dataview": "0.5.68",
+  "dbfolder": "3.5.1",
   "obsidian-excalidraw-plugin": "2.22.0",
   "obsidian-git": "2.38.0",
   "obsidian-linter": "1.31.2",
