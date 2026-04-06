@@ -1,0 +1,9 @@
+.DS_Store
+.obsidian/workspace.json
+.obsidian/cache
+.obsidian/workspace-mobile.json
+.obsidian/plugins/obsidian-local-rest-api/data.json
+.obsidian/plugins/quickadd/data.json
+.smart-env
+07 Resources/*
+!07 Resources/.gitkeep

@@ -1,0 +1,11 @@
+{
+  "templates_folder": "90 Templates",
+  "trigger_on_file_creation": true,
+  "enable_system_commands": false,
+  "folder_templates": [
+    {
+      "folder": "02 Daily",
+      "template": "90 Templates/Daily Note"
+    }
+  ]
+}

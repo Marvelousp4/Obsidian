@@ -1,0 +1,13 @@
+{
+  "calendar": "1.5.10",
+  "dataview": "0.5.68",
+  "obsidian-excalidraw-plugin": "2.22.0",
+  "obsidian-git": "2.38.0",
+  "obsidian-linter": "1.31.2",
+  "obsidian-local-rest-api": "3.6.0",
+  "obsidian-tasks-plugin": "7.23.1",
+  "omnisearch": "1.28.2",
+  "quickadd": "2.12.0",
+  "smart-connections": "4.3.0",
+  "templater-obsidian": "2.18.1"
+}
