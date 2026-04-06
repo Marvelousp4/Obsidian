@@ -349,28 +349,28 @@ def build_account_note(
         f"{context}\n\n"
         f"## Stakeholder Map\n\n"
         f"```dataview\n"
-        f"TABLE team, title, relationship, verification_status\n"
+        f"TABLE team AS Team, title AS Role, relationship AS Relationship, verification_status AS Verification\n"
         f'FROM "04 Clients/{title}"\n'
         f'WHERE type = "contact"\n'
         f"SORT team ASC, file.name ASC\n"
         f"```\n\n"
         f"## Active Deployments / Projects\n\n"
         f"```dataview\n"
-        f"TABLE project_kind, site, status, next\n"
+        f"TABLE project_kind AS Type, site AS Site, status AS Status, next AS Next\n"
         f'FROM "05 Projects"\n'
         f'WHERE type = "project" AND account = "{title}"\n'
         f"SORT file.name ASC\n"
         f"```\n\n"
         f"## Recent Meetings\n\n"
         f"```dataview\n"
-        f"TABLE date, organizations, project\n"
+        f"TABLE date AS Date, organizations AS Organizations, project AS Project\n"
         f'FROM "06 Meetings"\n'
         f'WHERE type = "meeting" AND contains(organizations, "{title}")\n'
         f"SORT date DESC\n"
         f"```\n\n"
         f"## Open Issues\n\n"
         f"```dataview\n"
-        f"TABLE site, category, status, severity, last_updated_date\n"
+        f"TABLE site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated\n"
         f'FROM "08 Issues"\n'
         f'WHERE type = "issue" AND client = "{title}" AND status != "resolved"\n'
         f"SORT last_updated_date DESC\n"
@@ -415,9 +415,9 @@ def import_greyorange():
             "Several deployments appear stopped or aging, so historical context matters.",
         ],
         next_moves=[
-            "Keep all new site issues linked to the correct deployment note.",
-            "Promote repeated issue patterns into SOP or knowledge notes.",
-            "Use weekly review to identify sites with repeated unresolved issues.",
+            "把新增站点问题挂到正确的部署页，不要让问题漂在收件箱里。",
+            "把重复出现的问题沉淀成 SOP 或正式知识卡片。",
+            "每周复盘一次高频未解决问题，优先找反复出问题的站点。",
         ],
     )
     write_note(VAULT / "04 Clients/GreyOrange.md", account_fm, account_body)
@@ -503,11 +503,11 @@ def import_greyorange():
         status = "stopped" if "停止" in note else "active"
         next_step = ""
         if "电池异常" in note:
-            next_step = "Review battery anomaly analysis and link all related issues."
+            next_step = "补电池异常分析结论，并把相关问题、会议和责任人串起来。"
         elif "停止" in note:
-            next_step = "Preserve context only; no active delivery unless reactivated."
+            next_step = "确认该站点是否已经停用；如果停用，补一个停用结论并保留历史背景。"
         else:
-            next_step = "Link current site issues and update latest operating status."
+            next_step = "把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。"
         fm = {
             "type": "project",
             "account": "GreyOrange",

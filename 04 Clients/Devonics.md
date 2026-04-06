@@ -25,7 +25,7 @@ The transcript describes a discovery conversation around using a Wellwit mobile 
 ## Stakeholder Map
 
 ```dataview
-TABLE team, title, relationship, verification_status
+TABLE team AS Team, title AS Role, relationship AS Relationship, verification_status AS Verification
 FROM "04 Clients/Devonics"
 WHERE type = "contact"
 SORT team ASC, file.name ASC
@@ -34,7 +34,7 @@ SORT team ASC, file.name ASC
 ## Active Deployments / Projects
 
 ```dataview
-TABLE project_kind, site, status, next
+TABLE project_kind AS Type, site AS Site, status AS Status, next AS Next
 FROM "05 Projects"
 WHERE type = "project" AND account = "Devonics"
 SORT file.name ASC
@@ -43,7 +43,7 @@ SORT file.name ASC
 ## Recent Meetings
 
 ```dataview
-TABLE date, organizations, project
+TABLE date AS Date, organizations AS Organizations, project AS Project
 FROM "06 Meetings"
 WHERE type = "meeting" AND contains(organizations, "Devonics")
 SORT date DESC
@@ -52,7 +52,7 @@ SORT date DESC
 ## Open Issues
 
 ```dataview
-TABLE site, category, status, severity, last_updated_date
+TABLE site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated
 FROM "08 Issues"
 WHERE type = "issue" AND client = "Devonics" AND status != "resolved"
 SORT last_updated_date DESC

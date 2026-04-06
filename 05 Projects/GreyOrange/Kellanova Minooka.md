@@ -7,7 +7,7 @@ site: "Kellanova Minooka"
 status: "active"
 owner: "bai"
 started: ""
-next: "Link current site issues and update latest operating status."
+next: "把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。"
 tags: []
 ---
 
@@ -41,7 +41,7 @@ Court, Minooka, Illinois, United States, 60447-9430
 
 ## Next Steps
 
-- [ ] Link current site issues and update latest operating status.
+- [ ] 把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。
 
 ## Open Issues
 

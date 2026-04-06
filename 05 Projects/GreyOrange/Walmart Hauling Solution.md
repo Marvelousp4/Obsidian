@@ -7,7 +7,7 @@ site: "Walmart Hauling Solution"
 status: "stopped"
 owner: "bai"
 started: ""
-next: "Preserve context only; no active delivery unless reactivated."
+next: "确认该站点是否已经停用；如果停用，补一个停用结论并保留历史背景。"
 tags: []
 ---
 
@@ -39,7 +39,7 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Next Steps
 
-- [ ] Preserve context only; no active delivery unless reactivated.
+- [ ] 确认该站点是否已经停用；如果停用，补一个停用结论并保留历史背景。
 
 ## Open Issues
 

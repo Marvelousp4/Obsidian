@@ -22,12 +22,21 @@ tags: []
 
 ## Stakeholder Map
 
-- executive:
-- commercial:
-- technical:
-- site_ops:
+```dataview
+TABLE team AS Team, title AS Role, relationship AS Relationship, verification_status AS Verification
+FROM "04 Clients/<% tp.file.title %>"
+WHERE type = "contact"
+SORT team ASC, file.name ASC
+```
 
 ## Active Opportunities / Projects
+
+```dataview
+TABLE project_kind AS Type, site AS Site, status AS Status, next AS Next
+FROM "05 Projects"
+WHERE type = "project" AND account = "<% tp.file.title %>"
+SORT file.name ASC
+```
 
 
 ## Risks
@@ -36,4 +45,3 @@ tags: []
 ## Next Moves
 
 - [ ] 
-

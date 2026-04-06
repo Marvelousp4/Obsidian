@@ -7,7 +7,7 @@ site: "Sam's ATL"
 status: "active"
 owner: "bai"
 started: ""
-next: "Review battery anomaly analysis and link all related issues."
+next: "补电池异常分析结论，并把相关问题、会议和责任人串起来。"
 tags: []
 ---
 
@@ -41,7 +41,7 @@ SAMS ECOM FC ATLANTA GA
 
 ## Next Steps
 
-- [ ] Review battery anomaly analysis and link all related issues.
+- [ ] 补电池异常分析结论，并把相关问题、会议和责任人串起来。
 
 ## Open Issues
 

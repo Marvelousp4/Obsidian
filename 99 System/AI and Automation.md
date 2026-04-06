@@ -2,6 +2,12 @@
 
 这套配置里，AI 不负责替你记笔记，它负责把你已经记下来的东西重新找出来、串起来、自动处理。
 
+现在最推荐的主流程是：
+
+1. 白天所有信息先写进 `Daily Note`
+2. 晚上对这条 daily note 跑一次 AI 分流
+3. 再把 AI 给出的建议同步到正式账户、项目、会议、问题、知识笔记
+
 ## 已安装
 
 - `Smart Connections`
@@ -50,4 +56,12 @@ cp "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env.example" "/Users/
 bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "06 Meetings/客户A 需求会.md" discovery
 ```
 
-建议先从 `discovery`、`support`、`issue` 三类开始。
+建议先从 `daily`、`discovery`、`support`、`issue` 四类开始。
+
+如果你想按“每天先写 daily，再让 AI 帮你分流”的方式用，直接这样跑：
+
+```bash
+bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "02 Daily/2026-04-06.md" daily
+```
+
+这样会在 `01 Inbox/AI Drafts/` 里生成一份按账户 / 项目 / 会议 / 问题 / 知识分类的整理稿。

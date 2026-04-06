@@ -15,9 +15,10 @@ Examples:
   ai_process_note.sh "06 Meetings/客户A 需求会.md" discovery
   ai_process_note.sh "06 Meetings/客户B 支持会.md" support
   ai_process_note.sh "01 Inbox/现场问题-机械臂急停.md" issue
+  ai_process_note.sh "02 Daily/2026-04-06.md" daily
 
 Modes:
-  auto discovery support issue news video event
+  auto daily discovery support issue news video event
 EOF
 }
 
@@ -67,6 +68,7 @@ sanitize_name() {
 detect_mode() {
   local path="$1"
   case "$path" in
+    02\ Daily/* ) echo "daily" ;;
     06\ Meetings/*需求*|06\ Meetings/*discovery* ) echo "discovery" ;;
     06\ Meetings/*支持*|06\ Meetings/*support* ) echo "support" ;;
     *Field*|*现场问题*|*issue* ) echo "issue" ;;
@@ -91,17 +93,17 @@ PROMPT_COMMON=$(cat <<'EOF'
 4. 如果信息不足，明确写“待补充”。
 5. 输出必须包含以下部分：
    - # AI整理
-   - ## 一句话总结
-   - ## 关键事实
-   - ## 行动项
-   - ## 可沉淀知识
-   - ## 推荐链接
+   - 如果是普通笔记：## 一句话总结 / ## 关键事实 / ## 行动项 / ## 可沉淀知识 / ## 推荐链接
+   - 如果是日报：## 今日摘要 / ## 建议更新到账户 / ## 建议更新到项目或站点 / ## 建议更新到会议 / ## 建议更新到问题库 / ## 建议沉淀到知识库 / ## 明天优先动作
 6. 在“推荐链接”里，用 Obsidian wiki link 格式给出建议，比如 [[客户A]]、[[项目B]]、[[某技术主题]]。
 7. “可沉淀知识”要判断这条记录是否值得拆成正式知识卡片；如果值得，给出 1 到 3 个建议标题。
 EOF
 )
 
 case "$MODE" in
+  daily)
+    MODE_PROMPT="这是一条今日日记。你的任务是把其中的内容按账户、联系人、项目、会议、问题、知识进行分流建议。不要臆造新事实。对于每条建议，给出建议标题、建议目录、保留原始事实摘要，以及建议链接。重点目标是帮助用户晚上把 daily note 里的内容整理进正式系统。"
+    ;;
   discovery)
     MODE_PROMPT="这是一次新客户需求沟通。重点提炼需求、决策信息、预算/时间线、关键风险、下一步推进动作。"
     ;;
