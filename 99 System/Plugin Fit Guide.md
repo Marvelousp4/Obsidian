@@ -42,7 +42,6 @@ These plugins are not equal. Some belong in the core operating system. Some are 
 - `Dataview` for dashboards and indices
 - `Tasks` for action tracking
 - `Omnisearch` for retrieval
-- `Smart Connections` for related-note recall
 - `Obsidian Git` for backup and sync
 - `Local REST API` for local automation
 
@@ -72,6 +71,16 @@ These plugins are not equal. Some belong in the core operating system. Some are 
 
 - Skip it unless you want a mouse-heavy writing workflow
 - On Mac keyboard-driven note-taking, it adds more UI than value
+
+### Smart Connections
+
+- Powerful, but one of the first plugins to disable when vault responsiveness matters more than semantic recall
+- Keep it off unless you are actively using embedding-based lookup
+
+### Database Folder
+
+- Useful only for occasional table-style cleanup
+- Keep it off by default if the vault feels heavy
 
 ## Default Rule
 

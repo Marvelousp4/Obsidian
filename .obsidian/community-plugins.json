@@ -2,22 +2,14 @@
   "templater-obsidian",
   "quickadd",
   "dataview",
-  "dbfolder",
   "homepage",
   "periodic-notes",
   "obsidian-kanban",
   "obsidian-tasks-plugin",
   "calendar",
-  "omnisearch",
   "obsidian-linter",
   "obsidian-git",
   "obsidian-outliner",
   "pdf-plus",
-  "smart-connections",
-  "tag-wrangler",
-  "obsidian-local-rest-api",
-  "obsidian-excalidraw-plugin",
-  "copilot",
-  "editing-toolbar",
-  "obsidian-mind-map"
+  "tag-wrangler"
 ]
