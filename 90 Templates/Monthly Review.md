@@ -22,10 +22,10 @@ tags:
 
 ### Health Metrics Snapshot
 
-- Average weight:
-- Training sessions:
-- Sleep trend:
-- Digestion / recovery notes:
+- Weight trend:
+- Meal pattern:
+- Training consistency:
+- Recovery note:
 
 ## Finance
 
