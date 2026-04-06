@@ -8,22 +8,22 @@ tags:
 
 # Weekly Review - <% tp.date.now("YYYY-[W]WW") %>
 
-## 本周推进
+## Progress This Week
 
 - 
 
-## 客户变化
+## Account Changes
 
 - 
 
-## 项目变化
+## Project Changes
 
 - 
 
-## 复用价值高的问题 / 方案
+## High-Reuse Problems / Solutions
 
 - 
 
-## 下周关键动作
+## Key Moves Next Week
 
 - [ ] 

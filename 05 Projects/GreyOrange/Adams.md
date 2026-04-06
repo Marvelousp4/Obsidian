@@ -7,7 +7,7 @@ site: "Adams"
 status: "active"
 owner: "bai"
 started: ""
-next: "把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。"
+next: "Link the historical site issues here and update the latest operating status, owner, and next follow-up date."
 tags: []
 ---
 
@@ -19,10 +19,9 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Background
 
-- Source workbook: /Users/bai/Downloads/GO 人员简介.xlsx
+- Source workbook: GreyOrange internal workbook
 - Platform / robot type: L &H
-- Fleet size: 18台L
-8台H
+- Fleet size: 18 L units 8 H units
 - Notes: 
 
 ## Site / Deployment Information
@@ -30,8 +29,7 @@ Track one live or historical GreyOrange deployment site as an operational object
 - Customer: GreyOrange
 - Site: Adams
 - Deployment Type: L &H
-- Fleet Size: 18台L
-8台H
+- Fleet Size: 18 L units 8 H units
 - Address: Adams Beverages, LLC, 7505 Statesville Rd, Charlotte,
 North Carolina 28269, United States
 Raj
@@ -45,7 +43,7 @@ raj.k@greyorange.com
 
 ## Next Steps
 
-- [ ] 把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。
+- [ ] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
 
 ## Open Issues
 

@@ -14,22 +14,21 @@ tags: []
 
 # <% tp.file.title %>
 
-## 一句话
+## One-Line Summary
 
 
-## 发生了什么
+## What Happened
 
 
-## 为什么值得关注
+## Why It Matters
 
 
-## 对行业的影响
+## Impact On The Industry
 
 
-## 对我客户/业务的影响
+## Impact On My Customers / Business
 
 
-## 后续动作
+## Follow-Up Actions
 
 - [ ] 
-

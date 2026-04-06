@@ -9,22 +9,21 @@ tags: []
 
 # <% tp.file.title %>
 
-## 一句话结论
+## One-Line Conclusion
 
 
-## 核心内容
+## Core Content
 
 
-## 为什么重要
+## Why It Matters
 
 
-## 可复用方法
+## Reusable Method
 
 
-## 关联
+## Links
 
 - project:
 - client:
 - people:
 - topic:
-

@@ -12,9 +12,9 @@ Usage:
   ai_process_note.sh <relative-note-path> [mode]
 
 Examples:
-  ai_process_note.sh "06 Meetings/客户A 需求会.md" discovery
-  ai_process_note.sh "06 Meetings/客户B 支持会.md" support
-  ai_process_note.sh "01 Inbox/现场问题-机械臂急停.md" issue
+  ai_process_note.sh "06 Meetings/Account A Discovery.md" discovery
+  ai_process_note.sh "06 Meetings/Account B Support.md" support
+  ai_process_note.sh "01 Inbox/Field Issue - Emergency Stop.md" issue
   ai_process_note.sh "02 Daily/2026-04-06.md" daily
 
 Modes:
@@ -69,12 +69,12 @@ detect_mode() {
   local path="$1"
   case "$path" in
     02\ Daily/* ) echo "daily" ;;
-    06\ Meetings/*需求*|06\ Meetings/*discovery* ) echo "discovery" ;;
-    06\ Meetings/*支持*|06\ Meetings/*support* ) echo "support" ;;
-    *Field*|*现场问题*|*issue* ) echo "issue" ;;
-    *News*|*新闻* ) echo "news" ;;
-    *Video*|*视频* ) echo "video" ;;
-    *Event*|*展会*|*GTC* ) echo "event" ;;
+    06\ Meetings/*discovery*|06\ Meetings/*Discovery* ) echo "discovery" ;;
+    06\ Meetings/*support*|06\ Meetings/*Support* ) echo "support" ;;
+    *Field*|*Issue*|*issue* ) echo "issue" ;;
+    *News* ) echo "news" ;;
+    *Video* ) echo "video" ;;
+    *Event*|*Expo*|*GTC* ) echo "event" ;;
     * ) echo "auto" ;;
   esac
 }
@@ -83,47 +83,47 @@ if [[ "$MODE" == "auto" ]]; then
   MODE="$(detect_mode "$NOTE_PATH")"
 fi
 
-PROMPT_COMMON=$(cat <<'EOF'
-你是一个严谨的知识运营助手。你的任务不是重写用户内容，而是把原始笔记整理成可执行、可链接、可沉淀的资产。
+PROMPT_COMMON=$(cat <<EOF
+You are a rigorous knowledge-operations assistant. Your job is not to rewrite the user content. Your job is to turn raw notes into actionable, linkable, reusable assets.
 
-输出要求：
-1. 只输出 Markdown。
-2. 不要解释你在做什么。
-3. 优先保留原始事实，不要编造缺失信息。
-4. 如果信息不足，明确写“待补充”。
-5. 输出必须包含以下部分：
-   - # AI整理
-   - 如果是普通笔记：## 一句话总结 / ## 关键事实 / ## 行动项 / ## 可沉淀知识 / ## 推荐链接
-   - 如果是日报：## 今日摘要 / ## 建议更新到账户 / ## 建议更新到项目或站点 / ## 建议更新到会议 / ## 建议更新到问题库 / ## 建议沉淀到知识库 / ## 明天优先动作
-6. 在“推荐链接”里，用 Obsidian wiki link 格式给出建议，比如 [[客户A]]、[[项目B]]、[[某技术主题]]。
-7. “可沉淀知识”要判断这条记录是否值得拆成正式知识卡片；如果值得，给出 1 到 3 个建议标题。
+Output requirements:
+1. Output Markdown only.
+2. Do not explain what you are doing.
+3. Preserve original facts and do not invent missing information.
+4. If information is missing, write "Needs follow-up".
+5. The output must include these sections:
+   - # AI Draft
+   - For a normal note: ## One-Line Summary / ## Key Facts / ## Action Items / ## Knowledge Worth Promoting / ## Suggested Links
+   - For a daily note: ## Today Summary / ## Suggested Account Updates / ## Suggested Project Or Site Updates / ## Suggested Meetings / ## Suggested Issues / ## Suggested Knowledge Notes / ## Next Priorities
+6. In "Suggested Links", use Obsidian wiki-link format such as [[Account A]], [[Project B]], or [[Technical Topic]].
+7. In "Knowledge Worth Promoting", decide whether the note should become one or more formal knowledge notes. If yes, propose one to three titles.
 EOF
 )
 
 case "$MODE" in
   daily)
-    MODE_PROMPT="这是一条今日日记。你的任务是把其中的内容按账户、联系人、项目、会议、问题、知识进行分流建议。不要臆造新事实。对于每条建议，给出建议标题、建议目录、保留原始事实摘要，以及建议链接。重点目标是帮助用户晚上把 daily note 里的内容整理进正式系统。"
+    MODE_PROMPT="This is a daily note. Route the content into suggested account, contact, project, meeting, issue, and knowledge updates. Do not invent facts. For each suggestion, provide a proposed title, target folder, preserved fact summary, and suggested links. The main goal is to help the user turn the daily note into formal notes at the end of the day."
     ;;
   discovery)
-    MODE_PROMPT="这是一次新客户需求沟通。重点提炼需求、决策信息、预算/时间线、关键风险、下一步推进动作。"
+    MODE_PROMPT="This is a new customer discovery conversation. Extract requirements, decision context, budget and timeline signals, major risks, and next actions."
     ;;
   support)
-    MODE_PROMPT="这是一次老客户支持或问题排查沟通。重点提炼问题现象、已确认事实、临时方案、根因线索、后续责任人和动作。"
+    MODE_PROMPT="This is an existing customer support or troubleshooting conversation. Extract symptoms, confirmed facts, temporary workarounds, root-cause clues, owners, and follow-up actions."
     ;;
   issue)
-    MODE_PROMPT="这是一条客户现场零碎技术问题记录。重点提炼环境、复现条件、根因、解决步骤、是否值得标准化沉淀。"
+    MODE_PROMPT="This is a fragmented field technical issue note. Extract environment, reproduction conditions, root cause, resolution steps, and whether it should become a standardized knowledge note."
     ;;
   news)
-    MODE_PROMPT="这是一条行业新闻记录。重点提炼发生了什么、为什么值得关注、对行业和客户的影响、是否需要跟进。"
+    MODE_PROMPT="This is an industry news note. Extract what happened, why it matters, the impact on the industry and customers, and whether follow-up is needed."
     ;;
   video)
-    MODE_PROMPT="这是一条技术视频学习记录。重点提炼核心概念、方法、案例、值得迁移到项目或客户场景的点。"
+    MODE_PROMPT="This is a technical video learning note. Extract core concepts, methods, examples, and ideas worth moving into projects or customer contexts."
     ;;
   event)
-    MODE_PROMPT="这是一条展会或前沿活动记录。重点提炼趋势、竞品、客户机会、值得会后跟进的人和方向。"
+    MODE_PROMPT="This is an event or frontier-activity note. Extract trends, competitor signals, customer opportunities, and the people or directions worth following up after the event."
     ;;
   *)
-    MODE_PROMPT="这是一次通用工作笔记整理。重点提炼事实、行动项、可复用知识和建议链接。"
+    MODE_PROMPT="This is a general work note. Extract facts, action items, reusable knowledge, and suggested links."
     ;;
 esac
 
@@ -139,7 +139,7 @@ NOW_UTC="$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
 
 REQUEST_JSON="$(jq -n \
   --arg model "$DEFAULT_MODEL" \
-  --arg prompt "$PROMPT_COMMON"$'\n\n'"$MODE_PROMPT"$'\n\n'"原始笔记路径："$'\n'"$NOTE_PATH"$'\n\n'"原始笔记内容："$'\n'"$NOTE_CONTENT" \
+  --arg prompt "$PROMPT_COMMON"$'\n\n'"$MODE_PROMPT"$'\n\n'"Source note path:"$'\n'"$NOTE_PATH"$'\n\n'"Source note content:"$'\n'"$NOTE_CONTENT" \
   '{
     model: $model,
     input: $prompt
@@ -167,7 +167,7 @@ fi
 
 NOTE_BASENAME="$(basename "$NOTE_PATH" .md)"
 SAFE_BASENAME="$(sanitize_name "$NOTE_BASENAME")"
-DRAFT_PATH="01 Inbox/AI Drafts/${SAFE_BASENAME} - AI整理.md"
+DRAFT_PATH="01 Inbox/AI Drafts/${SAFE_BASENAME} - AI Draft.md"
 ENCODED_DRAFT_PATH="$(encode_uri "$DRAFT_PATH")"
 
 DRAFT_CONTENT=$(cat <<EOF
@@ -180,9 +180,9 @@ generated_at_utc: "$NOW_UTC"
 model: "$DEFAULT_MODEL"
 ---
 
-# ${NOTE_BASENAME} - AI整理
+# ${NOTE_BASENAME} - AI Draft
 
-来源：[[${NOTE_PATH%.md}]]
+Source: [[${NOTE_PATH%.md}]]
 
 $OUTPUT_TEXT
 EOF

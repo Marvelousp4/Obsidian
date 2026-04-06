@@ -1,61 +1,61 @@
 # Tool Division
 
-## 最合理的分工
+## Recommended Division
 
 - `Obsidian`
-  你的主知识库。负责长期积累、会议记录、现场问题、技术沉淀、行业跟踪。
+  Your primary knowledge base for long-term context, meeting notes, field issues, technical knowledge, and industry tracking.
 - `GitHub`
-  版本历史、跨设备同步、回滚、备份。
+  Version history, cross-device backup, rollback, and sync.
 - `Notion`
-  对外协作、团队共享文档、项目协同页面、需要网页化展示的内容。
+  External collaboration, team documentation, project pages, and shareable web-style pages.
 - `Airtable`
-  强结构化数据。适合客户管道、线索池、设备清单、售后工单台账。
-- `Codex / 外部 agent`
-  加工层。负责整理、汇总、抽行动项、生成草稿，不做主存储。
+  Structured operational data such as customer pipeline, lead pool, equipment lists, and support ledgers.
+- `Codex / External Agent`
+  Processing layer for summarization, extraction, action items, and draft generation. Not the source of truth.
 
-## 什么时候该接 Notion
+## When To Add Notion
 
-- 你要把信息分享给团队或客户
-- 你需要数据库视图、多人协作和页面权限
-- 你想用 Notion AI 的 Agent、Meeting Notes、Connectors
+- You need to share information with a team or customer
+- You need database views, multi-person collaboration, and page permissions
+- You want Notion AI features such as agents, meeting notes, or connectors
 
-不该接的时候：
+Do not add it when:
 
-- 你只是自己记和自己搜
-- 你不想双份维护
+- You are mostly writing and searching for yourself
+- You do not want duplicate maintenance
 
-## 什么时候该接 Airtable
+## When To Add Airtable
 
-- 客户很多，状态字段明确
-- 你要筛选、统计、自动化跟进
-- 你要做销售漏斗或售后台账
+- You have many customers with stable status fields
+- You need filtering, reporting, and automated follow-up
+- You want a sales funnel or support ledger
 
-不该接的时候：
+Do not add it when:
 
-- 你现在还在摸索字段
-- 你连“什么算 lead / project / support case”都没定稳
+- You are still discovering the right fields
+- You have not yet stabilized what counts as a lead, project, or support case
 
-## 推荐组合
+## Recommended Stacks
 
-### 现在
+### Right Now
 
 - `Obsidian + GitHub + Codex`
 
-### 进入协作期
+### Collaboration Phase
 
 - `Obsidian + GitHub + Notion`
 
-### 进入客户规模期
+### Scale Phase
 
 - `Obsidian + GitHub + Airtable`
 
-### 进入组织化阶段
+### Organized Operating Phase
 
 - `Obsidian + GitHub + Notion + Airtable`
 
-规则：
+Rules:
 
-- Obsidian 存原始上下文和深度知识
-- Notion 存共享页面和项目协作
-- Airtable 存结构化记录和自动化状态
-- 不在三个地方同时写同一条核心信息
+- Obsidian stores raw context and deep knowledge
+- Notion stores shared pages and collaborative project views
+- Airtable stores structured records and automation status
+- Do not write the same core truth in all three tools

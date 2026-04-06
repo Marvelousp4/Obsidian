@@ -7,7 +7,7 @@ site: "Dish Deal"
 status: "active"
 owner: "bai"
 started: ""
-next: "把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。"
+next: "Link the historical site issues here and update the latest operating status, owner, and next follow-up date."
 tags: []
 ---
 
@@ -19,7 +19,7 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Background
 
-- Source workbook: /Users/bai/Downloads/GO 人员简介.xlsx
+- Source workbook: GreyOrange internal workbook
 - Platform / robot type: L
 - Fleet size: 2
 - Notes: 
@@ -40,7 +40,7 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Next Steps
 
-- [ ] 把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。
+- [ ] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
 
 ## Open Issues
 

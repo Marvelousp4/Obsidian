@@ -12,20 +12,20 @@ tags: []
 
 # <% tp.file.title %>
 
-## 议题
+## Agenda
 
 
-## 关键信息
+## Key Information
 
 
-## 决策
+## Decisions
 
 
 ## Action Items
 
 - [ ] 
 
-## 关联
+## Links
 
 - account:
 - project:

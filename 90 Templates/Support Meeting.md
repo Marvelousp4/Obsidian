@@ -14,23 +14,23 @@ tags: []
 
 # <% tp.file.title %>
 
-## 问题清单
+## Problem List
 
 
-## 已确认事实
+## Confirmed Facts
 
 
-## 临时方案
+## Temporary Workarounds
 
 
-## 根因与后续
+## Root Cause And Follow-Up
 
 
 ## Action Items
 
 - [ ] 
 
-## 关联
+## Links
 
 - account:
 - project:

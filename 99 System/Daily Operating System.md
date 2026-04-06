@@ -1,54 +1,54 @@
 # Daily Operating System
 
-## 每天只跑这四步
+## Run Only These Five Steps Each Day
 
-1. 早上打开 Dashboard 和今日日记
-2. 白天所有信息先捕获，不现场分类过度
-3. 下午或晚上做一次整理和链接
-4. 下班前更新项目下一步和客户下一步
-5. 收工前做一次 Git 同步
+1. Open the dashboard and today's daily note in the morning
+2. Capture all information during the day without over-classifying in real time
+3. Do one pass of sorting and linking in the afternoon or evening
+4. Update account and project next steps before the workday ends
+5. Run Git sync before closing the day
 
-## 你的 6 类输入，怎么进系统
+## How Your Six Input Types Enter The System
 
-### 1. 机器人行业新闻
+### 1. Robotics Industry News
 
-- 先记成 `Industry News`
-- 如果只是短讯，正文不超过 5 行
-- 重点写“为什么对行业和客户重要”
+- Start with `Industry News`
+- If it is just a short update, keep the body under five lines
+- Focus on why it matters to the market and to your customers
 
-### 2. YouTube 系统技术视频
+### 2. Long-Form Technical Videos
 
-- 先记成 `Video Note`
-- 不要抄字幕，写结论、方法、案例
-- 能复用的内容再拆成正式技术卡片
+- Start with `Video Note`
+- Do not transcribe the video; write conclusions, methods, and examples
+- Promote reusable material into formal tech notes later
 
-### 3. 客户现场零碎技术问题
+### 3. Fragmented Field Technical Problems
 
-- 先记成 `Field Issue`
-- 解决以后判断是否值得转知识库
-- 高复用问题必须二次沉淀
+- Start with `Field Issue`
+- After resolution, decide whether it should become knowledge
+- High-reuse problems must be promoted into reusable notes
 
-### 4. 新客户开会聊需求
+### 4. New Customer Discovery Meetings
 
-- 先建账户卡，再建 `Discovery Meeting`
-- 如果机会成立，再建项目卡
+- Create the account first, then create a `Discovery Meeting`
+- If the opportunity becomes real, create a project note
 
-### 5. 老客户开会解决问题
+### 5. Existing Customer Support Meetings
 
-- 记录到 `Support Meeting`
-- 会后把动作项挂回账户页、项目页或 issue
+- Record them as `Support Meeting`
+- After the call, move action items back to the account, project, or issue note
 
-### 6. GTC / 展会 / 前沿大会
+### 6. GTC / Trade Shows / Frontier Events
 
-- 先记成 `Event Note`
-- 回来后拆成行业趋势、竞品、客户机会三类
-- 如果是和 booth 或具体人深聊，优先记成 `Expo Conversation`
+- Start with `Event Note`
+- After the event, split it into industry trends, competitors, and customer opportunities
+- If you had a real booth conversation or spoke with a concrete person, prefer `Expo Conversation`
 
-## 晚上整理时必须做的动作
+## Required End-Of-Day Actions
 
-- 给每条有效信息至少补一个链接
-- 给重要笔记补 frontmatter 字段
-- 从会议和问题笔记里抽行动项
-- 把收件箱清到接近空
-- 确保项目、会议、issue 至少链接到一个账户
-- 对重要会议或现场问题跑一次 AI 整理脚本
+- Add at least one useful link to every meaningful note
+- Add frontmatter fields to important notes
+- Pull action items out of meetings and issue notes
+- Reduce the inbox close to empty
+- Make sure every project, meeting, and issue links to at least one account
+- Run the AI processing script on important meetings or field issues

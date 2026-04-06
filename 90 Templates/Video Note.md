@@ -12,32 +12,31 @@ tags: []
 
 # <% tp.file.title %>
 
-## 视频信息
+## Video Information
 
-- 链接:
-- 讲者:
-- 时长:
+- Link:
+- Speaker:
+- Duration:
 
-## 关键结论
-
-
-## 结构化笔记
-
-### 概念
+## Key Takeaways
 
 
-### 方法
+## Structured Notes
+
+### Concepts
 
 
-### 案例
+### Methods
 
 
-## 可落地动作
+### Examples
+
+
+## Actionable Moves
 
 - [ ] 
 
-## 关联
+## Links
 
 - project:
 - client:
-

@@ -25,9 +25,10 @@ VAULT = Path("/Users/bai/Documents/Obsidian/Space")
 DOWNLOADS = Path("/Users/bai/Downloads")
 PLAYGROUND = Path("/Users/bai/Documents/Playground")
 
-GO_XLSX = DOWNLOADS / "GO 人员简介.xlsx"
+GO_XLSX = next(iter(sorted(DOWNLOADS.glob("GO*.xlsx"))))
 DEVONICS_TRANSCRIPT = DOWNLOADS / "cleaned_meeting_transcript_labeled.txt"
 WELLWIT_ISSUES = PLAYGROUND / "wellwit_issue_history_clean.csv"
+GO_SOURCE_LABEL = "GreyOrange internal workbook"
 
 
 def quote(value):
@@ -75,10 +76,10 @@ def wiki(path: str, label: str | None = None) -> str:
 
 
 TEAM_MAP = {
-    "供应链": "Supply Chain",
-    "技术团队": "Technical",
-    "软件": "Software",
-    "质量团队": "Quality",
+    "\u4f9b\u5e94\u94fe": "Supply Chain",
+    "\u6280\u672f\u56e2\u961f": "Technical",
+    "\u8f6f\u4ef6": "Software",
+    "\u8d28\u91cf\u56e2\u961f": "Quality",
 }
 
 
@@ -103,7 +104,7 @@ GREYORANGE_PUBLIC = {
     "website": "https://www.greyorange.com/",
     "linkedin": "https://www.linkedin.com/company/greyorange/",
     "notes": [
-        "Workbook source: /Users/bai/Downloads/GO 人员简介.xlsx",
+        "Workbook source: GreyOrange internal workbook.",
         "Company website and LinkedIn company page checked manually on 2026-04-05.",
     ],
 }
@@ -326,6 +327,69 @@ def normalize_date(raw: str) -> str:
     return "undated"
 
 
+def translate_go_contact_note(note: str) -> str:
+    text = re.sub(r"\s+", " ", (note or "")).strip()
+    if not text:
+        return "Role detail still needs confirmation from live collaboration."
+    replacements = {
+        "\u7c7b\u4f3c\u65b9\u6848\u7ecf\u7406\u4e4b\u7c7b\u7684": "Acts like a solutions or program manager.",
+        "\u65b9\u6848\u7ecf\u7406\u4e4b\u7c7b\u7684": "Acts like a solutions or program manager.",
+        "\u8d1f\u8d23\u73b0\u573a\u7684\u4eba": "Owns field operations for active sites.",
+        "Anand\u7684\u4e0b\u5c5e": "Direct report to Anand.",
+        "\u4f9b\u5e94\u94fe\u4e3b\u8981\u5bf9\u63a5\u4eba\uff0charshita \u7684\u4e0b\u5c5e": "Supply chain contact working under Harshita.",
+        "\u4e3b\u8981\u5bf9\u63a5\u56e2\u961f\uff0c\u8d28\u91cf\u8d1f\u8d23\u4eba\uff0c\u8d28\u91cf\u7684\u8001\u5927": "Primary quality stakeholder and leader for the quality team.",
+        "\u4f9b\u5e94\u94fe\u4e3b\u8981\u5bf9\u63a5\u4eba\uff0c": "Primary supply chain contact.",
+        "\u8d28\u91cf\u8d1f\u8d23\u4eba": "Quality lead.",
+        "\u8f6f\u4ef6\u8d1f\u8d23\u4eba": "Software lead.",
+        "\u603b\u76d1\u7ea7\u522b\u4eba\u7269\uff0c\u4e00\u822c\u4e0d\u53d1\u90ae\u4ef6\u7ed9\u4ed6": "Director-level stakeholder; usually not the default email contact.",
+        "\u6280\u672f\u8d1f\u8d23\u4eba": "Technical lead.",
+    }
+    return replacements.get(text, text)
+
+
+def normalize_fleet_text(text: str) -> str:
+    value = re.sub(r"\s+", " ", (text or "")).strip()
+    if not value:
+        return ""
+    value = re.sub(r"(\d+)\s*\u53f0\u53c9\u8f66", r"\1 forklifts", value)
+    value = re.sub(r"(\d+)\s*\u53f0\u8f66", r"\1 vehicles", value)
+    value = re.sub(r"(\d+)\s*\u53f0\s*([A-Za-z]+)", r"\1 \2 units", value)
+    return value
+
+
+def translate_go_operational_note(note: str) -> str:
+    text = re.sub(r"\s+", " ", (note or "")).strip()
+    if not text:
+        return ""
+    replacements = {
+        "\u73b0\u573a\u7535\u6c60\u5f02\u5e38\uff0c\u76ee\u524d\u5df2\u4f7f\u7528\u5907\u54c1\u6b63\u5e38\u8fd0\u884c\uff0c\u9700\u8981\u5206\u6790\u62a5\u544a": "Battery anomaly on site. A spare unit is currently keeping operations running. Analysis report still needed.",
+        "\u5df2\u505c\u6b62": "Deployment appears stopped.",
+        "\u975e\u5e38\u65e7\u7684\u73b0\u573a\uff0c\u4e00\u5171\u670963\u53f0\u8f66": "Very old deployment site with 63 robots in total.",
+        "2\u53f0\u53c9\u8f66\uff0c\u9502\u5e73": "Fleet note: 2 forklifts with lithium pallet configuration.",
+        "2\u53f0AP\uff0c2\u53f0L \u8f66\uff0c2\u53f0H": "Fleet note: 2 AP units, 2 L units, and 2 H units.",
+        "2\u53f0AP\uff0c2\u53f0L \u8f66\uff0c2\u53f0H ": "Fleet note: 2 AP units, 2 L units, and 2 H units.",
+    }
+    return replacements.get(text, text)
+
+
+def sanitize_imported_text(text: str) -> str:
+    value = (text or "").strip()
+    if not value:
+        return ""
+    replacements = {
+        "\u67e5\u8be2\u673a\u5668\u4eba\u4e0d\u6267\u884c\u81ea\u52a8\u4efb\u52a1\u539f\u56e0 - \u98de\u4e66\u4e91\u6587\u6863": "Check why the robot is not executing auto tasks - Feishu doc",
+        "\u4e0a\u4f20\u573a\u666f - \u98de\u4e66\u4e91\u6587\u6863": "Upload scene - Feishu doc",
+        "CBD30H-YD\u81ea\u52a8\u5bfc\u5f15\u6258\u76d8\u642c\u8fd0\u8f66450\u9ad8\u5bf9\u6bd4\u56fe(1).dwg": "CBD30H-YD automated guided pallet truck 450-lift comparison drawing (1).dwg",
+        "CBD30H-YD\u81ea\u52a8\u5bfc\u5f15\u6258\u76d8\u642c\u8fd0\u8f66450\u9ad8.dwg": "CBD30H-YD automated guided pallet truck 450-lift drawing.dwg",
+        "\u81ea\u52a8\u5bfc\u5f15\u6258\u76d8\u642c\u8fd0\u8f66": "automated guided pallet truck",
+        "greyorange side": "GreyOrange side",
+        "\u98de\u4e66\u4e91\u6587\u6863": "Feishu doc",
+    }
+    for old, new in replacements.items():
+        value = value.replace(old, new)
+    return value
+
+
 def build_account_note(
     title: str,
     *,
@@ -398,8 +462,8 @@ def build_account_note(
 
 def import_greyorange():
     wb = load_workbook(GO_XLSX, data_only=True)
-    people = wb["工作表1"]
-    addresses = wb["地址表"]
+    people = wb.worksheets[0]
+    addresses = wb.worksheets[1]
 
     account_fm, account_body = build_account_note(
         "GreyOrange",
@@ -415,9 +479,9 @@ def import_greyorange():
             "Several deployments appear stopped or aging, so historical context matters.",
         ],
         next_moves=[
-            "把新增站点问题挂到正确的部署页，不要让问题漂在收件箱里。",
-            "把重复出现的问题沉淀成 SOP 或正式知识卡片。",
-            "每周复盘一次高频未解决问题，优先找反复出问题的站点。",
+            "Attach new site issues to the correct deployment note instead of leaving them floating in the inbox.",
+            "Promote repeated patterns into SOPs or formal knowledge notes.",
+            "Review high-frequency unresolved issues every week and prioritize the sites that keep repeating.",
         ],
     )
     write_note(VAULT / "04 Clients/GreyOrange.md", account_fm, account_body)
@@ -433,7 +497,8 @@ def import_greyorange():
         contact_count += 1
         title = ROLE_HINTS.get(name, "GreyOrange stakeholder")
         relationship = "active"
-        verification_sources = [str(GO_XLSX), GREYORANGE_PUBLIC["website"], GREYORANGE_PUBLIC["linkedin"]]
+        verification_sources = [GO_SOURCE_LABEL, GREYORANGE_PUBLIC["website"], GREYORANGE_PUBLIC["linkedin"]]
+        role_note = translate_go_contact_note(note)
         fm = {
             "type": "contact",
             "organization": "GreyOrange",
@@ -460,11 +525,11 @@ def import_greyorange():
             - Team: {current_team or "Unknown"}
             - Title: {title}
             - Email: {email or ""}
-            - Source: {GO_XLSX}
+            - Source: {GO_SOURCE_LABEL}
 
             ## What They Own
 
-            - {note or "Role detail still needs confirmation from live collaboration."}
+            - {role_note}
 
             ## Relationship Notes
 
@@ -475,7 +540,7 @@ def import_greyorange():
 
             - status: company_verified_internal_contact
             - sources:
-              - {GO_XLSX}
+              - {GO_SOURCE_LABEL}
               - {GREYORANGE_PUBLIC["website"]}
               - {GREYORANGE_PUBLIC["linkedin"]}
 
@@ -497,17 +562,18 @@ def import_greyorange():
             continue
         site_count += 1
         site = normalize_site(str(row[1]).replace("Columbia", "Colombia").replace("  ", " ").strip())
-        fleet = row[3] if row[3] is not None else ""
+        fleet = normalize_fleet_text(str(row[3])) if row[3] is not None else ""
         address = row[4] or ""
-        note = row[5] or ""
-        status = "stopped" if "停止" in note else "active"
+        raw_note = str(row[5] or "").strip()
+        note = translate_go_operational_note(raw_note)
+        status = "stopped" if "\u505c\u6b62" in raw_note else "active"
         next_step = ""
-        if "电池异常" in note:
-            next_step = "补电池异常分析结论，并把相关问题、会议和责任人串起来。"
-        elif "停止" in note:
-            next_step = "确认该站点是否已经停用；如果停用，补一个停用结论并保留历史背景。"
+        if "\u7535\u6c60\u5f02\u5e38" in raw_note:
+            next_step = "Add the battery anomaly analysis conclusion and link the related issues, meetings, and owners."
+        elif "\u505c\u6b62" in raw_note:
+            next_step = "Confirm whether this site is decommissioned and capture the historical context if it is."
         else:
-            next_step = "把该站点的历史问题链接进来，并补最新运行状态、负责人和下一次跟进时间。"
+            next_step = "Link the historical site issues here and update the latest operating status, owner, and next follow-up date."
         fm = {
             "type": "project",
             "account": "GreyOrange",
@@ -525,7 +591,7 @@ def import_greyorange():
             f"## Goal\n\n"
             f"Track one live or historical GreyOrange deployment site as an operational object that can collect meetings, issues, local context, and follow-ups.\n\n"
             f"## Background\n\n"
-            f"- Source workbook: {GO_XLSX}\n"
+            f"- Source workbook: {GO_SOURCE_LABEL}\n"
             f"- Platform / robot type: {row[2] or ''}\n"
             f"- Fleet size: {fleet}\n"
             f"- Notes: {note or ''}\n\n"
@@ -781,19 +847,19 @@ def import_wellwit_issues():
             skipped += 1
             continue
         site = normalize_site(row.get("site_std") or row.get("site"))
-        title = short_issue_title(row)
+        title = sanitize_imported_text(short_issue_title(row))
         created = normalize_date(row.get("created_date") or row.get("created_iso_std") or row.get("created_iso"))
         category = row.get("category_std") or row.get("category") or ""
         status = row.get("status_std") or row.get("status") or ""
         severity = row.get("severity_std") or row.get("severity") or ""
         priority = row.get("priority_std") or ""
         item_type = row.get("item_type_std") or row.get("item_type") or ""
-        problem = row.get("problem_description_clean") or row.get("problem_description") or ""
-        progress = row.get("solution_or_progress_clean") or row.get("solution_or_progress") or ""
-        next_action = row.get("next_action_clean") or row.get("next_action") or ""
+        problem = sanitize_imported_text(row.get("problem_description_clean") or row.get("problem_description") or "")
+        progress = sanitize_imported_text(row.get("solution_or_progress_clean") or row.get("solution_or_progress") or "")
+        next_action = sanitize_imported_text(row.get("next_action_clean") or row.get("next_action") or "")
         bot_ids = [v.strip() for v in (row.get("bot_ids") or "").split(",") if v.strip()]
         components = [v.strip() for v in (row.get("component_terms") or "").split(",") if v.strip()]
-        source_channel = row.get("source_file") or row.get("source") or ""
+        source_channel = sanitize_imported_text(row.get("source_file") or row.get("source") or "")
         source_id = row.get("source_id") or f"row-{index}"
         imported += 1
         per_site[site] += 1

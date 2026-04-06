@@ -7,7 +7,7 @@ site: "Sam's ATL"
 status: "active"
 owner: "bai"
 started: ""
-next: "补电池异常分析结论，并把相关问题、会议和责任人串起来。"
+next: "Add the battery anomaly analysis conclusion and link the related issues, meetings, and owners."
 tags: []
 ---
 
@@ -19,10 +19,10 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Background
 
-- Source workbook: /Users/bai/Downloads/GO 人员简介.xlsx
+- Source workbook: GreyOrange internal workbook
 - Platform / robot type: L
 - Fleet size: 30+
-- Notes: 现场电池异常，目前已使用备品正常运行，需要分析报告
+- Notes: Battery anomaly on site. A spare unit is currently keeping operations running. Analysis report still needed.
 
 ## Site / Deployment Information
 
@@ -37,11 +37,11 @@ SAMS ECOM FC ATLANTA GA
 ## Current Status
 
 - Status: active
-- Operational note: 现场电池异常，目前已使用备品正常运行，需要分析报告
+- Operational note: Battery anomaly on site. A spare unit is currently keeping operations running. Analysis report still needed.
 
 ## Next Steps
 
-- [ ] 补电池异常分析结论，并把相关问题、会议和责任人串起来。
+- [ ] Add the battery anomaly analysis conclusion and link the related issues, meetings, and owners.
 
 ## Open Issues
 

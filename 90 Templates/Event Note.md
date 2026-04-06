@@ -10,19 +10,18 @@ tags: []
 
 # <% tp.file.title %>
 
-## 现场观察
+## On-Site Observations
 
 
-## 值得记录的公司 / 产品
+## Companies / Products Worth Tracking
 
 
-## 重要趋势
+## Important Trends
 
 
-## 可跟进的人
+## People To Follow Up With
 
 
-## 回来后要做的事
+## Follow-Up After The Event
 
 - [ ] 
-

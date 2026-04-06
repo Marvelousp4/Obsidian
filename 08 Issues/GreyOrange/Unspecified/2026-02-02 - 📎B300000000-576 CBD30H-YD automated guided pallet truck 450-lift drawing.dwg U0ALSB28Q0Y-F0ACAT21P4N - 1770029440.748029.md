@@ -21,7 +21,7 @@ components: []
 tags: []
 ---
 
-# 📎B300000000-576 CBD30H-YD自动导引托盘搬运车450高.dwg U0ALSB28Q0Y/F0ACAT21P4N
+# 📎B300000000-576 CBD30H-YD automated guided pallet truck 450-lift drawing.dwg U0ALSB28Q0Y/F0ACAT21P4N
 
 ## Source Context
 
@@ -33,7 +33,7 @@ tags: []
 
 ## Problem
 
-📎B300000000-576 CBD30H-YD自动导引托盘搬运车450高.dwg U0ALSB28Q0Y/F0ACAT21P4N
+📎B300000000-576 CBD30H-YD automated guided pallet truck 450-lift drawing.dwg U0ALSB28Q0Y/F0ACAT21P4N
 
 ## Progress
 

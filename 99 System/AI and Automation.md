@@ -1,67 +1,67 @@
-# AI 和 Agent 怎么接
+# AI and Automation
 
-这套配置里，AI 不负责替你记笔记，它负责把你已经记下来的东西重新找出来、串起来、自动处理。
+In this setup, AI is not the note-taker. It processes, reconnects, and restructures material that you already captured.
 
-现在最推荐的主流程是：
+## Preferred Workflow
 
-1. 白天所有信息先写进 `Daily Note`
-2. 晚上对这条 daily note 跑一次 AI 分流
-3. 再把 AI 给出的建议同步到正式账户、项目、会议、问题、知识笔记
+1. Write all raw input into the daily note during the day
+2. Run AI triage on that daily note at night
+3. Move the AI suggestions into formal account, project, meeting, issue, and knowledge notes
 
-## 已安装
+## Installed Components
 
 - `Smart Connections`
-  作用：做语义关联和相似笔记发现，适合回忆“我之前好像记过这个”。
+  Purpose: semantic linking and similar-note discovery when you vaguely remember that you saw something before
 - `Local REST API`
-  作用：给本地脚本、自动化工具、外部 agent 开接口。
+  Purpose: interface for local scripts, automation tools, and external agents
 - `Omnisearch`
-  作用：把普通搜索做强，偏关键词和全文。
+  Purpose: stronger full-text and keyword search
 
-## 推荐用法
+## Recommended Usage
 
-1. 日常检索先用 `Omnisearch`
-2. 想找“相关想法”时用 `Smart Connections`
-3. 要做自动归档、自动同步、外部 AI 工作流时用 `Local REST API`
+1. Use `Omnisearch` for normal retrieval
+2. Use `Smart Connections` when you want related notes or adjacent ideas
+3. Use `Local REST API` for automation, sync, or external AI workflows
 
-## 为什么没直接给你塞一堆 AI 聊天插件
+## Why This Vault Does Not Rely On AI Chat Plugins
 
-- 很多插件强依赖 API key、订阅或云端模型
-- 很容易把主流程变成“找 AI 聊天”而不是“沉淀资产”
-- 先把结构和元数据打稳，后面接任何模型都更顺
+- Many plugins depend on API keys, subscriptions, or cloud models
+- They often turn the workflow into chatting with AI instead of building assets
+- Stable structure and metadata make every future model integration cleaner
 
-## 你下一步可以接什么
+## What You Can Add Next
 
-- Ollama：本地模型
-- OpenAI / Claude / Gemini：云模型
-- n8n / Raycast / Keyboard Maestro：自动化入口
-- 我这种外部 coding agent：通过 `Local REST API` 读写笔记
+- Ollama: local models
+- OpenAI / Claude / Gemini: cloud models
+- n8n / Raycast / Keyboard Maestro: automation entry points
+- External coding agents like me: read and write notes through `Local REST API`
 
-## 已经给你准备好的自动整理脚本
+## Prepared Processing Scripts
 
-脚本位置：`99 System/scripts/ai_process_note.sh`
+Script path: `99 System/scripts/ai_process_note.sh`
 
-推荐入口：`99 System/scripts/run_ai_process.sh`
+Recommended runner: `99 System/scripts/run_ai_process.sh`
 
-用途：
+What it does:
 
-- 读取某条会议或问题笔记
-- 调 OpenAI 生成整理稿
-- 写回 `01 Inbox/AI Drafts/`
+- Reads a meeting, issue, or daily note
+- Calls a model to generate a structured draft
+- Writes the result into `01 Inbox/AI Drafts/`
 
-示例：
+Example:
 
 ```bash
 cp "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env.example" "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env"
-# 然后把 .env 里的 key 改成你自己的
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "06 Meetings/客户A 需求会.md" discovery
+# Then replace the key in `.env` with your own
+bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "06 Meetings/Account A Discovery.md" discovery
 ```
 
-建议先从 `daily`、`discovery`、`support`、`issue` 四类开始。
+Start with `daily`, `discovery`, `support`, and `issue`.
 
-如果你想按“每天先写 daily，再让 AI 帮你分流”的方式用，直接这样跑：
+If you want the "daily first, AI triage at night" flow, run:
 
 ```bash
 bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "02 Daily/2026-04-06.md" daily
 ```
 
-这样会在 `01 Inbox/AI Drafts/` 里生成一份按账户 / 项目 / 会议 / 问题 / 知识分类的整理稿。
+This generates one draft in `01 Inbox/AI Drafts/` grouped by account, project, meeting, issue, and knowledge suggestions.

@@ -8,41 +8,41 @@ tags:
 
 # <% tp.date.now("YYYY-MM-DD dddd") %>
 
-## 今日重点
+## Top Priorities
 
 - [ ] 
 - [ ] 
 - [ ] 
 
-## 原始输入
+## Raw Input
 
-这里什么都可以先写，先别纠结分类。
+Write anything here first. Do not worry about classification yet.
 
-### 客户 / 项目 / 现场
-
-- 
-
-### 学习 / 行业 / 产品
+### Accounts / Projects / Field
 
 - 
 
-### 想法 / 决策 / 待验证
+### Learning / Industry / Product
 
 - 
 
-## 今日输出
+### Ideas / Decisions / Open Questions
 
 - 
 
-## 沟通纪要速记
+## Output Today
 
 - 
 
-## AI 夜间整理
+## Fast Meeting Notes
 
-- [ ] 晚上运行 AI daily triage
-- [ ] 把 AI 建议同步到账户 / 项目 / 会议 / 问题 / 知识库
+- 
 
-## 明日推进
+## AI Nightly Triage
+
+- [ ] Run AI daily triage tonight
+- [ ] Move AI suggestions into account / project / meeting / issue / knowledge notes
+
+## Next Day
 
 - [ ] 

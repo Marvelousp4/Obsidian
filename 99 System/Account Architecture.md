@@ -1,59 +1,58 @@
 # Account Architecture
 
-这套系统里，一个客户不是一张笔记，而是一组关联对象。
+In this system, one customer is not one note. It is a linked set of objects.
 
-## 关系模型
+## Relationship Model
 
 1. `Account`
-   代表客户账号本身，比如 `GreyOrange`、`Devonics`
+   Represents the customer entity itself, such as `GreyOrange` or `Devonics`
 2. `Contact`
-   代表这个账号里的具体人，归属于某个团队和职责
+   Represents one person under that account, tied to a team and responsibility
 3. `Project / Site`
-   代表客户下的具体项目、现场或部署站点
+   Represents a deployment, opportunity, or site under that account
 4. `Meeting`
-   代表一次沟通事件，关联账号、联系人、项目
+   Represents one communication event linked to accounts, contacts, and projects
 5. `Issue`
-   代表一个现场问题、产品问题或支持问题，关联账号、项目、设备
+   Represents one field, product, or support problem linked to an account, project, and equipment
 
-## 为什么这样设计
+## Why This Design Works
 
-- 一个客户会有很多项目，所以 `客户 != 项目`
-- 一个客户会有很多人，所以 `客户 != 联系人`
-- 一个项目会有很多问题，所以 `项目 != 问题`
-- 一次会议往往牵涉多个组织和多个人，所以 `会议` 要单独存在
+- One customer can have many projects, so `customer != project`
+- One customer can have many people, so `customer != contact`
+- One project can have many issues, so `project != issue`
+- One meeting often includes multiple organizations and people, so `meeting` must stand alone
 
-## 目录约定
+## Folder Convention
 
 - `04 Clients/<Account>.md`
-  账号总览
+  account overview
 - `04 Clients/<Account>/Contacts/*.md`
-  联系人
+  contacts
 - `05 Projects/<Account>/*.md`
-  项目 / 现场
+  projects / sites
 - `06 Meetings/<Account>/*.md`
-  会议
+  meetings
 - `08 Issues/<Account>/**/*.md`
-  问题单
+  issues
 
-## 操作原则
+## Operating Rules
 
-- 新客户先建 `Account`
-- 有明确负责人或关键人，就建 `Contact`
-- 有明确交付现场或长期运行点，就建 `Project / Site`
-- 每次重要沟通建 `Meeting`
-- 有现场故障、软件问题、阻塞，就建 `Issue`
+- Create an `Account` first for a new customer
+- Create a `Contact` when a real owner or stakeholder becomes relevant
+- Create a `Project / Site` when there is a real deployment, opportunity, or operating location
+- Create a `Meeting` for any important conversation
+- Create an `Issue` for failures, bugs, support blockers, or field problems
 
-## GreyOrange 这种客户怎么落
+## GreyOrange Example
 
-- `GreyOrange` 是账号
-- `Harshita / Mohit / Sumit ...` 是联系人
-- `Sam's ATL / Kenco Kansas / Sodimac Colombia ...` 是项目 / 现场
-- 每个现场产生的问题进入 `08 Issues/GreyOrange`
+- `GreyOrange` is the account
+- `Harshita / Mohit / Sumit ...` are contacts
+- `Sam's ATL / Kenco Kansas / Sodimac Colombia ...` are projects / sites
+- Site-specific support history goes into `08 Issues/GreyOrange`
 
-## Devonics 这种会议怎么落
+## Devonics Example
 
-- `Devonics` 是账号
-- `Joe / Frank / Joy` 是联系人
-- 会议单独建成 `Meeting`
-- 会议里提到的技术需求、动作项再分别挂到项目或问题
-
+- `Devonics` is the account
+- `Joe / Frank / Joy` are contacts
+- The discovery call exists as its own `Meeting`
+- Technical requirements and action items from that meeting get linked into projects or issues

@@ -1,83 +1,83 @@
 # MODEX 2026 Playbook
 
-MODEX 2026 runs from **Monday, April 13, 2026 through Thursday, April 16, 2026** in Atlanta. 你不该把它当成“看看新东西”的展会，而应该当成一次高密度客户、竞品、产品验证行动。
+MODEX 2026 runs from **Monday, April 13, 2026 through Thursday, April 16, 2026** in Atlanta. Treat it as a dense customer, competitor, and product-validation sprint, not as a casual browsing event.
 
-## 参展目标
+## Event Goals
 
-只抓 4 类输出：
+Focus on only four outputs:
 
-1. 客户机会
-2. 竞品与合作方情报
-3. 真实痛点与需求
-4. 会后明确动作
+1. Customer opportunities
+2. Competitor and partner intelligence
+3. Real pain points and requirements
+4. Explicit post-event actions
 
-## 展前准备
+## Before The Event
 
-1. 在 MODEX 官网先完成 `Register to Attend`、`Find Exhibitors`、`Search Seminars`、`My Show Planner`。
-2. 在 [[05 Projects/MODEX 2026/MODEX 2026 Event Sprint]] 里写清楚本次最重要的 10 家目标公司。
-3. 预先建好 3 类捕获入口：
+1. Use the MODEX site to complete `Register to Attend`, `Find Exhibitors`, `Search Seminars`, and `My Show Planner`.
+2. Write the ten highest-priority target companies in [[05 Projects/MODEX 2026/MODEX 2026 Event Sprint]].
+3. Prepare these three capture entries in advance:
    `Capture: Expo Conversation`
    `Capture: Event Note`
    `Capture: Contact Card`
-4. 给每类目标公司准备同一套问题，不要现场即兴乱聊。
+4. Prepare one stable question set for each target company type instead of improvising on the floor.
 
-## 现场打法
+## On-Site Execution
 
-### 1. 逛展顺序
+### 1. Floor Order
 
-- 上午先跑最高优先级 booth 和 keynotes
-- 下午再看广度和偶遇
-- 最后半天留给回访和补缺口
+- Hit the highest-priority booths and keynotes in the morning
+- Use the afternoon for breadth and chance discoveries
+- Reserve the last half day for revisits and gaps
 
-### 2. 每个 booth 只做这 5 件事
+### 2. Do Only These Five Things At Each Booth
 
-- 确认他们卖什么，不听空话
-- 问真实部署场景和客户画像
-- 问成单 / 落地阻力
-- 问接口、维护、交付、售后
-- 拿到一个明确后续动作
+- Confirm what they actually sell
+- Ask about real deployment scenarios and buyer profiles
+- Ask what blocks purchase and rollout
+- Ask about interfaces, maintenance, delivery, and after-sales support
+- Leave with one explicit next action
 
-### 3. 记录规则
+### 3. Recording Rules
 
-- 有价值的人: 建 `Contact`
-- 有价值的公司: 建 `Account`
-- 有价值的对话: 建 `Expo Conversation`
-- 有价值的趋势: 建 `Event Note`
-- 有明确合作或客户机会: 建 `Project`
+- Valuable person: create a `Contact`
+- Valuable company: create an `Account`
+- Valuable conversation: create an `Expo Conversation`
+- Valuable trend: create an `Event Note`
+- Clear partnership or customer opportunity: create a `Project`
 
-## 每晚复盘
+## Every Evening
 
-1. 打开 [[00 Dashboard/CRM Board]]
-2. 处理当天全部 `Expo Conversation`
-3. 给每条记录补 `account / contacts / next action`
-4. 把高价值线索升级为正式账户或项目
-5. 把共性趋势写进行业笔记
+1. Open [[00 Dashboard/CRM Board]]
+2. Process every `Expo Conversation` from that day
+3. Add `account / contacts / next action` to each record
+4. Promote high-value leads into formal account or project notes
+5. Move repeated patterns into industry notes
 
-## 你现场该问的问题
+## Questions To Ask On The Floor
 
-### 对客户 / 集成商
+### For Customers / Integrators
 
-- 你们现在最痛的环节是哪一步？
-- 现在是人工、半自动，还是已经上了 AMR / 机器人？
-- 现在卡在 ROI、集成、维护、还是售后？
-- 未来 6 到 12 个月最可能启动的项目是什么？
+- What is the most painful step in your process right now?
+- Are you manual, semi-automated, or already running AMRs / robots?
+- Is the current blocker ROI, integration, maintenance, or support?
+- Which project is most likely to start in the next 6 to 12 months?
 
-### 对机器人 / 平台供应商
+### For Robot / Platform Vendors
 
-- 量产部署最多的场景是什么？
-- 失败最多的场景是什么？
-- 集成接口、调度、地图、维护怎么做？
-- 现场最常见故障是什么？怎么处理？
+- Which use case has the most scaled deployments?
+- Which use case fails most often?
+- How do you handle APIs, orchestration, maps, and maintenance?
+- What is the most common field failure and how is it handled?
 
-### 对潜在合作方
+### For Potential Partners
 
-- 你们最适合和谁一起卖？
-- 你们缺哪一段能力？
-- 典型项目里你们怎么和集成商协同？
+- Who do you sell best alongside?
+- Which capability is missing on your side?
+- How do you usually work with integrators in a typical project?
 
-## 会后 48 小时内必须完成
+## Within 48 Hours After The Event
 
-1. 发出第一波 follow-up
-2. 归档所有 contacts / meetings / notes
-3. 形成一页 `MODEX 2026 takeaways`
-4. 把值得长期跟踪的对象放进账户体系
+1. Send the first wave of follow-up messages
+2. Archive all contacts, meetings, and notes
+3. Produce one `MODEX 2026 takeaways` note
+4. Add long-term targets into the account system

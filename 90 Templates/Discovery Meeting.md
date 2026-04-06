@@ -14,27 +14,27 @@ tags: []
 
 # <% tp.file.title %>
 
-## 客户背景
+## Account Background
 
 
-## 当前问题
+## Current Problems
 
 
-## 想要的结果
+## Desired Outcome
 
 
-## 决策信息
+## Decision Context
 
-- 预算:
-- 时间:
-- 决策人:
-- 风险:
+- Budget:
+- Timeline:
+- Decision Makers:
+- Risks:
 
-## 下一步
+## Next Steps
 
 - [ ] 
 
-## 关联
+## Links
 
 - account:
 - project:

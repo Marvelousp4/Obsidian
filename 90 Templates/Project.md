@@ -13,13 +13,13 @@ tags: []
 
 # <% tp.file.title %>
 
-## 目标
+## Goal
 
 
-## 背景
+## Background
 
 
-## 站点 / 部署信息
+## Site / Deployment Information
 
 - Customer:
 - Site:
@@ -28,18 +28,18 @@ tags: []
 - Address:
 
 
-## 当前状态
+## Current Status
 
 
-## 下一步
+## Next Steps
 
 - [ ] 
 
-## 关键资料
+## Key Resources
 
 - 
 
-## 关联
+## Links
 
 - account:
 - client:

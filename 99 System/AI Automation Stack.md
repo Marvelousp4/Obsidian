@@ -1,39 +1,39 @@
 # AI / Automation Stack
 
-## 第一层：现在就能用
+## Layer 1: Usable Right Now
 
-- `Omnisearch`：关键词检索
-- `Smart Connections`：语义相关笔记
-- `Local REST API`：给外部脚本和 agent 开接口
-- `ai_process_note.sh`：把原始会议 / 问题记录整理成 AI 草稿
-- `verify_local_rest_api.sh`：检查本地 API 是否正常
+- `Omnisearch`: keyword retrieval
+- `Smart Connections`: semantic related-note discovery
+- `Local REST API`: interface for local scripts and agents
+- `ai_process_note.sh`: turn raw meetings or issue notes into AI drafts
+- `verify_local_rest_api.sh`: verify that the local API is working
 
-## 第二层：一周内值得加
+## Layer 2: Worth Adding Within A Week
 
-- 语音转文字
-  方案：Mac 录音 + OpenAI 转写，或者会议工具自带 transcript
-- 日报 / 周报自动汇总
-  来源：`02 Daily`、`06 Meetings`、`05 Projects`
-- 客户跟进提醒
-  来源：`04 Clients` 中的 `next_contact`
+- Voice to text
+  Option: Mac recording plus transcription, or the transcript feature from a meeting tool
+- Daily or weekly automated summaries
+  Sources: `02 Daily`, `06 Meetings`, `05 Projects`
+- Customer follow-up reminders
+  Source: `next_contact` in `04 Clients`
 
-## 第三层：更强但别一开始就上
+## Layer 3: Stronger, But Not For Day One
 
-- 自动把展会和新闻拆成客户机会
-- 自动从现场问题里抽出 FAQ / SOP
-- 自动给知识卡加标签和候选链接
-- 自动生成周会简报和客户复盘
+- Automatically split event and news notes into customer opportunities
+- Automatically extract FAQ / SOP candidates from field issues
+- Automatically propose tags and candidate links for knowledge notes
+- Automatically generate weekly briefings and customer reviews
 
-## 可视化怎么做
+## Visualization
 
-- Obsidian 自带 Graph：看知识互链，不适合做 CRM 仪表盘
-- Dataview 表格：最适合你现在，够直接
-- Excalidraw：画系统图、流程图、现场架构
-- 真要做销售或客户漏斗可视化，再考虑 Airtable Interface
+- Obsidian Graph: useful for knowledge links, not for CRM dashboards
+- Dataview tables: the best fit for you right now
+- Excalidraw: system diagrams, flow diagrams, and field architecture sketches
+- If you truly need sales or customer pipeline visualization later, consider Airtable Interface
 
-## 你的 AI 原则
+## Your AI Rules
 
-- AI 先做整理、提炼、建议
-- 最终知识卡和关键结论由你确认
-- 不让 AI 直接改原始会议记录
-- 不把客户敏感信息随便喂进公共工具
+- Let AI handle summarization, extraction, and suggestions first
+- Final knowledge notes and key conclusions must be confirmed by you
+- Do not let AI directly rewrite raw meeting records
+- Do not send customer-sensitive information into public tools casually

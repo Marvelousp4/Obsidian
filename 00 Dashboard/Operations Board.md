@@ -1,24 +1,24 @@
 # Operations Board
 
-## 活跃账户
+## Active Accounts
 
 ```dataview
-TABLE industry AS 行业, region AS 区域, last_contact AS 上次联系, next_contact AS 下次联系
+TABLE industry AS Industry, region AS Region, last_contact AS "Last Contact", next_contact AS "Next Contact"
 FROM "04 Clients"
 WHERE type = "account"
 SORT file.mtime DESC
 ```
 
-## 活跃项目
+## Active Projects
 
 ```dataview
-TABLE account AS 账户, project_kind AS 类型, site AS 站点, status AS 状态, next AS 下一步
+TABLE account AS Account, project_kind AS Type, site AS Site, status AS Status, next AS Next
 FROM "05 Projects"
 WHERE type = "project"
 SORT file.mtime DESC
 ```
 
-## 最近问题单
+## Recent Issues
 
 ```dataview
 TABLE client, site, category, status, severity, last_updated_date
@@ -28,7 +28,7 @@ SORT last_updated_date DESC
 LIMIT 15
 ```
 
-## 最近会议
+## Recent Meetings
 
 ```dataview
 TABLE date, organizations, project, account
@@ -38,7 +38,7 @@ SORT date DESC
 LIMIT 15
 ```
 
-## 待跟进账户
+## Accounts Needing Follow-Up
 
 ```tasks
 not done
@@ -46,7 +46,7 @@ path includes 04 Clients
 sort by due
 ```
 
-## 待跟进项目
+## Projects Needing Follow-Up
 
 ```tasks
 not done

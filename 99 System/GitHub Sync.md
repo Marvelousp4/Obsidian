@@ -1,24 +1,24 @@
-# GitHub 同步方案
+# GitHub Sync
 
-## 原则
+## Principles
 
-- 用 GitHub 做版本管理和跨设备同步
-- 不把敏感配置和大附件直接公开同步
-- Obsidian 负责记，Git 负责保存历史
+- Use GitHub for version history and backup
+- Do not push sensitive config or large attachments by default
+- Obsidian is for writing, Git is for history
 
-## 推荐仓库形态
+## Recommended Repository Shape
 
-- 最好用私有仓库
-- 一个 vault 一个仓库
-- 附件很多时，再单独考虑云盘，不要先把 Git 用坏
+- Use a private repository
+- Keep one vault per repository
+- If attachments grow large, solve storage separately instead of abusing Git
 
-## 这个 vault 已经做的保护
+## Protection Already Applied In This Vault
 
-- `.gitignore` 已排除 `workspace.json`
-- `.gitignore` 已排除 `Local REST API` 的敏感配置
-- `.gitignore` 已排除 `07 Resources` 下的大附件
+- `.gitignore` excludes `workspace.json`
+- `.gitignore` excludes sensitive Local REST API config
+- `.gitignore` excludes large resources under `07 Resources`
 
-## 本地初始化
+## Local Initialization
 
 ```bash
 cd "/Users/bai/Documents/Obsidian/Space"
@@ -27,7 +27,7 @@ git add .
 git commit -m "Initialize Obsidian workspace"
 ```
 
-## 接 GitHub 私有仓库
+## Connect A Private GitHub Repository
 
 ```bash
 cd "/Users/bai/Documents/Obsidian/Space"
@@ -36,22 +36,21 @@ git branch -M main
 git push -u origin main
 ```
 
-## 在 Obsidian 里怎么用 Git 插件
+## Use The Git Plugin In Obsidian
 
-- 打开 Command Palette
-- 搜 `Obsidian Git: Create backup`
-- 搜 `Obsidian Git: Pull`
-- 搜 `Obsidian Git: Open source control view`
+- Open the Command Palette
+- Run `Obsidian Git: Create backup`
+- Run `Obsidian Git: Pull`
+- Run `Obsidian Git: Open source control view`
 
-## 建议节奏
+## Recommended Rhythm
 
-- 每天收工前 `Create backup`
-- 换设备前先 `Create backup`
-- 开始工作前先 `Pull`
+- Run `Create backup` before the day ends
+- Run `Create backup` before switching devices
+- Run `Pull` before starting work on a device
 
-## 不建议
+## Avoid
 
-- 不要把公开仓库当默认选项
-- 不要把证书、token、客户隐私信息直接推上去
-- 不要让插件自动每几分钟 commit，一般会把历史刷烂
-
+- Do not use a public repository by default
+- Do not push certificates, tokens, or customer-sensitive information
+- Do not auto-commit every few minutes; it destroys signal in history

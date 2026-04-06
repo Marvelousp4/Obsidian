@@ -21,7 +21,7 @@ components: ["rds", "scene file"]
 tags: []
 ---
 
-# Hi Ross, we are trying to automate our map and scene creation part from greyorange side...
+# Hi Ross, we are trying to automate our map and scene creation part from GreyOrange side...
 
 ## Source Context
 
@@ -33,15 +33,15 @@ tags: []
 
 ## Problem
 
-Hi Ross, we are trying to automate our map and scene creation part from greyorange side. Till now we are able to build roboshop feature and functionalities in our application, and as next step, we need to complete scene creation and push that. Can you please provide details of any API which we can use to push the scene to RDS as we couldn't find it in the API doc.
+Hi Ross, we are trying to automate our map and scene creation part from GreyOrange side. Till now we are able to build roboshop feature and functionalities in our application, and as next step, we need to complete scene creation and push that. Can you please provide details of any API which we can use to push the scene to RDS as we couldn't find it in the API doc.
 
 ## Progress
 
-For similar task, is there any API for configuration using API call instead of using roboshop: 1. Setting callback url in Trigger for OrderStateChanged by calling API 2. Setting parameters config(like RHCR related configs etc.) by calling API 1. You need to edit and upload model file. 2. You can try following API, it's not http API, but robokit API. ‬‬‬‬⁠⁠⁠⁠‬‬‬⁠Set Robot Params Permanently - 飞书云文档
+For similar task, is there any API for configuration using API call instead of using roboshop: 1. Setting callback url in Trigger for OrderStateChanged by calling API 2. Setting parameters config(like RHCR related configs etc.) by calling API 1. You need to edit and upload model file. 2. You can try following API, it's not http API, but robokit API. ‬‬‬‬⁠⁠⁠⁠‬‬‬⁠Set Robot Params Permanently - Feishu doc
 
 ## Next Action
 
-You can check this link for upload scene file: ‬‬‬‬⁠上传场景 - 飞书云文档
+You can check this link for upload scene file: ‬‬‬‬⁠Upload scene - Feishu doc
 
 ## Metadata
 

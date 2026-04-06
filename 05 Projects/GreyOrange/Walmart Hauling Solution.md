@@ -7,7 +7,7 @@ site: "Walmart Hauling Solution"
 status: "stopped"
 owner: "bai"
 started: ""
-next: "确认该站点是否已经停用；如果停用，补一个停用结论并保留历史背景。"
+next: "Confirm whether this site is decommissioned and capture the historical context if it is."
 tags: []
 ---
 
@@ -19,10 +19,10 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Background
 
-- Source workbook: /Users/bai/Downloads/GO 人员简介.xlsx
+- Source workbook: GreyOrange internal workbook
 - Platform / robot type: 
 - Fleet size: 
-- Notes: 已停止
+- Notes: Deployment appears stopped.
 
 ## Site / Deployment Information
 
@@ -35,11 +35,11 @@ Track one live or historical GreyOrange deployment site as an operational object
 ## Current Status
 
 - Status: stopped
-- Operational note: 已停止
+- Operational note: Deployment appears stopped.
 
 ## Next Steps
 
-- [ ] 确认该站点是否已经停用；如果停用，补一个停用结论并保留历史背景。
+- [ ] Confirm whether this site is decommissioned and capture the historical context if it is.
 
 ## Open Issues
 

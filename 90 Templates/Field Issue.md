@@ -14,27 +14,27 @@ tags: []
 
 # <% tp.file.title %>
 
-## 现场现象
+## Field Symptoms
 
 
-## 环境
+## Environment
 
-- 设备:
-- 版本:
-- 网络:
-- 操作步骤:
+- Equipment:
+- Version:
+- Network:
+- Reproduction Steps:
 - Site:
 - Bot ID:
 
-## 根因分析
+## Root Cause Analysis
 
 
-## 解决办法
+## Resolution
 
 
-## 标准化结论
+## Reusable Conclusion
 
 
-## 是否值得沉淀成知识库
+## Should This Become Knowledge?
 
-- [ ] 是，转成正式知识笔记
+- [ ] Yes, promote this into a formal knowledge note

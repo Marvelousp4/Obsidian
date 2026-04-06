@@ -33,7 +33,7 @@ tags: []
 
 ## Problem
 
-XXL bot2 [Single fork, UL bot] 2D drawing, version1: Shared by Wellwit today. FYI 📎B300000000-564 CBD30H-YD自动导引托盘搬运车450高对比图(1).dwg U0ALSB28Q0Y/F0AB8J87BTM
+XXL bot2 [Single fork, UL bot] 2D drawing, version1: Shared by Wellwit today. FYI 📎B300000000-564 CBD30H-YD automated guided pallet truck 450-lift comparison drawing (1).dwg U0ALSB28Q0Y/F0AB8J87BTM
 
 ## Progress
 

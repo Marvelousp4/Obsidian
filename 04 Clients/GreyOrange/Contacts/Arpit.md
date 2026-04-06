@@ -10,7 +10,7 @@ location: ""
 relationship: "active"
 owner: "bai"
 verification_status: "company_verified_internal_contact"
-verification_sources: ["/Users/bai/Downloads/GO 人员简介.xlsx", "https://www.greyorange.com/", "https://www.linkedin.com/company/greyorange/"]
+verification_sources: ["GreyOrange internal workbook", "https://www.greyorange.com/", "https://www.linkedin.com/company/greyorange/"]
 last_contact: ""
 tags: []
 ---
@@ -23,7 +23,7 @@ tags: []
 - Team: Technical
 - Title: GreyOrange stakeholder
 - Email: 
-- Source: /Users/bai/Downloads/GO 人员简介.xlsx
+- Source: GreyOrange internal workbook
 
 ## What They Own
 
@@ -38,7 +38,7 @@ tags: []
 
 - status: company_verified_internal_contact
 - sources:
-  - /Users/bai/Downloads/GO 人员简介.xlsx
+  - GreyOrange internal workbook
   - https://www.greyorange.com/
   - https://www.linkedin.com/company/greyorange/
 

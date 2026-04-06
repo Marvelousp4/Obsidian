@@ -1,21 +1,21 @@
-# 工作中枢
+# Operating Hub
 
-先用这一个入口，不要一上来把 Obsidian 用成文件坟场。
+Use this page as the default entry point. The goal is not to build a note graveyard. The goal is to keep raw input moving into reusable account, project, issue, and knowledge assets.
 
-## 今天
+## Today
 
-- 用命令 `Daily notes: Open today's daily note` 打开今日日记
-- [[01 Inbox/收件箱|快速捕获]]
-- [[99 System/Workflow Guide|工作流说明]]
-- [[99 System/Daily Operating System|Daily OS]]
-- [[99 System/GitHub Sync|GitHub 同步]]
-- [[99 System/AI and Automation|AI / Agent]]
-- [[99 System/Command Playbook|Command 手册]]
-- [[99 System/AI Automation Stack|AI / Automation Stack]]
+- Run `Daily notes: Open today's daily note`
+- [[01 Inbox/Inbox|Quick Capture]]
+- [[99 System/Workflow Guide|Workflow Guide]]
+- [[99 System/Daily Operating System|Daily Operating System]]
+- [[99 System/GitHub Sync|GitHub Sync]]
+- [[99 System/AI and Automation|AI and Automation]]
+- [[99 System/Command Playbook|Command Playbook]]
+- [[99 System/AI Automation Stack|AI Automation Stack]]
 - [[99 System/MODEX 2026 Playbook|MODEX 2026 Playbook]]
-- [[99 System/Tool Division|工具分工]]
+- [[99 System/Tool Division|Tool Division]]
 
-## 快速入口
+## Navigation
 
 - [[03 Knowledge/Tech/Tech Index]]
 - [[03 Knowledge/Industry/Industry Index]]
@@ -29,7 +29,7 @@
 - [[00 Dashboard/Support Board|Support Board]]
 - [[00 Dashboard/Knowledge Board|Knowledge Board]]
 
-## 今日视图
+## Recent Daily Notes
 
 ```dataview
 TABLE file.link AS Daily, week AS Week
@@ -39,26 +39,26 @@ SORT date DESC
 LIMIT 3
 ```
 
-## 活跃账户
+## Active Accounts
 
 ```dataview
-TABLE industry AS 行业, region AS 区域, last_contact AS 上次联系, next_contact AS 下次联系
+TABLE industry AS Industry, region AS Region, last_contact AS "Last Contact", next_contact AS "Next Contact"
 FROM "04 Clients"
 WHERE type = "account"
 SORT file.mtime DESC
 LIMIT 12
 ```
 
-## 进行中的项目 / 部署
+## Active Projects / Deployments
 
 ```dataview
-TABLE account AS 账户, project_kind AS 类型, site AS 站点, status AS 状态, next AS 下一步
+TABLE account AS Account, project_kind AS Type, site AS Site, status AS Status, next AS Next
 FROM "05 Projects"
 WHERE type = "project"
 SORT file.mtime DESC
 ```
 
-## 最近技术积累
+## Recent Tech Knowledge
 
 ```dataview
 TABLE tags, source, updated
@@ -68,7 +68,7 @@ SORT file.mtime DESC
 LIMIT 10
 ```
 
-## 最近行业积累
+## Recent Industry Knowledge
 
 ```dataview
 TABLE tags, source, updated
@@ -78,27 +78,27 @@ SORT file.mtime DESC
 LIMIT 10
 ```
 
-## 最近会议
+## Recent Meetings
 
 ```dataview
-TABLE date AS 日期, organizations AS 组织, project AS 项目
+TABLE date AS Date, organizations AS Organizations, project AS Project
 FROM "06 Meetings"
 WHERE type = "meeting"
 SORT date DESC
 LIMIT 10
 ```
 
-## 重点问题
+## Open Issues
 
 ```dataview
-TABLE client AS 客户, site AS 站点, category AS 类别, status AS 状态, priority AS 优先级, last_updated_date AS 更新
+TABLE client AS Client, site AS Site, category AS Category, status AS Status, priority AS Priority, last_updated_date AS Updated
 FROM "08 Issues"
 WHERE type = "issue" AND status != "resolved"
 SORT last_updated_date DESC
 LIMIT 15
 ```
 
-## 待办
+## Tasks
 
 ```tasks
 not done

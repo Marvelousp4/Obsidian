@@ -66,6 +66,6 @@ SORT last_updated_date DESC
 
 ## Next Moves
 
-- [ ] 把新增站点问题挂到正确的部署页，不要让问题漂在收件箱里。
-- [ ] 把重复出现的问题沉淀成 SOP 或正式知识卡片。
-- [ ] 每周复盘一次高频未解决问题，优先找反复出问题的站点。
+- [ ] Attach new site issues to the correct deployment note instead of leaving them floating in the inbox.
+- [ ] Promote repeated patterns into SOPs or formal knowledge notes.
+- [ ] Review high-frequency unresolved issues every week and prioritize the sites that keep repeating.
