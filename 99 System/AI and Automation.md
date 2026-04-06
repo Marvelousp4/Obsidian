@@ -29,3 +29,22 @@
 - OpenAI / Claude / Gemini：云模型
 - n8n / Raycast / Keyboard Maestro：自动化入口
 - 我这种外部 coding agent：通过 `Local REST API` 读写笔记
+
+## 已经给你准备好的自动整理脚本
+
+脚本位置：`99 System/scripts/ai_process_note.sh`
+
+用途：
+
+- 读取某条会议或问题笔记
+- 调 OpenAI 生成整理稿
+- 写回 `01 Inbox/AI Drafts/`
+
+示例：
+
+```bash
+export OPENAI_API_KEY="你的key"
+bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/ai_process_note.sh" "06 Meetings/客户A 需求会.md" discovery
+```
+
+建议先从 `discovery`、`support`、`issue` 三类开始。
