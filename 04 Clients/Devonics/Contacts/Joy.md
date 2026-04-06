@@ -17,24 +17,36 @@ tags: []
 
 # Joy
 
-          ## Profile
+## Profile
 
-          - Organization: Devonics
-          - Team: Supplier Coordination
-          - Title: China-based supplier and project coordination
-          - Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Organization: Devonics
+- Team: Supplier Coordination
+- Title: China-based supplier and project coordination
+- Email:
+- Phone:
+- Location:
+- Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
 
-          ## What They Own
+## What They Own
 
-          - Introduced as the China-side team member coordinating suppliers and projects.
+- Introduced as the China-side team member coordinating suppliers and projects.
 
-          ## Relationship Notes
+## Relationship Notes
 
-          - Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
-          - Public verification confidence is limited unless a company site was also confirmed.
+- Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
+- Public verification confidence is limited unless a company site was also confirmed.
 
-          ## Verification
+## Verification
 
-          - status: transcript_derived
-          - sources:
-- /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- status: transcript_derived
+- sources:
+  - /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+
+## Related Projects / Sites
+
+```dataview
+TABLE site, status, next
+FROM "05 Projects"
+WHERE type = "project" AND account = "Devonics"
+SORT file.name ASC
+```

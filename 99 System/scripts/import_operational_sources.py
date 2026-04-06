@@ -676,33 +676,35 @@ def import_devonics():
 
     for contact in DEVONICS_CONTACTS:
         org = contact["organization"]
-        body = dedent(
-            f"""
-            # {contact["name"]}
-
-            ## Profile
-
-            - Organization: {org}
-            - Team: {contact["team"]}
-            - Title: {contact["title"]}
-            - Source: {DEVONICS_TRANSCRIPT}
-
-            ## What They Own
-
-            {chr(10).join(f"- {line}" for line in contact["notes"])}
-
-            ## Relationship Notes
-
-            - Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
-            - Public verification confidence is limited unless a company site was also confirmed.
-
-            ## Verification
-
-            - status: {contact["verification_status"]}
-            - sources:
-{chr(10).join(f"  - {source}" for source in contact["verification_sources"])}
-            """
-        ).strip()
+        note_lines = "\n".join(f"- {line}" for line in contact["notes"]) or "- Needs follow-up"
+        sources_block = "\n".join(f"  - {source}" for source in contact["verification_sources"])
+        body = (
+            f"# {contact['name']}\n\n"
+            f"## Profile\n\n"
+            f"- Organization: {org}\n"
+            f"- Team: {contact['team']}\n"
+            f"- Title: {contact['title']}\n"
+            f"- Email:\n"
+            f"- Phone:\n"
+            f"- Location:\n"
+            f"- Source: {DEVONICS_TRANSCRIPT}\n\n"
+            f"## What They Own\n\n"
+            f"{note_lines}\n\n"
+            f"## Relationship Notes\n\n"
+            f"- Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.\n"
+            f"- Public verification confidence is limited unless a company site was also confirmed.\n\n"
+            f"## Verification\n\n"
+            f"- status: {contact['verification_status']}\n"
+            f"- sources:\n"
+            f"{sources_block}\n\n"
+            f"## Related Projects / Sites\n\n"
+            f"```dataview\n"
+            f"TABLE site, status, next\n"
+            f'FROM "05 Projects"\n'
+            f'WHERE type = "project" AND account = "{org}"\n'
+            f"SORT file.name ASC\n"
+            f"```"
+        )
         fm = {
             "type": "contact",
             "organization": org,

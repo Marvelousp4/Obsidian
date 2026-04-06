@@ -17,26 +17,38 @@ tags: []
 
 # Vincent
 
-            ## Profile
+## Profile
 
-            - Organization: Wellwit Robotics
-            - Team: Software
-            - Title: Software engineer
-            - Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Organization: Wellwit Robotics
+- Team: Software
+- Title: Software engineer
+- Email:
+- Phone:
+- Location:
+- Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
 
-            ## What They Own
+## What They Own
 
-            - Atlanta-based software engineer from the Wellwit team.
+- Atlanta-based software engineer from the Wellwit team.
 - Covered power budget, SLAM, maintenance, and integration details.
 
-            ## Relationship Notes
+## Relationship Notes
 
-            - Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
-            - Public verification confidence is limited unless a company site was also confirmed.
+- Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
+- Public verification confidence is limited unless a company site was also confirmed.
 
-            ## Verification
+## Verification
 
-            - status: company_verified_transcript_contact
-            - sources:
+- status: company_verified_transcript_contact
+- sources:
   - /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
   - https://wellwit.com/
+
+## Related Projects / Sites
+
+```dataview
+TABLE site, status, next
+FROM "05 Projects"
+WHERE type = "project" AND account = "Wellwit Robotics"
+SORT file.name ASC
+```

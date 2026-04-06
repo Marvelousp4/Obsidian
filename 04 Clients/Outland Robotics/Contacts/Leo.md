@@ -17,25 +17,37 @@ tags: []
 
 # Leo
 
-            ## Profile
+## Profile
 
-            - Organization: Outland Robotics
-            - Team: Founding Team
-            - Title: CEO; CTO
-            - Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Organization: Outland Robotics
+- Team: Founding Team
+- Title: CEO; CTO
+- Email:
+- Phone:
+- Location:
+- Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
 
-            ## What They Own
+## What They Own
 
-            - Introduced as CEO and CTO of Outland Robotics.
+- Introduced as CEO and CTO of Outland Robotics.
 - Asked about deployments, applications, and commercialization path.
 
-            ## Relationship Notes
+## Relationship Notes
 
-            - Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
-            - Public verification confidence is limited unless a company site was also confirmed.
+- Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
+- Public verification confidence is limited unless a company site was also confirmed.
 
-            ## Verification
+## Verification
 
-            - status: transcript_derived
-            - sources:
+- status: transcript_derived
+- sources:
   - /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+
+## Related Projects / Sites
+
+```dataview
+TABLE site, status, next
+FROM "05 Projects"
+WHERE type = "project" AND account = "Outland Robotics"
+SORT file.name ASC
+```

@@ -17,25 +17,37 @@ tags: []
 
 # Samantha
 
-          ## Profile
+## Profile
 
-          - Organization: Wellwit Robotics
-          - Team: Sales
-          - Title: Overseas sales manager
-          - Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Organization: Wellwit Robotics
+- Team: Sales
+- Title: Overseas sales manager
+- Email:
+- Phone:
+- Location:
+- Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
 
-          ## What They Own
+## What They Own
 
-          - Introduced as overseas sales manager of Wellwit and owner of the Devonics project.
+- Introduced as overseas sales manager of Wellwit and owner of the Devonics project.
 
-          ## Relationship Notes
+## Relationship Notes
 
-          - Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
-          - Public verification confidence is limited unless a company site was also confirmed.
+- Contact was extracted from the 2026-04-05 Devonics / Outland / Wellwit discovery call.
+- Public verification confidence is limited unless a company site was also confirmed.
 
-          ## Verification
+## Verification
 
-          - status: company_verified_transcript_contact
-          - sources:
-- /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
-- https://wellwit.com/
+- status: company_verified_transcript_contact
+- sources:
+  - /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+  - https://wellwit.com/
+
+## Related Projects / Sites
+
+```dataview
+TABLE site, status, next
+FROM "05 Projects"
+WHERE type = "project" AND account = "Wellwit Robotics"
+SORT file.name ASC
+```
