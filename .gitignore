@@ -6,5 +6,6 @@
 .smart-env
 .obsidian/graph.json
 99 System/scripts/.env
+__pycache__/
 07 Resources/*
 !07 Resources/.gitkeep

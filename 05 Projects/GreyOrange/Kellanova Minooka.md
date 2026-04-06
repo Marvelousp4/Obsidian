@@ -1,0 +1,53 @@
+---
+type: "project"
+account: "GreyOrange"
+client: "GreyOrange"
+project_kind: "site_deployment"
+site: "Kellanova Minooka"
+status: "active"
+owner: "bai"
+started: ""
+next: "Link current site issues and update latest operating status."
+tags: []
+---
+
+# GreyOrange - Kellanova Minooka
+
+## Goal
+
+Track one live or historical GreyOrange deployment site as an operational object that can collect meetings, issues, local context, and follow-ups.
+
+## Background
+
+- Source workbook: /Users/bai/Downloads/GO 人员简介.xlsx
+- Platform / robot type: AP
+- Fleet size: 6
+- Notes: src2000
+
+## Site / Deployment Information
+
+- Customer: GreyOrange
+- Site: Kellanova Minooka
+- Deployment Type: AP
+- Fleet Size: 6
+- Address: Kellanova Minooka 
+NUSC - Kellogg Sales Co 1499 - NSD – DC – Minooka Annex~ IL, 1460 Cargo 
+Court, Minooka, Illinois, United States, 60447-9430 
+
+## Current Status
+
+- Status: active
+- Operational note: src2000
+
+## Next Steps
+
+- [ ] Link current site issues and update latest operating status.
+
+## Open Issues
+
+```dataview
+TABLE category, status, severity, last_updated_date
+FROM "08 Issues/GreyOrange"
+WHERE type = "issue" AND site = "Kellanova Minooka"
+SORT last_updated_date DESC
+```

@@ -123,10 +123,10 @@
         },
         {
           "id": "qa-client-card",
-          "name": "Capture: Client Card",
+          "name": "Capture: Account Card",
           "type": "Template",
           "command": true,
-          "templatePath": "90 Templates/Client.md",
+          "templatePath": "90 Templates/Account.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{VALUE:title}}"

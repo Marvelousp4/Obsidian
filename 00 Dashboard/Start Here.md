@@ -19,8 +19,10 @@
 - [[03 Knowledge/Tech/Tech Index]]
 - [[03 Knowledge/Industry/Industry Index]]
 - [[04 Clients/Client Index]]
+- [[04 Clients/Contact Index]]
 - [[05 Projects/Project Index]]
 - [[06 Meetings/Meeting Index]]
+- [[08 Issues/Issue Index]]
 - [[00 Dashboard/Operations Board|Operations Board]]
 
 ## 进行中的项目

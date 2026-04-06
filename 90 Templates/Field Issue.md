@@ -2,8 +2,11 @@
 type: issue
 source_type: field
 severity: medium
+account:
 client:
 project:
+site:
+category:
 status: open
 date: <% tp.date.now("YYYY-MM-DD") %>
 tags: []
@@ -20,6 +23,8 @@ tags: []
 - 版本:
 - 网络:
 - 操作步骤:
+- Site:
+- Bot ID:
 
 ## 根因分析
 
@@ -33,4 +38,3 @@ tags: []
 ## 是否值得沉淀成知识库
 
 - [ ] 是，转成正式知识笔记
-
