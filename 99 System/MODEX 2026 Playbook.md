@@ -47,7 +47,7 @@ Focus on only four outputs:
 
 ## Every Evening
 
-1. Open [[00 Dashboard/CRM Board]]
+1. Open [[00 Dashboard/Boards/CRM Board]]
 2. Process every `Expo Conversation` from that day
 3. Add `account / contacts / next action` to each record
 4. Promote high-value leads into formal account or project notes

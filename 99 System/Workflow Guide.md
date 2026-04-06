@@ -33,7 +33,7 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 
 ## Weekly And Monthly Control
 
-1. Use `00 Dashboard/Weekly Focus Board` as the short-horizon execution board
+1. Use `00 Dashboard/Boards/Weekly Focus Board` as the short-horizon execution board
 2. Use weekly reviews to compress scattered notes into account, project, and knowledge shifts
 3. Use monthly reviews to identify repeat patterns, pipeline movement, and support themes
 4. Do not turn the Kanban board into a second knowledge base

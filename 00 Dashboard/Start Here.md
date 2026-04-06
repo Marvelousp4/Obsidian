@@ -6,17 +6,16 @@ Use this page as the default entry point. The goal is not to build a note gravey
 
 - Run `Daily notes: Open today's daily note`
 - [[01 Inbox/Inbox|Quick Capture]]
-- [[00 Dashboard/Weekly Focus Board|Weekly Focus Board]]
+- [[00 Dashboard/Boards/Weekly Focus Board|Weekly Focus Board]]
 - [[99 System/System Index|System Index]]
 
 ## Navigation
 
 - [[00 Dashboard/Databases|Databases]]
-- [[00 Dashboard/CRM Board|CRM Board]]
-- [[00 Dashboard/Support Board|Support Board]]
-- [[00 Dashboard/Knowledge Board|Knowledge Board]]
-- [[02 Daily/Weekly]]
-- [[02 Daily/Monthly]]
+- [[00 Dashboard/Boards/CRM Board|CRM Board]]
+- [[00 Dashboard/Boards/Support Board|Support Board]]
+- [[00 Dashboard/Boards/Knowledge Board|Knowledge Board]]
+- [[09 Reviews/Reviews Index|Reviews Index]]
 
 ## Indices
 
@@ -33,7 +32,7 @@ Use this page as the default entry point. The goal is not to build a note gravey
 ```dataview
 TABLE file.link AS Daily, week AS Week
 FROM "02 Daily"
-WHERE type = "daily" AND !contains(file.path, "02 Daily/Weekly") AND !contains(file.path, "02 Daily/Monthly")
+WHERE type = "daily"
 SORT date DESC
 LIMIT 3
 ```
@@ -42,7 +41,7 @@ LIMIT 3
 
 ```dataview
 TABLE file.link AS Weekly, date
-FROM "02 Daily/Weekly"
+FROM "09 Reviews/Weekly"
 WHERE type = "review"
 SORT file.name DESC
 LIMIT 4
@@ -50,7 +49,7 @@ LIMIT 4
 
 ```dataview
 TABLE file.link AS Monthly, date
-FROM "02 Daily/Monthly"
+FROM "09 Reviews/Monthly"
 WHERE type = "review"
 SORT file.name DESC
 LIMIT 3

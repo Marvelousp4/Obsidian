@@ -2,10 +2,10 @@
 
 Use these only when you want table-style scanning or bulk edits. They are not the main capture path.
 
-- [[00 Dashboard/Accounts Database|Accounts Database]]
-- [[00 Dashboard/Contacts Database|Contacts Database]]
-- [[00 Dashboard/Projects Database|Projects Database]]
-- [[00 Dashboard/Issues Database|Issues Database]]
+- [[00 Dashboard/Databases/Accounts Database|Accounts Database]]
+- [[00 Dashboard/Databases/Contacts Database|Contacts Database]]
+- [[00 Dashboard/Databases/Projects Database|Projects Database]]
+- [[00 Dashboard/Databases/Issues Database|Issues Database]]
 
 ## When To Use Them
 

@@ -50,7 +50,7 @@ You do not need every command. You need a small set that keeps capture, retrieva
 - `Kanban: View as table`
 - `Kanban: View as list`
 
-Use [[00 Dashboard/Weekly Focus Board]] for weekly execution control, not for deep knowledge storage.
+Use [[00 Dashboard/Boards/Weekly Focus Board]] for weekly execution control, not for deep knowledge storage.
 
 ## Outliner
 

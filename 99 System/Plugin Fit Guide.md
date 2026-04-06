@@ -11,13 +11,13 @@ These plugins are not equal. Some belong in the core operating system. Some are 
 
 ### Periodic Notes
 
-- Weekly reviews live in `02 Daily/Weekly`
-- Monthly reviews live in `02 Daily/Monthly`
+- Weekly reviews live in `09 Reviews/Weekly`
+- Monthly reviews live in `09 Reviews/Monthly`
 - Use it for review rhythm, not for raw capture
 
 ### Kanban
 
-- Use [[00 Dashboard/Weekly Focus Board]] as the weekly execution board
+- Use [[00 Dashboard/Boards/Weekly Focus Board]] as the weekly execution board
 - Best for short-horizon work control, not for long-form knowledge
 
 ### Outliner

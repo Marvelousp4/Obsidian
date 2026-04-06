@@ -138,14 +138,11 @@ columns:
       task_hide_completed: true
       footer_type: none
       persist_changes: false
-filters:
-  enabled: false
-  conditions: []
 config:
   remove_field_when_delete_column: false
   cell_size: normal
   sticky_first_column: false
-  group_folder_column: ""
+  group_folder_column: 
   remove_empty_folders: false
   automatically_group_files: false
   hoist_files_with_empty_attributes: true
@@ -159,7 +156,7 @@ config:
   source_form_result: "FROM \"04 Clients\" WHERE type = \"account\""
   source_destination_path: 04 Clients
   row_templates_folder: /
-  current_row_template: ""
+  current_row_template: 
   pagination_size: 20
   font_size: 16
   enable_js_formulas: false
@@ -171,4 +168,7 @@ config:
   metadata_date_format: "yyyy-MM-dd HH:mm:ss"
   enable_footer: false
   implementation: default
+filters:
+  enabled: false
+  conditions:
 ```
