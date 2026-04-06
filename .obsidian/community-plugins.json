@@ -16,5 +16,8 @@
   "smart-connections",
   "tag-wrangler",
   "obsidian-local-rest-api",
-  "obsidian-excalidraw-plugin"
+  "obsidian-excalidraw-plugin",
+  "copilot",
+  "editing-toolbar",
+  "obsidian-mind-map"
 ]

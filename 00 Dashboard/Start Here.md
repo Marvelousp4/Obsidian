@@ -30,6 +30,10 @@ Use this page as the default entry point. The goal is not to build a note gravey
 - [[00 Dashboard/CRM Board|CRM Board]]
 - [[00 Dashboard/Support Board|Support Board]]
 - [[00 Dashboard/Knowledge Board|Knowledge Board]]
+- [[00 Dashboard/Accounts Database|Accounts Database]]
+- [[00 Dashboard/Contacts Database|Contacts Database]]
+- [[00 Dashboard/Projects Database|Projects Database]]
+- [[00 Dashboard/Issues Database|Issues Database]]
 - [[02 Daily/Weekly]]
 - [[02 Daily/Monthly]]
 
