@@ -4,8 +4,8 @@
 
 1. Open the dashboard and today's daily note in the morning
 2. Capture all information during the day without over-classifying in real time
-3. Do one pass of sorting and linking in the afternoon or evening
-4. Update area and project next steps before the day ends
+3. Move high-value source material into `10 Raw`
+4. Do one pass of sorting, linking, and compiling in the afternoon or evening
 5. Run Git sync before closing the day
 
 ## Weekly And Monthly Rhythm
@@ -35,8 +35,10 @@
 
 ### 4. Learning And Research
 
+- Put markdown source material into `10 Raw`
 - Put reusable methods, summaries, and models into `05 Knowledge`
-- Keep raw source files in `07 Resources`
+- Keep binary source files in `07 Resources`
+- Create concept pages when multiple raw or compiled notes point to the same idea
 
 ### 5. Reviews
 
@@ -50,4 +52,5 @@
 - Pull action items out of meetings, projects, and knowledge notes
 - Reduce the inbox close to empty
 - Make sure important notes connect to at least one area, project, person, or work object
-- Run the AI processing script on the daily note or on important work notes
+- Run AI processing on the daily note or on important raw notes
+- Promote at least one important raw note into a compiled knowledge note when possible

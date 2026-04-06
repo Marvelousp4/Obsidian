@@ -9,9 +9,12 @@ These are the operating docs that matter. Keep this as the single reference page
 - [[99 System/Command Playbook|Command Playbook]]
 - [[99 System/AI and Automation|AI and Automation]]
 - [[99 System/GitHub Sync|GitHub Sync]]
+- [[99 System/Knowledge Factory|Knowledge Factory]]
+- [[99 System/Local and iCloud Sync|Local and iCloud Sync]]
 
 ## Structural Indices
 
+- [[10 Raw/Raw Index|Raw Index]]
 - [[03 Areas/Areas Index|Areas Index]]
 - [[04 Projects/Projects Index|Projects Index]]
 - [[05 Knowledge/Knowledge Index|Knowledge Index]]

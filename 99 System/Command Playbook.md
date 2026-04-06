@@ -79,8 +79,15 @@ Use this in daily notes and meetings when a thought naturally becomes nested.
 
 ## AI / Retrieval
 
-- `Smart Connections: Open: Connections view`
-- `Smart Connections: Open: Lookup view`
+- `Omnisearch: Vault search`
+- `Homepage: Open homepage`
+
+## Knowledge Factory CLI
+
+- `python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/raw_ingest.py" --help`
+- `python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/compile_raw_library.py" --help`
+- `python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/wiki_health_check.py" --help`
+- `bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_knowledge_factory.sh"`
 
 ## Six Good Hotkeys
 
@@ -88,7 +95,7 @@ Use this in daily notes and meetings when a thought naturally becomes nested.
 - `Cmd/Ctrl + Shift + D`: `Daily notes: Open today's daily note`
 - `Cmd/Ctrl + Shift + T`: `Templater: Create new note from template`
 - `Cmd/Ctrl + Shift + G`: `Git: Commit-and-sync`
-- `Cmd/Ctrl + Shift + L`: `Smart Connections: Open: Lookup view`
+- `Cmd/Ctrl + Shift + L`: `Homepage: Open homepage`
 - `Cmd/Ctrl + Shift + C`: `QuickAdd: Run QuickAdd`
 
 ## When To Use QuickAdd
@@ -112,6 +119,6 @@ If you forget the command name:
 1. Homepage for reset
 2. Daily note for raw input
 3. QuickAdd for formal capture
-4. Kanban for weekly control
-5. Periodic Notes for review compression
-6. Database views only for scanning and bulk cleanup
+4. `10 Raw` for durable source intake
+5. Kanban for weekly control
+6. Periodic Notes for review compression

@@ -8,3 +8,9 @@ FROM "04 Projects"
 WHERE type = "project"
 SORT file.mtime DESC
 ```
+
+## Knowledge Factory Support
+
+- Use `04 Projects` only for bounded initiatives.
+- Do not use projects as a dumping ground for source material.
+- Source material should enter through [[10 Raw/Raw Index|Raw Index]] first.

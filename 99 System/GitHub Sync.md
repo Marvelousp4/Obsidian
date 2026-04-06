@@ -3,6 +3,8 @@
 ## Principles
 
 - Use GitHub for version history and backup
+- Keep the primary vault local for speed
+- Treat iCloud as an optional mirror, not the primary working copy
 - Do not push sensitive config or large attachments by default
 - Obsidian is for writing, Git is for history
 
@@ -48,6 +50,13 @@ git push -u origin main
 - Run `Create backup` before the day ends
 - Run `Create backup` before switching devices
 - Run `Pull` before starting work on a device
+- Mirror to iCloud only when you actually need mobile access
+
+## Optional iCloud Mirror
+
+```bash
+bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/sync_space_to_icloud.sh"
+```
 
 ## Avoid
 
