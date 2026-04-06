@@ -2,7 +2,10 @@
 type: meeting
 meeting_type: support
 date: <% tp.date.now("YYYY-MM-DD") %>
+organizations: []
 participants: []
+contacts: []
+account:
 client:
 project:
 ticket:
@@ -27,3 +30,9 @@ tags: []
 
 - [ ] 
 
+## 关联
+
+- account:
+- project:
+- ticket:
+- contacts:

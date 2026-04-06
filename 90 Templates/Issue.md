@@ -4,6 +4,7 @@ client:
 account:
 project:
 site:
+vendor:
 status: open
 severity:
 priority:
@@ -34,5 +35,4 @@ tags: []
 
 
 ## Related People
-
 

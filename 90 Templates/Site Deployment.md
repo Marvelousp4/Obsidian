@@ -1,15 +1,16 @@
 ---
 type: project
-project_type: deployment_site
-client:
 account:
-site_name:
+client:
+project_kind: site_deployment
+site:
 platform:
 quantity:
 status: active
 region:
 address:
 owner: bai
+next:
 tags: []
 ---
 
@@ -20,6 +21,8 @@ tags: []
 
 ## Deployment Scope
 
+- Account:
+- Site:
 - Platform:
 - Quantity:
 - Address:
@@ -33,4 +36,3 @@ tags: []
 ## Next Actions
 
 - [ ] 
-

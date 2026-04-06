@@ -141,6 +141,25 @@
           "onePageInput": "always"
         },
         {
+          "id": "qa-contact-card",
+          "name": "Capture: Contact Card",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Contact.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "04 Clients"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
           "id": "qa-project-card",
           "name": "Capture: Project Card",
           "type": "Template",
@@ -154,6 +173,63 @@
             "enabled": true,
             "folders": [
               "05 Projects"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-site-deployment",
+          "name": "Capture: Site Deployment",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Site Deployment.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "05 Projects"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-issue-record",
+          "name": "Capture: Issue Record",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Issue.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "08 Issues"
+            ]
+          },
+          "openFile": true,
+          "onePageInput": "always"
+        },
+        {
+          "id": "qa-knowledge-note",
+          "name": "Capture: Knowledge Note",
+          "type": "Template",
+          "command": true,
+          "templatePath": "90 Templates/Knowledge Note.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{VALUE:title}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "03 Knowledge/Tech"
             ]
           },
           "openFile": true,

@@ -2,8 +2,12 @@
 type: meeting
 meeting_type: discovery
 date: <% tp.date.now("YYYY-MM-DD") %>
+organizations: []
 participants: []
+contacts: []
+account:
 client:
+project:
 opportunity_stage: new
 tags: []
 ---
@@ -30,3 +34,8 @@ tags: []
 
 - [ ] 
 
+## 关联
+
+- account:
+- project:
+- contacts:

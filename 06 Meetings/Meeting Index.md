@@ -1,8 +1,8 @@
 # Meeting Index
 
 ```dataview
-TABLE date, organizations, participants, project, client
+TABLE date, organizations, account, project
 FROM "06 Meetings"
 WHERE type = "meeting"
-SORT file.mtime DESC
+SORT date DESC
 ```

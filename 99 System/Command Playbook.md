@@ -22,8 +22,12 @@
 - `Capture: Discovery Meeting`
 - `Capture: Support Meeting`
 - `Capture: Event Note`
-- `Capture: Client Card`
+- `Capture: Account Card`
+- `Capture: Contact Card`
 - `Capture: Project Card`
+- `Capture: Site Deployment`
+- `Capture: Issue Record`
+- `Capture: Knowledge Note`
 
 ## Git 同步
 
