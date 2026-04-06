@@ -23,3 +23,7 @@ Keep daily life and long-term direction from fragmenting.
 - Personal admin
 - Life direction
 - Environment
+
+## Core Notes
+
+- [[06 People/Personal/Personal|Personal]]

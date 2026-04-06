@@ -8,5 +8,6 @@
 99 System/scripts/.env
 __pycache__/
 *.base
+/个人.md
 07 Resources/*
 !07 Resources/.gitkeep

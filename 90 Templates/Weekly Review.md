@@ -20,6 +20,13 @@ tags:
 
 - 
 
+### Health Metrics Snapshot
+
+- Average weight:
+- Training sessions:
+- Sleep trend:
+- Digestion / recovery notes:
+
 ## Finance
 
 - 

@@ -14,6 +14,19 @@ tags:
 - [ ] 
 - [ ] 
 
+## Health Metrics
+
+weight_kg:: 
+sleep_hours:: 
+steps:: 
+training_sessions:: 
+cardio_minutes:: 
+protein_g:: 
+water_l:: 
+energy_score:: 
+mood_score:: 
+digestion:: 
+
 ## Raw Input
 
 Write anything here first. Do not worry about classification yet.
