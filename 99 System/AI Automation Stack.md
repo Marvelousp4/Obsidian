@@ -6,6 +6,7 @@
 - `Smart Connections`：语义相关笔记
 - `Local REST API`：给外部脚本和 agent 开接口
 - `ai_process_note.sh`：把原始会议 / 问题记录整理成 AI 草稿
+- `verify_local_rest_api.sh`：检查本地 API 是否正常
 
 ## 第二层：一周内值得加
 

@@ -21,6 +21,7 @@
 - [[04 Clients/Client Index]]
 - [[05 Projects/Project Index]]
 - [[06 Meetings/Meeting Index]]
+- [[00 Dashboard/Operations Board|Operations Board]]
 
 ## 进行中的项目
 

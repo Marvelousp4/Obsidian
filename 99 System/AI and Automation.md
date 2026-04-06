@@ -34,6 +34,8 @@
 
 脚本位置：`99 System/scripts/ai_process_note.sh`
 
+推荐入口：`99 System/scripts/run_ai_process.sh`
+
 用途：
 
 - 读取某条会议或问题笔记
@@ -43,8 +45,9 @@
 示例：
 
 ```bash
-export OPENAI_API_KEY="你的key"
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/ai_process_note.sh" "06 Meetings/客户A 需求会.md" discovery
+cp "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env.example" "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env"
+# 然后把 .env 里的 key 改成你自己的
+bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "06 Meetings/客户A 需求会.md" discovery
 ```
 
 建议先从 `discovery`、`support`、`issue` 三类开始。

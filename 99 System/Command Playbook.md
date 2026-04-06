@@ -14,6 +14,17 @@
 - `Templater: Open insert template modal`
 - `QuickAdd: Run QuickAdd`
 
+## QuickAdd 已配置好的入口
+
+- `Capture: Industry News`
+- `Capture: Video Note`
+- `Capture: Field Issue`
+- `Capture: Discovery Meeting`
+- `Capture: Support Meeting`
+- `Capture: Event Note`
+- `Capture: Client Card`
+- `Capture: Project Card`
+
 ## Git 同步
 
 - `Git: Pull`
@@ -36,10 +47,11 @@
 
 ## QuickAdd 先怎么用
 
-目前最稳的用法是：
+现在最稳的用法是直接运行上面的 `Capture:*` 命令。
 
-1. 先运行 `Templater: Create new note from template`
-2. 选对应模板
-3. 再用 `QuickAdd` 作为统一入口
+如果你忘了命令名：
 
-原因：这样不会被 QuickAdd 的复杂宏配置卡住，先把捕获和沉淀跑顺。
+1. 打开 `QuickAdd: Run QuickAdd`
+2. 选对应入口
+3. 输入标题
+4. 直接开始记录

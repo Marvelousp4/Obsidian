@@ -3,7 +3,8 @@
 .obsidian/cache
 .obsidian/workspace-mobile.json
 .obsidian/plugins/obsidian-local-rest-api/data.json
-.obsidian/plugins/quickadd/data.json
 .smart-env
+.obsidian/graph.json
+99 System/scripts/.env
 07 Resources/*
 !07 Resources/.gitkeep
