@@ -6,11 +6,13 @@ Use this page as the default entry point. The goal is not to build a note gravey
 
 - Run `Daily notes: Open today's daily note`
 - [[01 Inbox/Inbox|Quick Capture]]
+- [[00 Dashboard/Weekly Focus Board|Weekly Focus Board]]
 - [[99 System/Workflow Guide|Workflow Guide]]
 - [[99 System/Daily Operating System|Daily Operating System]]
 - [[99 System/GitHub Sync|GitHub Sync]]
 - [[99 System/AI and Automation|AI and Automation]]
 - [[99 System/Command Playbook|Command Playbook]]
+- [[99 System/Plugin Fit Guide|Plugin Fit Guide]]
 - [[99 System/AI Automation Stack|AI Automation Stack]]
 - [[99 System/MODEX 2026 Playbook|MODEX 2026 Playbook]]
 - [[99 System/Tool Division|Tool Division]]
@@ -28,14 +30,34 @@ Use this page as the default entry point. The goal is not to build a note gravey
 - [[00 Dashboard/CRM Board|CRM Board]]
 - [[00 Dashboard/Support Board|Support Board]]
 - [[00 Dashboard/Knowledge Board|Knowledge Board]]
+- [[02 Daily/Weekly]]
+- [[02 Daily/Monthly]]
 
 ## Recent Daily Notes
 
 ```dataview
 TABLE file.link AS Daily, week AS Week
 FROM "02 Daily"
-WHERE type = "daily"
+WHERE type = "daily" AND !contains(file.path, "02 Daily/Weekly") AND !contains(file.path, "02 Daily/Monthly")
 SORT date DESC
+LIMIT 3
+```
+
+## Review Rhythm
+
+```dataview
+TABLE file.link AS Weekly, date
+FROM "02 Daily/Weekly"
+WHERE type = "review"
+SORT file.name DESC
+LIMIT 4
+```
+
+```dataview
+TABLE file.link AS Monthly, date
+FROM "02 Daily/Monthly"
+WHERE type = "review"
+SORT file.name DESC
 LIMIT 3
 ```
 

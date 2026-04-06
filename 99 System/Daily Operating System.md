@@ -8,6 +8,13 @@
 4. Update account and project next steps before the workday ends
 5. Run Git sync before closing the day
 
+## Weekly And Monthly Rhythm
+
+- Use the weekly note to review account movement, project risk, and reusable technical lessons
+- Use the monthly note to collapse multiple weeks into operating direction
+- Use the weekly focus board for active execution, not archival reference
+- If a task survives multiple weekly reviews, either redefine it or delete it
+
 ## How Your Six Input Types Enter The System
 
 ### 1. Robotics Industry News

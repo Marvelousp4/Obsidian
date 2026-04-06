@@ -4,6 +4,7 @@ You do not need every command. You need a small set that keeps capture, retrieva
 
 ## Daily Open
 
+- `Homepage: Open homepage`
 - `Daily notes: Open today's daily note`
 - `Calendar: Open view`
 - `Omnisearch: Vault search`
@@ -33,6 +34,37 @@ You do not need every command. You need a small set that keeps capture, retrieva
 - `Capture: Industry News`
 - `Capture: Event Note`
 - `Capture: Knowledge Note`
+
+## Periodic Reviews
+
+- Search `Periodic Notes` in the command palette
+- Open or create the current weekly review
+- Open or create the current monthly review
+
+## Kanban
+
+- `Kanban: Create new board`
+- `Kanban: Toggle between Kanban and markdown mode`
+- `Kanban: Add a list`
+- `Kanban: View as board`
+- `Kanban: View as table`
+- `Kanban: View as list`
+
+Use [[00 Dashboard/Weekly Focus Board]] for weekly execution control, not for deep knowledge storage.
+
+## Outliner
+
+- `Outliner: Fold the list`
+- `Outliner: Unfold the list`
+- `Outliner: Move list and sublists up`
+- `Outliner: Move list and sublists down`
+
+Use this in daily notes and meetings when a thought naturally becomes nested.
+
+## PDF And Tags
+
+- Use `PDF++` when reading reports and manuals in `07 Resources`
+- Use `Tag Wrangler` from the tag pane context menu when a tag needs rename or merge
 
 ## Git Sync
 
@@ -69,3 +101,11 @@ If you forget the command name:
 3. Pick the capture flow
 4. Enter the title
 5. Start writing
+
+## Default Plugin Stack
+
+1. Homepage for reset
+2. Daily note for raw input
+3. QuickAdd for formal capture
+4. Kanban for weekly control
+5. Periodic Notes for review compression

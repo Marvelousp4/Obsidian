@@ -1,14 +1,20 @@
 {
   "calendar": "1.5.10",
+  "homepage": "4.4.0",
   "dataview": "0.5.68",
   "dbfolder": "3.5.1",
   "obsidian-excalidraw-plugin": "2.22.0",
   "obsidian-git": "2.38.0",
+  "obsidian-kanban": "2.0.51",
   "obsidian-linter": "1.31.2",
   "obsidian-local-rest-api": "3.6.0",
+  "obsidian-outliner": "4.10.0",
   "obsidian-tasks-plugin": "7.23.1",
   "omnisearch": "1.28.2",
+  "pdf-plus": "0.40.31",
+  "periodic-notes": "0.0.17",
   "quickadd": "2.12.0",
   "smart-connections": "4.3.0",
+  "tag-wrangler": "0.6.4",
   "templater-obsidian": "2.18.1"
 }

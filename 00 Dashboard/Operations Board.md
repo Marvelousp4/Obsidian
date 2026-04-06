@@ -1,5 +1,12 @@
 # Operations Board
 
+## Control Surface
+
+- [[00 Dashboard/Start Here|Operating Hub]]
+- [[00 Dashboard/Weekly Focus Board|Weekly Focus Board]]
+- [[02 Daily/Weekly]]
+- [[02 Daily/Monthly]]
+
 ## Active Accounts
 
 ```dataview

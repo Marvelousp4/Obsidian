@@ -31,6 +31,13 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 5. Before the day ends, move useful output into account, project, meeting, issue, or knowledge notes
 6. Run Git backup
 
+## Weekly And Monthly Control
+
+1. Use `00 Dashboard/Weekly Focus Board` as the short-horizon execution board
+2. Use weekly reviews to compress scattered notes into account, project, and knowledge shifts
+3. Use monthly reviews to identify repeat patterns, pipeline movement, and support themes
+4. Do not turn the Kanban board into a second knowledge base
+
 ## Note-Taking Rules
 
 - One note should primarily represent one object
@@ -59,3 +66,4 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 - [[99 System/Daily Operating System]]
 - [[99 System/GitHub Sync]]
 - [[99 System/AI and Automation]]
+- [[99 System/Plugin Fit Guide]]
