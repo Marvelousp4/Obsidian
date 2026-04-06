@@ -14,19 +14,24 @@
 - `Templater: Open insert template modal`
 - `QuickAdd: Run QuickAdd`
 
-## QuickAdd 已配置好的入口
+## QuickAdd 现在的分组
 
-- `Capture: Industry News`
-- `Capture: Video Note`
-- `Capture: Field Issue`
-- `Capture: Discovery Meeting`
-- `Capture: Support Meeting`
-- `Capture: Event Note`
+- `CRM Capture`：账户、联系人、Discovery、展会对话
+- `Delivery And Support Capture`：项目、站点、现场问题、支持会议、正式 issue
+- `Research And Intel Capture`：行业新闻、视频、展会观察、知识卡片
+
+## 最常用的直接命令
+
 - `Capture: Account Card`
 - `Capture: Contact Card`
+- `Capture: Discovery Meeting`
+- `Capture: Expo Conversation`
 - `Capture: Project Card`
 - `Capture: Site Deployment`
+- `Capture: Field Issue`
 - `Capture: Issue Record`
+- `Capture: Industry News`
+- `Capture: Event Note`
 - `Capture: Knowledge Note`
 
 ## Git 同步
@@ -51,11 +56,15 @@
 
 ## QuickAdd 先怎么用
 
-现在最稳的用法是直接运行上面的 `Capture:*` 命令。
+现在最稳的用法有两种：
+
+1. 平时直接运行上面的 `Capture:*` 命令
+2. 场景不确定时，打开 `QuickAdd: Run QuickAdd` 后再进入分组菜单
 
 如果你忘了命令名：
 
 1. 打开 `QuickAdd: Run QuickAdd`
-2. 选对应入口
-3. 输入标题
-4. 直接开始记录
+2. 先选分组
+3. 再选对应入口
+4. 输入标题
+5. 直接开始记录

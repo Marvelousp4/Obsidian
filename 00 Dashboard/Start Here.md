@@ -12,6 +12,7 @@
 - [[99 System/AI and Automation|AI / Agent]]
 - [[99 System/Command Playbook|Command 手册]]
 - [[99 System/AI Automation Stack|AI / Automation Stack]]
+- [[99 System/MODEX 2026 Playbook|MODEX 2026 Playbook]]
 - [[99 System/Tool Division|工具分工]]
 
 ## 快速入口
