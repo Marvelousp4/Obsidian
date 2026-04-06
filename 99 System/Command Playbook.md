@@ -109,3 +109,4 @@ If you forget the command name:
 3. QuickAdd for formal capture
 4. Kanban for weekly control
 5. Periodic Notes for review compression
+6. Database views only for scanning and bulk cleanup

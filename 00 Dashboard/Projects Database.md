@@ -5,7 +5,142 @@ database-plugin: basic
 ```yaml:dbfolder
 name: Projects Database
 description: Project and deployment records in a database view.
-columns: {}
+columns:
+  __file__:
+    key: __file__
+    id: __file__
+    input: markdown
+    label: File
+    accessorKey: __file__
+    isMetadata: true
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 0
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: true
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  account:
+    key: account
+    id: account
+    input: text
+    label: Account
+    accessorKey: account
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 1
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  project_kind:
+    key: project_kind
+    id: project_kind
+    input: text
+    label: Type
+    accessorKey: project_kind
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 2
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  site:
+    key: site
+    id: site
+    input: text
+    label: Site
+    accessorKey: site
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 3
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  status:
+    key: status
+    id: status
+    input: text
+    label: Status
+    accessorKey: status
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 4
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  next:
+    key: next
+    id: next
+    input: text
+    label: Next
+    accessorKey: next
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 5
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+filters:
+  enabled: false
+  conditions: []
 config:
   remove_field_when_delete_column: false
   cell_size: normal
@@ -21,7 +156,7 @@ config:
   show_metadata_outlinks: false
   show_metadata_tags: false
   source_data: query
-  source_form_result: 'FROM "05 Projects" WHERE type = "project"'
+  source_form_result: "FROM \"05 Projects\" WHERE type = \"project\""
   source_destination_path: 05 Projects
   row_templates_folder: /
   current_row_template: ""
@@ -36,7 +171,4 @@ config:
   metadata_date_format: "yyyy-MM-dd HH:mm:ss"
   enable_footer: false
   implementation: default
-filters:
-  enabled: false
-  conditions: []
 ```

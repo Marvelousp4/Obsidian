@@ -44,6 +44,7 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 - Write conclusions, not just links
 - Accounts, contacts, projects, meetings, and issues should link to each other
 - Put important fields in YAML when possible so Dataview can read them
+- Use database views for review and cleanup, not as the primary writing surface
 
 ## When To Create Which Note
 

@@ -7,17 +7,18 @@ Use this page as the default entry point. The goal is not to build a note gravey
 - Run `Daily notes: Open today's daily note`
 - [[01 Inbox/Inbox|Quick Capture]]
 - [[00 Dashboard/Weekly Focus Board|Weekly Focus Board]]
-- [[99 System/Workflow Guide|Workflow Guide]]
-- [[99 System/Daily Operating System|Daily Operating System]]
-- [[99 System/GitHub Sync|GitHub Sync]]
-- [[99 System/AI and Automation|AI and Automation]]
-- [[99 System/Command Playbook|Command Playbook]]
-- [[99 System/Plugin Fit Guide|Plugin Fit Guide]]
-- [[99 System/AI Automation Stack|AI Automation Stack]]
-- [[99 System/MODEX 2026 Playbook|MODEX 2026 Playbook]]
-- [[99 System/Tool Division|Tool Division]]
+- [[99 System/System Index|System Index]]
 
 ## Navigation
+
+- [[00 Dashboard/Databases|Databases]]
+- [[00 Dashboard/CRM Board|CRM Board]]
+- [[00 Dashboard/Support Board|Support Board]]
+- [[00 Dashboard/Knowledge Board|Knowledge Board]]
+- [[02 Daily/Weekly]]
+- [[02 Daily/Monthly]]
+
+## Indices
 
 - [[03 Knowledge/Tech/Tech Index]]
 - [[03 Knowledge/Industry/Industry Index]]
@@ -26,16 +27,6 @@ Use this page as the default entry point. The goal is not to build a note gravey
 - [[05 Projects/Project Index]]
 - [[06 Meetings/Meeting Index]]
 - [[08 Issues/Issue Index]]
-- [[00 Dashboard/Operations Board|Operations Board]]
-- [[00 Dashboard/CRM Board|CRM Board]]
-- [[00 Dashboard/Support Board|Support Board]]
-- [[00 Dashboard/Knowledge Board|Knowledge Board]]
-- [[00 Dashboard/Accounts Database|Accounts Database]]
-- [[00 Dashboard/Contacts Database|Contacts Database]]
-- [[00 Dashboard/Projects Database|Projects Database]]
-- [[00 Dashboard/Issues Database|Issues Database]]
-- [[02 Daily/Weekly]]
-- [[02 Daily/Monthly]]
 
 ## Recent Daily Notes
 

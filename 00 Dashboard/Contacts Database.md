@@ -28,6 +28,141 @@ columns:
       task_hide_completed: true
       footer_type: none
       persist_changes: false
+  organization:
+    key: organization
+    id: organization
+    input: text
+    label: Organization
+    accessorKey: organization
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 1
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  team:
+    key: team
+    id: team
+    input: text
+    label: Team
+    accessorKey: team
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 2
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  title:
+    key: title
+    id: title
+    input: text
+    label: Title
+    accessorKey: title
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 3
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  relationship:
+    key: relationship
+    id: relationship
+    input: text
+    label: Relationship
+    accessorKey: relationship
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 4
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  last_contact:
+    key: last_contact
+    id: last_contact
+    input: calendar
+    label: Last Contact
+    accessorKey: last_contact
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 5
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+  verification_status:
+    key: verification_status
+    id: verification_status
+    input: text
+    label: Verification
+    accessorKey: verification_status
+    isMetadata: false
+    skipPersist: false
+    isDragDisabled: false
+    csvCandidate: true
+    position: 6
+    isHidden: false
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+      footer_type: none
+      persist_changes: false
+filters:
+  enabled: false
+  conditions: []
 config:
   remove_field_when_delete_column: false
   cell_size: normal
@@ -58,7 +193,4 @@ config:
   metadata_date_format: "yyyy-MM-dd HH:mm:ss"
   enable_footer: false
   implementation: default
-filters:
-  enabled: false
-  conditions: []
 ```
