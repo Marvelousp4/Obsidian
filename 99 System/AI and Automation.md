@@ -38,6 +38,7 @@ Scan the whole wiki for:
 1. Use `Omnisearch` for normal retrieval
 2. Use `Local REST API` for automation, sync, or external AI workflows
 3. Use `10 Raw` as the AI compile queue, not as a permanent dumping ground
+4. Use Dataview boards for status, not separate database plugins
 
 ## Why This Vault Does Not Rely On AI Chat Plugins
 

@@ -46,11 +46,10 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 
 ## Weekly And Monthly Control
 
-1. Use `00 Dashboard/Boards/Weekly Focus Board` as the short-horizon execution board
-2. Use weekly reviews to compress scattered notes into area, project, and knowledge shifts
-3. Use monthly reviews to identify repeat patterns across work and life
-4. Do not turn the Kanban board into a second knowledge base
-5. Run a periodic wiki health check so the knowledge graph does not rot
+1. Use weekly reviews to compress scattered notes into area, project, and knowledge shifts
+2. Use monthly reviews to identify repeat patterns across work and life
+3. Use `Work Control Board` for work execution status instead of maintaining a second task board
+4. Run a periodic wiki health check so the knowledge graph does not rot
 
 ## Note-Taking Rules
 
@@ -58,7 +57,7 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 2. Write conclusions, not just links
 3. Related objects should link to each other
 4. Put important fields in YAML when possible so Dataview can read them
-5. Use database views for review and cleanup, not as the primary writing surface
+5. Use boards and indices for review and cleanup, not as the primary writing surface
 
 ## When To Create Which Note
 
@@ -82,7 +81,6 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 ## Next References
 
 - [[99 System/Daily Operating System]]
-- [[99 System/GitHub Sync]]
 - [[99 System/AI and Automation]]
 - [[99 System/Knowledge Factory]]
-- [[99 System/Plugin Fit Guide]]
+- [[99 System/Sync]]

@@ -12,7 +12,7 @@
 
 - Use the weekly note to review work, health, finance, learning, and relationship movement
 - Use the monthly note to collapse multiple weeks into direction
-- Use the weekly focus board for active execution, not archival reference
+- Use `Work Control Board` for active work execution status
 - If a task survives multiple weekly reviews, either redefine it or delete it
 
 ## How Input Enters The System
@@ -54,3 +54,17 @@
 - Make sure important notes connect to at least one area, project, person, or work object
 - Run AI processing on the daily note or on important raw notes
 - Promote at least one important raw note into a compiled knowledge note when possible
+
+## Commands That Matter
+
+- `Homepage: Open homepage`
+- `Daily notes: Open today's daily note`
+- `Omnisearch: Vault search`
+- `QuickAdd: Run QuickAdd`
+- `Templater: Create new note from template`
+- `Git: Pull`
+- `Git: Commit-and-sync`
+
+## QuickAdd Rule
+
+Use QuickAdd only when the note deserves a formal object now. If the input is still mixed or unclear, keep writing in the daily note and triage it later.

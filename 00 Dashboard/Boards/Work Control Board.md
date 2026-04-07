@@ -11,6 +11,15 @@ WHERE type = "project"
 SORT account ASC, status ASC, file.name ASC
 ```
 
+## Account List
+
+```dataview
+TABLE stage AS Stage, industry AS Industry, region AS Region, last_contact AS "Last Contact", next_contact AS "Next Contact"
+FROM "09 Work/Accounts"
+WHERE type = "account"
+SORT file.name ASC
+```
+
 ## Field Issue List
 
 ```dataview
@@ -55,6 +64,16 @@ TABLE account AS Account, site AS Site, category AS Category, status AS Status, 
 FROM "09 Work/Issues"
 WHERE type = "issue" AND status != "resolved" AND assignee
 SORT assignee ASC, priority ASC, last_updated_date DESC
+```
+
+## Recent Meetings
+
+```dataview
+TABLE date AS Date, organizations AS Organizations, project AS Project, account AS Account
+FROM "09 Work/Meetings"
+WHERE type = "meeting"
+SORT date DESC
+LIMIT 20
 ```
 
 ## Priority Queue

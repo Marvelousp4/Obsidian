@@ -2,14 +2,16 @@
   "templater-obsidian",
   "quickadd",
   "dataview",
+  "omnisearch",
   "homepage",
   "periodic-notes",
-  "obsidian-kanban",
   "obsidian-tasks-plugin",
   "calendar",
   "obsidian-linter",
   "obsidian-git",
+  "obsidian-local-rest-api",
   "obsidian-outliner",
   "pdf-plus",
-  "tag-wrangler"
+  "tag-wrangler",
+  "obsidian-clipper"
 ]

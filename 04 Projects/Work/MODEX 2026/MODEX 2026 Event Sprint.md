@@ -68,4 +68,4 @@ Use MODEX 2026 to collect customer signals, partner leads, product intelligence,
 
 ## Links
 
-- [[99 System/MODEX 2026 Playbook]]
+- [[04 Projects/Work/MODEX 2026/MODEX 2026 Playbook]]
