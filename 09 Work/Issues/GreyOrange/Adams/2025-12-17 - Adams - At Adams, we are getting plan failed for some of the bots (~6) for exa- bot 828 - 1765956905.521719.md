@@ -7,11 +7,11 @@ site: "Adams"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-12-17"
-last_updated_date: "2025-12-18"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1765956905.521719"
@@ -47,7 +47,7 @@ If you can capture more logs, pls share more logs Any update on this issue? 5 Bo
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-12-17

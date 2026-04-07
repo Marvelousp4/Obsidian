@@ -7,11 +7,11 @@ site: "Kenco"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-16"
-last_updated_date: "2026-01-19"
+last_updated_date: "2026-04-07"
 reporter: "U046B9XUZRV"
 assignee: ""
 source_id: "1768561679.308719"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-16

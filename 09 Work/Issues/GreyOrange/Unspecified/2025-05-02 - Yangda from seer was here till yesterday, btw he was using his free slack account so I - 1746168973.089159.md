@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-05-02"
-last_updated_date: "2025-05-05"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1746168973.089159"
@@ -47,7 +47,7 @@ Can you guys please share if there is any update on the deadlock issues faced at
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-05-02

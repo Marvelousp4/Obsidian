@@ -7,11 +7,11 @@ site: "Sodimac Colombia"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: "SEV1"
 priority: "P1"
 created_date: "2026-03-16"
-last_updated_date: "2026-03-16"
+last_updated_date: "2026-04-07"
 reporter: "U046B9XUZRV"
 assignee: ""
 source_id: "1773648438.777789"
@@ -47,7 +47,7 @@ Thanks for the update. Please let me know the timeline of the results. We need t
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: SEV1
 - Priority: P1
 - Created: 2026-03-16

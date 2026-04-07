@@ -7,11 +7,11 @@ site: "Adams"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-02-23"
-last_updated_date: "2026-02-24"
+last_updated_date: "2026-04-07"
 reporter: "U046W74R38V"
 assignee: ""
 source_id: "1771868943.223759"
@@ -47,7 +47,7 @@ Because the BMS dosen't send the cycles to SRC
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-02-23

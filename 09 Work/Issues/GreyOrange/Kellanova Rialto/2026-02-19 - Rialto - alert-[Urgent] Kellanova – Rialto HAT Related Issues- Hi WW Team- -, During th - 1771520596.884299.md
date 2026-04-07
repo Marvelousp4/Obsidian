@@ -7,11 +7,11 @@ site: "Kellanova Rialto"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "blocked"
+status: "resolved"
 severity: "SEV1"
 priority: "P1"
 created_date: "2026-02-19"
-last_updated_date: "2026-02-26"
+last_updated_date: "2026-04-07"
 reporter: "U046XLEEE84"
 assignee: ""
 source_id: "1771520596.884299"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: blocked
+- Status: resolved
 - Severity: SEV1
 - Priority: P1
 - Created: 2026-02-19

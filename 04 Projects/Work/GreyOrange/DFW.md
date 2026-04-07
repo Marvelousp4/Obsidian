@@ -38,7 +38,7 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ## Next Steps
 
-- [ ] Confirm whether this site is decommissioned and capture the historical context if it is.
+- [x] Confirm whether this site is decommissioned and capture the historical context if it is.
 
 ## Open Issues
 

@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-06-04"
-last_updated_date: "2025-06-05"
+last_updated_date: "2026-04-07"
 reporter: "U04D80T8GJF"
 assignee: ""
 source_id: "1749035753.852219"
@@ -47,7 +47,7 @@ Can you share any example payload for this: < any update on this?? What will be 
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-06-04

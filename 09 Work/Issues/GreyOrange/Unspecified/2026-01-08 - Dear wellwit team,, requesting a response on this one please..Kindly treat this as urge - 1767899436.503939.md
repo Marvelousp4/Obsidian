@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "product_design"
 item_type: "design_or_product"
-status: "blocked"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2026-01-08"
-last_updated_date: "2026-01-12"
+last_updated_date: "2026-04-07"
 reporter: "U09ESA5TB3R"
 assignee: ""
 source_id: "1767899436.503939"
@@ -47,7 +47,7 @@ No progress note captured in the cleaned source.
 
 - Category: product_design
 - Item type: design_or_product
-- Status: blocked
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2026-01-08

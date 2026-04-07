@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "general"
 item_type: "general"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2026-01-21"
-last_updated_date: "2026-02-25"
+last_updated_date: "2026-04-07"
 reporter: "U080M6C7DUN"
 assignee: ""
 source_id: "1769015499.525339"
@@ -47,7 +47,7 @@ any update? FYI I checked the datasheet, it looks OK can we procure the one modu
 
 - Category: general
 - Item type: general
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2026-01-21

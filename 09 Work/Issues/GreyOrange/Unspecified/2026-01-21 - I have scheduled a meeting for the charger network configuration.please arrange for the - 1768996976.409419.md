@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "support_coordination"
 item_type: "coordination"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2026-01-21"
-last_updated_date: "2026-01-29"
+last_updated_date: "2026-04-07"
 reporter: "U046V4NANGK"
 assignee: ""
 source_id: "1768996976.409419"
@@ -47,7 +47,7 @@ we are waiting. The Wi-Fi module has been configured on the Grey Orange network,
 
 - Category: support_coordination
 - Item type: coordination
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2026-01-21

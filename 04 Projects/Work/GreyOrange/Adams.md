@@ -42,7 +42,7 @@ raj.k@greyorange.com
 
 ## Next Steps
 
-- [ ] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
+- [x] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
 
 ## Open Issues
 

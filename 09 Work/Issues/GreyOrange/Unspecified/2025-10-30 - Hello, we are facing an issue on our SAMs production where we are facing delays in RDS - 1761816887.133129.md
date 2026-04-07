@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-10-30"
-last_updated_date: "2025-11-04"
+last_updated_date: "2026-04-07"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1761816887.133129"
@@ -47,7 +47,7 @@ Any update on this?
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-10-30

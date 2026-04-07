@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-05-13"
-last_updated_date: "2025-05-13"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1747180772.735929"
@@ -47,7 +47,7 @@ It needs robot logs as well, shared robot log with
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-05-13

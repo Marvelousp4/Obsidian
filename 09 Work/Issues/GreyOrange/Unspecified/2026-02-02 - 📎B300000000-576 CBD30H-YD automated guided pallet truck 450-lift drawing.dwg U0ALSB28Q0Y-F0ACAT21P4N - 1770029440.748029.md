@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "product_design"
 item_type: "design_or_product"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-02-02"
-last_updated_date: "2026-03-02"
+last_updated_date: "2026-04-07"
 reporter: "U06GFL86XUP"
 assignee: ""
 source_id: "1770029440.748029"
@@ -47,7 +47,7 @@ please share the cad review sheet with your team's review on this CAD against th
 
 - Category: product_design
 - Item type: design_or_product
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-02-02

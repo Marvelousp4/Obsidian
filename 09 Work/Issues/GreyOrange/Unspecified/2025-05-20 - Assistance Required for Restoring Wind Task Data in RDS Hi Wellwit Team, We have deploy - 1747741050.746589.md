@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2025-05-20"
-last_updated_date: "2025-06-05"
+last_updated_date: "2026-04-07"
 reporter: "U044YH122LA"
 assignee: ""
 source_id: "1747741050.746589"
@@ -47,7 +47,7 @@ Can you guys check this please.. This is for Dorman portland wait amoment, let m
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2025-05-20

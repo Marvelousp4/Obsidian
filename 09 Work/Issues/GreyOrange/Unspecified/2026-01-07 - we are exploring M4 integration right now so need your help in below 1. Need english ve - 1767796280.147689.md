@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "support_coordination"
 item_type: "coordination"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-07"
-last_updated_date: "2026-01-09"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1767796280.147689"
@@ -47,7 +47,7 @@ we are exploring M4 integration right now so need your help in below 1. Need eng
 
 - Category: support_coordination
 - Item type: coordination
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-07

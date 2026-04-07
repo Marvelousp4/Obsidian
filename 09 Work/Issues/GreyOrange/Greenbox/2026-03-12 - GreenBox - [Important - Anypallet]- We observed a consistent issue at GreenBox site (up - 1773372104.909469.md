@@ -7,11 +7,11 @@ site: "Greenbox"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-03-12"
-last_updated_date: "2026-03-13"
+last_updated_date: "2026-04-07"
 reporter: "U046W74R38V"
 assignee: ""
 source_id: "1773372104.909469"
@@ -47,7 +47,7 @@ We can have a debug meeting with the site team and please help to check the site
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-03-12

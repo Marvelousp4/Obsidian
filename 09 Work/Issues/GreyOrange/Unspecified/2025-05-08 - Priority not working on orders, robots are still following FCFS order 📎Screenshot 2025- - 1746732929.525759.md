@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-05-08"
-last_updated_date: "2025-05-09"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1746732929.525759"
@@ -47,7 +47,7 @@ Check the tasks with label PICK_H priorityratio/waittimeratio = 100, 1 priority 
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-05-08

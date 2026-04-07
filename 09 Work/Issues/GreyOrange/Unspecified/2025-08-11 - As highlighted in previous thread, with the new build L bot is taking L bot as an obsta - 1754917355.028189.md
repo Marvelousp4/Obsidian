@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-08-11"
-last_updated_date: "2025-08-21"
+last_updated_date: "2026-04-07"
 reporter: "U046B9XUZRV"
 assignee: ""
 source_id: "1754917355.028189"
@@ -47,7 +47,7 @@ please share the rds logs for this issue would the rds logs be sufficient for no
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-08-11

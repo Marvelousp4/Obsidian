@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-09-05"
-last_updated_date: "2025-09-22"
+last_updated_date: "2026-04-07"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1757067465.916249"
@@ -47,7 +47,7 @@ any update on this? I checked the log, but I didn't find the cause. I've raised 
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-09-05

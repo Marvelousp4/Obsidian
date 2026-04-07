@@ -7,11 +7,11 @@ site: "GFC"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2026-01-13"
-last_updated_date: "2026-01-16"
+last_updated_date: "2026-04-07"
 reporter: "U074K0MQT4N"
 assignee: ""
 source_id: "1768323784.227939"
@@ -47,7 +47,7 @@ Check here for the license
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2026-01-13

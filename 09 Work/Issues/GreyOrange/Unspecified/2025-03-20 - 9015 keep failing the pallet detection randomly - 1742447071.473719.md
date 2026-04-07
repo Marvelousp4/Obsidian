@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-03-20"
-last_updated_date: "2025-03-20"
+last_updated_date: "2026-04-07"
 reporter: "U044YH122LA"
 assignee: ""
 source_id: "1742447071.473719"
@@ -47,7 +47,7 @@ No progress note captured in the cleaned source.
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-03-20

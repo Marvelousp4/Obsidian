@@ -40,7 +40,7 @@ Court, Minooka, Illinois, United States, 60447-9430
 
 ## Next Steps
 
-- [ ] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
+- [x] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
 
 ## Open Issues
 

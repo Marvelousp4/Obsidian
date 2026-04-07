@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "support_coordination"
 item_type: "coordination"
-status: "blocked"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2026-03-02"
-last_updated_date: "2026-03-04"
+last_updated_date: "2026-04-07"
 reporter: "U047AG7KZGD"
 assignee: ""
 source_id: "1772439809.384199"
@@ -47,7 +47,7 @@ Any update on this? Have you checked with SEER? Hello，I checked our FAT about 
 
 - Category: support_coordination
 - Item type: coordination
-- Status: blocked
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2026-03-02

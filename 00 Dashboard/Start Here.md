@@ -14,6 +14,15 @@ This page is now intentionally light. Use it as a reset point, not as a giant co
 - [[08 Reviews/Reviews Index|Reviews]]
 - [[09 Work/Work Index|Work]]
 
+## Today Important Tasks
+
+```dataview
+TASK
+FROM "02 Daily"
+WHERE !completed AND file.day = date(today)
+GROUP BY file.link
+```
+
 ## Core Boards
 
 - [[00 Dashboard/Boards/Life Board|Life Board]]

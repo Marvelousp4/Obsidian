@@ -7,11 +7,11 @@ site: "Adams"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-07-04"
-last_updated_date: "2025-07-04"
+last_updated_date: "2026-04-07"
 reporter: "U046B9XUZRV"
 assignee: ""
 source_id: "1751615577.003659"
@@ -47,7 +47,7 @@ Pls share the timestamp of the issue, the log is 1.8GB, it will take long time t
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-07-04

@@ -7,11 +7,11 @@ site: "Dorman Warsaw"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2026-01-12"
-last_updated_date: "2026-01-22"
+last_updated_date: "2026-04-07"
 reporter: "U07KMEF7TH8"
 assignee: ""
 source_id: "1768237549.992129"
@@ -47,7 +47,7 @@ can you check with Any update ? Okay, please share the model file for 8266 bot &
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2026-01-12

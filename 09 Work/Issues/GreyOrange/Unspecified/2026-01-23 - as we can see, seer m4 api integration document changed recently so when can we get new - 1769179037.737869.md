@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "general"
 item_type: "general"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-23"
-last_updated_date: "2026-01-26"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1769179037.737869"
@@ -47,7 +47,7 @@ Could you mark which API was changed? I will check with SEER team
 
 - Category: general
 - Item type: general
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-23

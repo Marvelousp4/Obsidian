@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "in_progress"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-13"
-last_updated_date: "2026-03-10"
+last_updated_date: "2026-04-07"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1768303757.315999"
@@ -47,7 +47,7 @@ Pls check the log and raise ticket to SEER I have shared with you now. We are st
 
 - Category: software_or_firmware
 - Item type: software
-- Status: in_progress
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-13

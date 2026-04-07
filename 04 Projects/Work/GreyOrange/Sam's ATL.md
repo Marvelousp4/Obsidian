@@ -40,7 +40,7 @@ SAMS ECOM FC ATLANTA GA
 
 ## Next Steps
 
-- [ ] Add the battery anomaly analysis conclusion and link the related issues, meetings, and owners.
+- [x] Add the battery anomaly analysis conclusion and link the related issues, meetings, and owners.
 
 ## Open Issues
 

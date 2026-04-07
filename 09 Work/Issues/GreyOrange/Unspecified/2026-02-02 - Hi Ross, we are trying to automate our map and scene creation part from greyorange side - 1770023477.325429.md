@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-02-02"
-last_updated_date: "2026-02-25"
+last_updated_date: "2026-04-07"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1770023477.325429"
@@ -47,7 +47,7 @@ You can check this link for upload scene file: ‬‬‬‬⁠Upload scene - Fei
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-02-02

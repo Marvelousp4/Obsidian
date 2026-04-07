@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-03-20"
-last_updated_date: "2025-03-25"
+last_updated_date: "2026-04-07"
 reporter: "U044YH122LA"
 assignee: ""
 source_id: "1742447321.654229"
@@ -47,7 +47,7 @@ please share the robot logs as well in such type of cases. btw will check the RD
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-03-20

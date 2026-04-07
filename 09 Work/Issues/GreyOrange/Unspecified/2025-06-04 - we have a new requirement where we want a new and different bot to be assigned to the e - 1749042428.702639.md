@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-06-04"
-last_updated_date: "2025-06-06"
+last_updated_date: "2026-04-07"
 reporter: "U049CDY3TGC"
 assignee: ""
 source_id: "1749042428.702639"
@@ -47,7 +47,7 @@ Can you help with the above query and share any data which might help with above
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-06-04

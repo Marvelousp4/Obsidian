@@ -7,11 +7,11 @@ site: "Sodimac Colombia"
 vendor: "Wellwit Robotics"
 category: "product_design"
 item_type: "design_or_product"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2026-03-09"
-last_updated_date: "2026-03-16"
+last_updated_date: "2026-04-07"
 reporter: "U046B9XUZRV"
 assignee: ""
 source_id: "1773043263.819169"
@@ -47,7 +47,7 @@ Hi Thanks for your information, my team is reviewing this and will share the fee
 
 - Category: product_design
 - Item type: design_or_product
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2026-03-09

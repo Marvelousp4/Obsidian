@@ -7,7 +7,7 @@ site: "Sam's ATL"
 vendor: "Wellwit Robotics"
 category: "structured_bug_list"
 item_type: "bug_record"
-status: "open"
+status: "resolved"
 severity: "SEV3"
 priority: "P3"
 created_date: "2026-03-02"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: structured_bug_list
 - Item type: bug_record
-- Status: open
+- Status: resolved
 - Severity: SEV3
 - Priority: P3
 - Created: 2026-03-02

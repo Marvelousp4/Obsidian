@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "site_support"
 item_type: "field_support"
-status: "open"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2025-05-23"
-last_updated_date: "2025-05-23"
+last_updated_date: "2026-04-07"
 reporter: "U049CDY3TGC"
 assignee: ""
 source_id: "1748019805.472429"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: site_support
 - Item type: field_support
-- Status: open
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2025-05-23

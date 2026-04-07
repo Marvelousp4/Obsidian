@@ -7,11 +7,11 @@ site: "Sam's ATL"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "in_progress"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-02-04"
-last_updated_date: "2026-03-10"
+last_updated_date: "2026-04-07"
 reporter: "U04ESFY14GG"
 assignee: ""
 source_id: "1770215532.121789"
@@ -47,7 +47,7 @@ Based on this situation, we initially judge that it's caused by eccentric loadin
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: in_progress
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-02-04

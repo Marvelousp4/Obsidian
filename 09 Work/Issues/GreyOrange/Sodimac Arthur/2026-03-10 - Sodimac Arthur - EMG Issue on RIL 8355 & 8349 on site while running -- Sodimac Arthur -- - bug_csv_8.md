@@ -7,7 +7,7 @@ site: "Sodimac Arthur"
 vendor: "Wellwit Robotics"
 category: "structured_bug_list"
 item_type: "bug_record"
-status: "open"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2026-03-10"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: structured_bug_list
 - Item type: bug_record
-- Status: open
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2026-03-10

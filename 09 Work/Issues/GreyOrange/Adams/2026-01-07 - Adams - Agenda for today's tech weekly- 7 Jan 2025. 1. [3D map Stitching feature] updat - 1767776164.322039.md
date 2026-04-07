@@ -7,11 +7,11 @@ site: "Adams"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-07"
-last_updated_date: "2026-01-08"
+last_updated_date: "2026-04-07"
 reporter: "U046W74R38V"
 assignee: ""
 source_id: "1767776164.322039"
@@ -47,7 +47,7 @@ Pls share the datasheet for this Single trolley bot can you please share a rende
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-07

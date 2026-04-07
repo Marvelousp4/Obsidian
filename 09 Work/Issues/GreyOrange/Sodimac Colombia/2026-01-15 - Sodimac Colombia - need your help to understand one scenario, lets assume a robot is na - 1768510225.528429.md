@@ -7,11 +7,11 @@ site: "Sodimac Colombia"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-15"
-last_updated_date: "2026-01-19"
+last_updated_date: "2026-04-07"
 reporter: "U04580WJL65"
 assignee: ""
 source_id: "1768510225.528429"
@@ -47,7 +47,7 @@ I checked with Yangda, the bot can not release the future markers. It will cause
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-15

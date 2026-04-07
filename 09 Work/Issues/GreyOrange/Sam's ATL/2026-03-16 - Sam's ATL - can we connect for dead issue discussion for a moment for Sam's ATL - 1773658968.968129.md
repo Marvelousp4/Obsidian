@@ -7,11 +7,11 @@ site: "Sam's ATL"
 vendor: "Wellwit Robotics"
 category: "site_support"
 item_type: "field_support"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-03-16"
-last_updated_date: "2026-03-16"
+last_updated_date: "2026-04-07"
 reporter: "U0492VBFW48"
 assignee: ""
 source_id: "1773658968.968129"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: site_support
 - Item type: field_support
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-03-16

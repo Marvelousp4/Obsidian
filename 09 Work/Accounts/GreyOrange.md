@@ -66,6 +66,6 @@ SORT last_updated_date DESC
 
 ## Next Moves
 
-- [ ] Attach new site issues to the correct deployment note instead of leaving them floating in the inbox.
-- [ ] Promote repeated patterns into SOPs or formal knowledge notes.
-- [ ] Review high-frequency unresolved issues every week and prioritize the sites that keep repeating.
+- [x] Attach new site issues to the correct deployment note instead of leaving them floating in the inbox.
+- [x] Promote repeated patterns into SOPs or formal knowledge notes.
+- [x] Review high-frequency unresolved issues every week and prioritize the sites that keep repeating.

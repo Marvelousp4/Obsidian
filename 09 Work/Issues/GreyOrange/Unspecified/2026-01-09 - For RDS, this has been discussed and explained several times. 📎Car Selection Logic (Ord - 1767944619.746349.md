@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-09"
-last_updated_date: "2026-01-09"
+last_updated_date: "2026-04-07"
 reporter: "U06H8SCA6PK"
 assignee: ""
 source_id: "1767944619.746349"
@@ -47,7 +47,7 @@ I checked this document earlier. I couldn't find any max limit on the priority v
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-09

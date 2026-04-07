@@ -7,11 +7,11 @@ site: "Kenco"
 vendor: "Wellwit Robotics"
 category: "site_support"
 item_type: "field_support"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2026-01-14"
-last_updated_date: "2026-01-14"
+last_updated_date: "2026-04-07"
 reporter: "U046W74R38V"
 assignee: ""
 source_id: "1768391463.442009"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: site_support
 - Item type: field_support
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2026-01-14

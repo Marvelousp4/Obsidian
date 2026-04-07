@@ -7,11 +7,11 @@ site: "H&M"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "blocked"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2025-08-04"
-last_updated_date: "2025-08-05"
+last_updated_date: "2026-04-07"
 reporter: "U049CDY3TGC"
 assignee: ""
 source_id: "1754316827.157899"
@@ -47,7 +47,7 @@ any update on thiS?? Will provide it in this afternoon
 
 - Category: software_or_firmware
 - Item type: software
-- Status: blocked
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2025-08-04

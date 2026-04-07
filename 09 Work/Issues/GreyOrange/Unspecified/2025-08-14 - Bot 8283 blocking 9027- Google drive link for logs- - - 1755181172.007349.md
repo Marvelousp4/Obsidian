@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "product_design"
 item_type: "design_or_product"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-08-14"
-last_updated_date: "2025-08-14"
+last_updated_date: "2026-04-07"
 reporter: "U046W74R38V"
 assignee: ""
 source_id: "1755181172.007349"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: product_design
 - Item type: design_or_product
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-08-14

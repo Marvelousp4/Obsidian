@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-01-12"
-last_updated_date: "2026-01-16"
+last_updated_date: "2026-04-07"
 reporter: "U046XL45XJ8"
 assignee: ""
 source_id: "1768207919.357709"
@@ -47,7 +47,7 @@ Pls test the API and share the example
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-01-12

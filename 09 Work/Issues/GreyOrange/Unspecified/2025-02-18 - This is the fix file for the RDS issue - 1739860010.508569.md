@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "software_or_firmware"
 item_type: "software"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-02-18"
-last_updated_date: "2025-02-18"
+last_updated_date: "2026-04-07"
 reporter: "U06GFL86XUP"
 assignee: ""
 source_id: "1739860010.508569"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: software_or_firmware
 - Item type: software
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-02-18

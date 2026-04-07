@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "support_coordination"
 item_type: "coordination"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2026-03-11"
-last_updated_date: "2026-03-11"
+last_updated_date: "2026-04-07"
 reporter: "U046B9XUZRV"
 assignee: ""
 source_id: "1773215816.952649"
@@ -47,7 +47,7 @@ No explicit next action found in the cleaned source.
 
 - Category: support_coordination
 - Item type: coordination
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2026-03-11

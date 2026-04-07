@@ -7,11 +7,11 @@ site: "H&M"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "blocked"
+status: "resolved"
 severity: ""
 priority: "P2"
 created_date: "2025-12-03"
-last_updated_date: "2025-12-11"
+last_updated_date: "2026-04-07"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1764777484.073909"
@@ -47,7 +47,7 @@ Hi Ross, can you please check this. SEER team suggest to move LM90223 to left, t
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: blocked
+- Status: resolved
 - Severity: 
 - Priority: P2
 - Created: 2025-12-03

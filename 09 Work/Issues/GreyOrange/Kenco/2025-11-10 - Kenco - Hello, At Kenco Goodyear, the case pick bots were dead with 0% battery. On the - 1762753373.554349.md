@@ -7,11 +7,11 @@ site: "Kenco"
 vendor: "Wellwit Robotics"
 category: "hardware_or_mechanical"
 item_type: "hardware"
-status: "open"
+status: "resolved"
 severity: "SEV2"
 priority: "P2"
 created_date: "2025-11-10"
-last_updated_date: "2025-12-04"
+last_updated_date: "2026-04-07"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1762753373.554349"
@@ -47,7 +47,7 @@ Were you able to check this? FYI Can you please check the first case(kenco goody
 
 - Category: hardware_or_mechanical
 - Item type: hardware
-- Status: open
+- Status: resolved
 - Severity: SEV2
 - Priority: P2
 - Created: 2025-11-10

@@ -7,11 +7,11 @@ site: "Unspecified"
 vendor: "Wellwit Robotics"
 category: "support_coordination"
 item_type: "coordination"
-status: "open"
+status: "resolved"
 severity: ""
 priority: "P4"
 created_date: "2025-03-28"
-last_updated_date: "2025-04-01"
+last_updated_date: "2026-04-07"
 reporter: "U0813SQMF4G"
 assignee: ""
 source_id: "1743171133.670199"
@@ -47,7 +47,7 @@ Could you provide log?
 
 - Category: support_coordination
 - Item type: coordination
-- Status: open
+- Status: resolved
 - Severity: 
 - Priority: P4
 - Created: 2025-03-28
