@@ -2,9 +2,9 @@
 type: knowledge
 area: research
 domain: paper_notes
-source: [[10 Raw/Papers/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
+source: [[10 Raw/Papers/Raw - Going with the Flow - Koopman Behavioral Models]]
 source_type: raw_source
-compiled_from: [[10 Raw/Papers/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
+compiled_from: [[10 Raw/Papers/Raw - Going with the Flow - Koopman Behavioral Models]]
 created: 2026-04-07
 updated: 2026-04-07
 tags:
@@ -23,7 +23,7 @@ Going with the Flow - Koopman Behavioral Models: we introduce Unified Behavioral
 
 ## Encyclopedia Entry
 
-Going with the Flow - Koopman Behavioral Models is a source-derived note compiled from [[10 Raw/Papers/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]. It belongs to the research area and currently sits in the paper_notes domain.
+Going with the Flow - Koopman Behavioral Models is a source-derived note compiled from [[10 Raw/Papers/Raw - Going with the Flow - Koopman Behavioral Models]]. It belongs to the research area and currently sits in the paper_notes domain.
 
 ## Key Concepts
 
@@ -42,4 +42,4 @@ This source is worth keeping because it can be turned into reusable knowledge in
 
 ## Linked Source
 
-- [[10 Raw/Papers/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
+- [[10 Raw/Papers/Raw - Going with the Flow - Koopman Behavioral Models]]

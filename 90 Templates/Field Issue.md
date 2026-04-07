@@ -3,7 +3,6 @@ type: issue
 source_type: field
 severity: medium
 account:
-client:
 project:
 site:
 category:

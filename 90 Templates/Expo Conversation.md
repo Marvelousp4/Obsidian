@@ -6,7 +6,6 @@ organizations: []
 participants: []
 contacts: []
 account:
-client:
 project: MODEX 2026 Event Sprint
 booth:
 priority:

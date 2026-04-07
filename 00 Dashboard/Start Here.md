@@ -30,7 +30,6 @@ This page is now intentionally light. Use it as a reset point, not as a giant co
 
 ## System
 
-- [[00 Dashboard/Databases|Databases]]
 - [[99 System/System Index|System Index]]
 
 ## Rules

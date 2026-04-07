@@ -26,4 +26,4 @@ Keep daily life and long-term direction from fragmenting.
 
 ## Core Notes
 
-- [[06 People/Personal/Personal|Personal]]
+- [[06 People/Personal/Personal Profile - Linhao Bai|Personal Profile - Linhao Bai]]

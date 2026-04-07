@@ -14,7 +14,7 @@ tags:
   - robotics
 ---
 
-# Personal
+# Linhao Bai
 
 ## Snapshot
 

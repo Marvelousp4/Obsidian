@@ -1,18 +1,18 @@
 ---
-    type: person
-    person_kind: professional
-    relationship: advisor
-    organization: STAR Lab, Georgia Tech
-    title: Assistant Professor
-    source_urls:
-      - https://star-lab.cc.gatech.edu/team/
-      - https://star-lab.cc.gatech.edu/team/harish-ravichandar/
-    last_contact:
-    tags:
-      - star-lab
-      - georgia-tech
-      - research
-    ---
+type: person
+person_kind: professional
+relationship: advisor
+organization: STAR Lab, Georgia Tech
+title: Assistant Professor
+source_urls:
+  - https://star-lab.cc.gatech.edu/team/
+  - https://star-lab.cc.gatech.edu/team/harish-ravichandar/
+last_contact:
+tags:
+  - star-lab
+  - georgia-tech
+  - research
+---
 
 # Harish Ravichandar
 

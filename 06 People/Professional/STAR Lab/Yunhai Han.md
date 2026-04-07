@@ -1,18 +1,18 @@
 ---
-    type: person
-    person_kind: professional
-    relationship: labmate
-    organization: STAR Lab, Georgia Tech
-    title: PhD Student
-    source_urls:
-      - https://star-lab.cc.gatech.edu/team/
-      - https://star-lab.cc.gatech.edu/team/yunhai-han/
-    last_contact:
-    tags:
-      - star-lab
-      - georgia-tech
-      - research
-    ---
+type: person
+person_kind: professional
+relationship: labmate
+organization: STAR Lab, Georgia Tech
+title: PhD Student
+source_urls:
+  - https://star-lab.cc.gatech.edu/team/
+  - https://star-lab.cc.gatech.edu/team/yunhai-han/
+last_contact:
+tags:
+  - star-lab
+  - georgia-tech
+  - research
+---
 
 # Yunhai Han
 

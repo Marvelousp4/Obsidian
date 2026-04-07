@@ -6,7 +6,6 @@ participants: []
 contacts: []
 account:
 project:
-client:
 tags: []
 ---
 

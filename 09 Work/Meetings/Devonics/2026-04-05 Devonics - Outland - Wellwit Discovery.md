@@ -6,7 +6,6 @@ participants: ["Joe Fautas", "Frank Handel", "Joy", "Darshan", "Leo", "Samantha"
 contacts: ["Joe Fautas", "Frank Handel", "Joy", "Darshan", "Leo", "Samantha", "Vincent"]
 account: "Devonics"
 project: "Devonics - Outland Mobile Manipulation Platform"
-client: "Devonics"
 tags: []
 ---
 

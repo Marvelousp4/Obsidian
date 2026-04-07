@@ -6,7 +6,6 @@ organizations: []
 participants: []
 contacts: []
 account:
-client:
 project:
 ticket:
 tags: []
