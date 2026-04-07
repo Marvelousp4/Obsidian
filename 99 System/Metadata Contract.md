@@ -2,6 +2,27 @@
 
 This page defines the minimum fields that scripts, boards, and templates should agree on.
 
+## Work Project
+
+Canonical fields:
+
+- `type: project`
+- `area`
+- `account`
+- `project_kind`
+- `site`
+- `status`
+- `owner`
+- `started`
+- `next`
+- `tags`
+
+Rules:
+
+- `account` is the canonical customer or organization key.
+- `client` should not be used in work project notes. It was a legacy alias and should stay out of new templates and imports.
+- `next` should contain the next concrete action, not a generic reminder to update the note.
+
 ## Issue
 
 Canonical fields:

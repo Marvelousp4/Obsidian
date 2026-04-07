@@ -1,7 +1,6 @@
 ---
 type: "project"
 account: "GreyOrange"
-client: "GreyOrange"
 project_kind: "site_deployment"
 site: "Fairlife"
 status: "active"

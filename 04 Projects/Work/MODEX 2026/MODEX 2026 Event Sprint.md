@@ -1,7 +1,6 @@
 ---
 type: project
 account: bai
-client: bai
 project_kind: event_sprint
 site: Georgia World Congress Center
 status: active

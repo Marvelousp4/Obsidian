@@ -2,7 +2,6 @@
 type: project
 area: work
 account:
-client:
 project_kind:
 site:
 status: active
@@ -49,6 +48,5 @@ tags: []
 
 - area:
 - account:
-- client:
 - people:
 - notes:

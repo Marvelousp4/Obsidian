@@ -1,7 +1,6 @@
 ---
 type: "project"
 account: "Devonics"
-client: "Devonics"
 project_kind: "solution_opportunity"
 site: ""
 status: "discovery"

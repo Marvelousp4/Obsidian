@@ -3,6 +3,7 @@
 ## Control Surface
 
 - [[00 Dashboard/Start Here|Operating Hub]]
+- [[00 Dashboard/Boards/Work Control Board|Work Control Board]]
 - [[00 Dashboard/Boards/Weekly Focus Board|Weekly Focus Board]]
 - [[08 Reviews/Reviews Index|Reviews Index]]
 

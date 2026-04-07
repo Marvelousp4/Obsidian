@@ -1,7 +1,6 @@
 ---
 type: project
 account:
-client:
 project_kind: site_deployment
 site:
 platform:

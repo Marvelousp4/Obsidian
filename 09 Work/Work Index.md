@@ -4,6 +4,7 @@ Use this page when you want the work domain without the rest of the personal sys
 
 ## Boards
 
+- [[00 Dashboard/Boards/Work Control Board|Work Control Board]]
 - [[00 Dashboard/Boards/Operations Board|Operations Board]]
 - [[00 Dashboard/Boards/CRM Board|CRM Board]]
 - [[00 Dashboard/Boards/Support Board|Support Board]]

@@ -1,7 +1,6 @@
 ---
 type: "project"
 account: "GreyOrange"
-client: "GreyOrange"
 project_kind: "site_issue_bucket"
 site: "Sodimac Arthur"
 status: "support_only"
