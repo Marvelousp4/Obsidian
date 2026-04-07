@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "Sam's ATL"
 site: "Sam's ATL"
@@ -16,6 +15,7 @@ last_updated_date: "2026-03-10"
 reporter: "U04ESFY14GG"
 assignee: ""
 source_id: "1770215532.121789"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: []
 components: ["lead screw", "lift", "ods"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: C0602U5PLMS_2026.txt
 - Original source id: 1770215532.121789
 - Site: Sam's ATL

@@ -11,6 +11,7 @@ These are the operating docs that matter. Keep this as the single reference page
 - [[99 System/GitHub Sync|GitHub Sync]]
 - [[99 System/Knowledge Factory|Knowledge Factory]]
 - [[99 System/Local and iCloud Sync|Local and iCloud Sync]]
+- [[99 System/Metadata Contract|Metadata Contract]]
 
 ## Structural Indices
 

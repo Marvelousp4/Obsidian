@@ -71,6 +71,20 @@ def extract_wikilinks(text: str) -> list[str]:
     return matches
 
 
+def extract_section(body: str, heading: str) -> str:
+    pattern = rf"## {re.escape(heading)}\s*(.*?)(\n## |\Z)"
+    match = re.search(pattern, body, re.S)
+    if not match:
+        return ""
+    return match.group(1).strip()
+
+
+def normalize_text(text: str) -> str:
+    text = re.sub(r"-\s*\n\s*", "", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
 def unresolved_placeholders(text: str) -> list[str]:
     patterns = [r"\bTODO\b", r"\bTBD\b", r"_No .* found\._", r"- $"]
     found: list[str] = []
@@ -78,6 +92,36 @@ def unresolved_placeholders(text: str) -> list[str]:
         if re.search(pattern, text, re.M):
             found.append(pattern)
     return found
+
+
+def compiled_quality_findings(path: Path, frontmatter: dict[str, object], body: str) -> list[Finding]:
+    findings: list[Finding] = []
+    summary = extract_section(body, "One-Line Summary")
+    takeaways = extract_section(body, "Actionable Takeaways")
+    concepts = extract_section(body, "Key Concepts")
+    linked_source = extract_section(body, "Linked Source")
+    summary_normalized = normalize_text(summary)
+    takeaway_count = len(re.findall(r"^- ", takeaways, re.M))
+    concept_count = len(re.findall(r"^\s*- \[\[", concepts, re.M))
+    linked_source_count = len(re.findall(r"\[\[", linked_source))
+    rel = path.relative_to(VAULT_ROOT)
+    if not summary_normalized:
+        findings.append(Finding("compiled_quality", f"{rel} has no one-line summary."))
+    if len(summary_normalized.split()) > 80:
+        findings.append(Finding("compiled_quality", f"{rel} has a summary longer than 80 words."))
+    if "\n" in summary.strip():
+        findings.append(Finding("compiled_quality", f"{rel} summary contains line breaks and may be copied from raw text."))
+    if re.search(r"\bAbstract[—-]|\bAuthor Names Omitted\b|\bI\.\s*I\s*N\s*T\s*R\s*O\s*D\s*U\s*C\s*T\s*I\s*O\s*N\b", summary_normalized, re.I):
+        findings.append(Finding("compiled_quality", f"{rel} summary appears to copy raw paper text."))
+    if takeaway_count < 3:
+        findings.append(Finding("compiled_quality", f"{rel} has fewer than three takeaways."))
+    if concept_count < 2:
+        findings.append(Finding("compiled_quality", f"{rel} links fewer than two concept pages."))
+    if linked_source_count < 1:
+        findings.append(Finding("compiled_quality", f"{rel} has no linked source."))
+    if str(frontmatter.get("compile_quality", "")).strip() == "failed":
+        findings.append(Finding("compiled_quality", f"{rel} is marked as failed quality."))
+    return findings
 
 
 def generate_report(findings: list[Finding]) -> Path:
@@ -131,8 +175,12 @@ def main() -> None:
 
     for path, (frontmatter, body) in raw_notes.items():
         compiled_note = str(frontmatter.get("compiled_note", "")).strip()
-        if not compiled_note:
-            findings.append(Finding("uncompiled_raw", f"{path.relative_to(VAULT_ROOT)} has no compiled note."))
+        compile_quality = str(frontmatter.get("compile_quality", "")).strip()
+        capture_status = str(frontmatter.get("capture_status", "")).strip()
+        if not compiled_note or capture_status != "compiled":
+            findings.append(Finding("uncompiled_raw", f"{path.relative_to(VAULT_ROOT)} has no accepted compiled note."))
+        if compile_quality == "failed":
+            findings.append(Finding("raw_compile_quality", f"{path.relative_to(VAULT_ROOT)} failed compile quality gate."))
         for placeholder in unresolved_placeholders(body):
             findings.append(Finding("raw_placeholder", f"{path.relative_to(VAULT_ROOT)} contains placeholder pattern `{placeholder}`."))
 
@@ -143,6 +191,7 @@ def main() -> None:
         links = extract_wikilinks(body)
         if len(links) < 2:
             findings.append(Finding("weak_compiled_links", f"{path.relative_to(VAULT_ROOT)} links to fewer than two notes."))
+        findings.extend(compiled_quality_findings(path, frontmatter, body))
         for placeholder in unresolved_placeholders(body):
             findings.append(Finding("compiled_placeholder", f"{path.relative_to(VAULT_ROOT)} contains placeholder pattern `{placeholder}`."))
 

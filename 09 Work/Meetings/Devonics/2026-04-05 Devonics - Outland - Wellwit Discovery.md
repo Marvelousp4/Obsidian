@@ -44,4 +44,4 @@ tags: []
 
 ## Raw Transcript
 
-- Source file: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Source file: cleaned_meeting_transcript_labeled.txt

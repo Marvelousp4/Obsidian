@@ -1,6 +1,5 @@
 ---
 type: issue
-client:
 account:
 project:
 site:
@@ -16,7 +15,9 @@ reporter:
 assignee:
 bot_ids: []
 components: []
-source:
+source_type:
+source_id:
+source_file:
 tags: []
 ---
 
@@ -35,4 +36,3 @@ tags: []
 
 
 ## Related People
-

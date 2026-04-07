@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "Sodimac Colombia"
 site: "Sodimac Colombia"
@@ -16,6 +15,7 @@ last_updated_date: ""
 reporter: "gokul.j@greyorange.com"
 assignee: "U06HK0RM940"
 source_id: "bug_csv_3"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: []
 components: ["lift", "pallet"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: Wellwit_Bug_list.csv
 - Original source id: bug_csv_3
 - Site: Sodimac Colombia

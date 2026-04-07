@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "Kenco"
 site: "Kenco"
@@ -16,6 +15,7 @@ last_updated_date: "2025-12-04"
 reporter: "U09ESA5TB3R"
 assignee: ""
 source_id: "1764089676.995209"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: []
 components: ["battery", "rds", "sto"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: C08GU4VBN1G_2025-01-01_to_2026-03-16.txt
 - Original source id: 1764089676.995209
 - Site: Kenco

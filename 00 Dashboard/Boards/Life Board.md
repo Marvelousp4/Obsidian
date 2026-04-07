@@ -60,7 +60,7 @@ LIMIT 10
 ```
 
 ```dataview
-TABLE client AS Account, site AS Site, category AS Category, status AS Status, last_updated_date AS Updated
+TABLE account AS Account, site AS Site, category AS Category, status AS Status, last_updated_date AS Updated
 FROM "09 Work/Issues"
 WHERE type = "issue" AND status != "resolved"
 SORT last_updated_date DESC

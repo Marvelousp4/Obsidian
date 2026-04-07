@@ -2,7 +2,7 @@
 type: knowledge
 domain: tech
 source_type: document
-source: "/Users/bai/Documents/Obsidian/Space/07 Resources/Reference Notes/2026-04-06 - Pre-Build Scenario Import.txt"
+source: "07 Resources/Reference Notes/2026-04-06 - Pre-Build Scenario Import.txt"
 speaker: ""
 platform: reference
 watched_on: 2026-04-06

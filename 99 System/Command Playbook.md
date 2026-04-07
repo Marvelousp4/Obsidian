@@ -84,10 +84,10 @@ Use this in daily notes and meetings when a thought naturally becomes nested.
 
 ## Knowledge Factory CLI
 
-- `python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/raw_ingest.py" --help`
-- `python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/compile_raw_library.py" --help`
-- `python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/wiki_health_check.py" --help`
-- `bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_knowledge_factory.sh"`
+- `python3 "99 System/scripts/raw_ingest.py" --help`
+- `python3 "99 System/scripts/compile_raw_library.py" --help`
+- `python3 "99 System/scripts/wiki_health_check.py" --help`
+- `bash "99 System/scripts/run_knowledge_factory.sh"`
 
 ## Six Good Hotkeys
 

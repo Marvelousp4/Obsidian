@@ -37,6 +37,13 @@ def wiki_link(path: Path) -> str:
     return f"[[{relative[:-3]}]]"
 
 
+def portable_path(path: Path) -> str:
+    try:
+        return path.relative_to(VAULT_ROOT).as_posix()
+    except ValueError:
+        return path.name
+
+
 def yaml_value(value: str | list[str] | None) -> str:
     if value is None:
         return ""
@@ -191,11 +198,11 @@ def ingest_markdown(args: argparse.Namespace) -> None:
         output_path,
         title=title,
         source_kind=args.kind,
-        source_path=str(source),
+        source_path=portable_path(source),
         source_url=args.source_url,
         repo_url=None,
         body_sections=[
-            ("Source", f"- Original file: `{source}`\n- Why keep this:"),
+            ("Source", f"- Original file: `{portable_path(source)}`\n- Why keep this:"),
             ("Raw Markdown", raw_text),
         ],
     )
@@ -212,11 +219,11 @@ def ingest_pdf(args: argparse.Namespace) -> None:
         output_path,
         title=title,
         source_kind="paper",
-        source_path=str(source),
+        source_path=portable_path(source),
         source_url=args.source_url,
         repo_url=None,
         body_sections=[
-            ("Source", f"- Original file: `{source}`\n- Why keep this:"),
+            ("Source", f"- Original file: `{portable_path(source)}`\n- Why keep this:"),
             ("Raw Markdown", text or "_No extractable text found in this PDF._"),
         ],
     )
@@ -233,7 +240,7 @@ def ingest_repo(args: argparse.Namespace) -> None:
     readme = repo_readme(source)
     tree = repo_tree(source)
     source_block = [
-        f"- Repo path: `{source}`",
+        f"- Repo path: `{portable_path(source)}`",
         f"- Remote: {remote or 'N/A'}",
         f"- HEAD: `{commit or 'N/A'}`",
         "- Why keep this:",
@@ -247,7 +254,7 @@ def ingest_repo(args: argparse.Namespace) -> None:
         output_path,
         title=title,
         source_kind="repo",
-        source_path=str(source),
+        source_path=portable_path(source),
         source_url=None,
         repo_url=remote,
         body_sections=body_sections,

@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "Sam's ATL"
 site: "Sam's ATL"
@@ -16,6 +15,7 @@ last_updated_date: ""
 reporter: "vikash.p@greyorange.com"
 assignee: "U06H8SCA6PK"
 source_id: "bug_csv_7"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: ["8238"]
 components: ["charger", "dock"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: Wellwit_Bug_list.csv
 - Original source id: bug_csv_7
 - Site: Sam's ATL

@@ -67,9 +67,9 @@ What it does:
 Example:
 
 ```bash
-cp "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env.example" "/Users/bai/Documents/Obsidian/Space/99 System/scripts/.env"
+cp "99 System/scripts/.env.example" "99 System/scripts/.env"
 # Then replace the key in `.env` with your own
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "09 Work/Meetings/Account A Discovery.md" discovery
+bash "99 System/scripts/run_ai_process.sh" "09 Work/Meetings/Account A Discovery.md" discovery
 ```
 
 Start with `daily`, `discovery`, `support`, and `issue`.
@@ -77,7 +77,7 @@ Start with `daily`, `discovery`, `support`, and `issue`.
 If you want the "daily first, AI triage at night" flow, run:
 
 ```bash
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_ai_process.sh" "02 Daily/2026-04-06.md" daily
+bash "99 System/scripts/run_ai_process.sh" "02 Daily/2026-04-06.md" daily
 ```
 
 This generates one draft in `01 Inbox/AI Drafts/` grouped by area, project, people, work, and knowledge suggestions.
@@ -96,7 +96,7 @@ This generates one draft in `01 Inbox/AI Drafts/` grouped by area, project, peop
 Recommended flow:
 
 ```bash
-python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/raw_ingest.py" markdown "/path/to/article.md" --kind web
-python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/compile_raw_library.py" --provider auto --only-uncompiled
-python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/wiki_health_check.py"
+python3 "99 System/scripts/raw_ingest.py" markdown "/path/to/article.md" --kind web
+python3 "99 System/scripts/compile_raw_library.py" --provider auto --only-uncompiled
+python3 "99 System/scripts/wiki_health_check.py"
 ```

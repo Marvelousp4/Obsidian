@@ -26,7 +26,7 @@ Rules:
 
 ## Step 2: Compile
 
-Use AI or deterministic scripts to turn raw notes into:
+Use AI to turn raw notes into:
 
 - compiled summaries
 - encyclopedia-style concept pages
@@ -37,6 +37,8 @@ The compiled wiki lives in:
 
 - `05 Knowledge/Compiled`
 - `05 Knowledge/Concepts`
+
+Deterministic fallback output is draft-only. It can help create a skeleton, but it does not mark a raw note as `compiled`. A raw note is only compiled after it passes the quality gate in [[99 System/Metadata Contract|Metadata Contract]].
 
 ## Step 3: Health Check
 
@@ -50,10 +52,10 @@ The health check should ask:
 ## Command Line Entry Points
 
 ```bash
-python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/raw_ingest.py" --help
-python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/compile_raw_library.py" --help
-python3 "/Users/bai/Documents/Obsidian/Space/99 System/scripts/wiki_health_check.py" --help
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/run_knowledge_factory.sh"
+python3 "99 System/scripts/raw_ingest.py" --help
+python3 "99 System/scripts/compile_raw_library.py" --help
+python3 "99 System/scripts/wiki_health_check.py" --help
+bash "99 System/scripts/run_knowledge_factory.sh"
 ```
 
 ## Obsidian CLI Examples

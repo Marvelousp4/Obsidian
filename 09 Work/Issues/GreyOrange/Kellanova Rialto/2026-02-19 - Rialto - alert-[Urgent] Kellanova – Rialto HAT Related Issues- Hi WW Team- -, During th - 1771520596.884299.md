@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "Kellanova Rialto"
 site: "Kellanova Rialto"
@@ -16,6 +15,7 @@ last_updated_date: "2026-02-26"
 reporter: "U046XLEEE84"
 assignee: ""
 source_id: "1771520596.884299"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: ["7006"]
 components: ["camera", "ods", "pallet"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: C06J8L4SG64_2026.txt
 - Original source id: 1771520596.884299
 - Site: Kellanova Rialto

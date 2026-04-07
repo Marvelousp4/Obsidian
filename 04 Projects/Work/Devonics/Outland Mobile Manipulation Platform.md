@@ -19,7 +19,7 @@ Evaluate a productized mobile manipulator based on a Wellwit mobile base, Fairin
 
 ## Background
 
-- Source transcript: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Source transcript: cleaned_meeting_transcript_labeled.txt
 - Core organizations: [[09 Work/Accounts/Devonics|Devonics]], [[09 Work/Accounts/Outland Robotics|Outland Robotics]], [[09 Work/Accounts/Wellwit Robotics|Wellwit Robotics]]
 - Candidate base discussed: 300J
 - Arm discussed: FR10

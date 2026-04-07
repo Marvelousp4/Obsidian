@@ -9,6 +9,7 @@ import subprocess
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
+from typing import Any
 
 
 VAULT_ROOT = Path(__file__).resolve().parents[2]
@@ -145,6 +146,82 @@ def nonempty_paragraphs(body: str) -> list[str]:
     return [chunk for chunk in chunks if not chunk.startswith("#")]
 
 
+def normalize_text(text: str) -> str:
+    text = re.sub(r"-\s*\n\s*", "", text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
+def split_sentences(text: str) -> list[str]:
+    text = normalize_text(text)
+    parts = re.split(r"(?<=[.!?])\s+", text)
+    return [part.strip() for part in parts if len(part.strip()) > 20]
+
+
+def pick_core_sentence(text: str) -> str:
+    sentences = split_sentences(text)
+    priority_patterns = (
+        r"\bwe introduce\b",
+        r"\bwe propose\b",
+        r"\bthis work\b",
+        r"\bthis paper\b",
+        r"\bwe demonstrate\b",
+        r"\bour method\b",
+    )
+    for pattern in priority_patterns:
+        for sentence in sentences:
+            if re.search(pattern, sentence, re.I):
+                return sentence
+    return sentences[0] if sentences else ""
+
+
+def short_summary(title: str, text: str) -> str:
+    sentence = pick_core_sentence(text)
+    if not sentence:
+        return f"This source needs a manual summary before it can be treated as compiled knowledge."
+    sentence = re.sub(r"^(In this work,|This work|This paper)\s*", "", sentence, flags=re.I).strip()
+    if len(sentence) > 260:
+        sentence = sentence[:260].rsplit(" ", 1)[0] + "."
+    return f"{title}: {sentence}"
+
+
+def extract_takeaways(text: str) -> list[str]:
+    sentences = split_sentences(text)
+    selected: list[str] = []
+    patterns = (
+        r"\bintroduce\b",
+        r"\bpropose\b",
+        r"\bdemonstrate\b",
+        r"\benable\b",
+        r"\bensure\b",
+        r"\bshow\b",
+        r"\bcontribution\b",
+    )
+    for pattern in patterns:
+        for sentence in sentences:
+            if re.search(pattern, sentence, re.I) and sentence not in selected:
+                selected.append(sentence)
+            if len(selected) >= 3:
+                break
+        if len(selected) >= 3:
+            break
+    if len(selected) < 3:
+        for sentence in sentences:
+            if sentence not in selected:
+                selected.append(sentence)
+            if len(selected) >= 3:
+                break
+    takeaways: list[str] = []
+    for sentence in selected[:3]:
+        sentence = sentence.strip()
+        if len(sentence) > 220:
+            sentence = sentence[:220].rsplit(" ", 1)[0] + "."
+        takeaways.append(sentence)
+    while len(takeaways) < 3:
+        takeaways.append("Manual synthesis needed before this source should drive decisions.")
+    return takeaways
+
+
 def extract_section(body: str, heading: str) -> str:
     pattern = rf"## {re.escape(heading)}\s*(.*?)(\n## |\Z)"
     match = re.search(pattern, body, re.S)
@@ -196,9 +273,6 @@ def deterministic_compile(note: Note) -> dict[str, object]:
     title = extract_title(note)
     source_kind = str(note.frontmatter.get("source_kind", "web"))
     source_body = compile_text(note)
-    paragraphs = nonempty_paragraphs(source_body)
-    excerpt = paragraphs[:3]
-    summary = " ".join(excerpt)[:700].strip() or f"Compiled summary pending for {title}."
     area = infer_area(source_body, source_kind)
     domain = infer_domain(source_body, source_kind)
     concepts = extract_concepts(title, source_body)
@@ -206,16 +280,13 @@ def deterministic_compile(note: Note) -> dict[str, object]:
         f"{title} is a source-derived note compiled from {wiki_link(note.path)}. "
         f"It belongs to the {area} area and currently sits in the {domain} domain."
     )
-    takeaways = [
-        "Capture the source faithfully before optimizing it.",
-        "Promote only reusable conclusions into the compiled wiki.",
-        "Link the source to concept pages so the graph can grow over time.",
-    ]
+    takeaways = extract_takeaways(source_body)
     return {
         "title": title,
         "area": area,
         "domain": domain,
-        "summary": summary,
+        "_compiler": "deterministic",
+        "summary": short_summary(title, source_body),
         "encyclopedia_entry": entry,
         "key_concepts": concepts,
         "why_it_matters": f"This source is worth keeping because it can be turned into reusable knowledge instead of remaining trapped as raw input.",
@@ -258,6 +329,7 @@ RAW NOTE BODY:
         text=True,
     )
     data = extract_json_block(result.stdout)
+    data["_compiler"] = f"ollama:{model}"
     if not isinstance(data.get("key_concepts"), list):
         data["key_concepts"] = []
     if not isinstance(data.get("actionable_takeaways"), list):
@@ -289,7 +361,81 @@ def safe_note_path(root: Path, title: str) -> Path:
     return path
 
 
-def update_raw_note(note: Note, compiled_path: Path, concept_paths: list[Path]) -> None:
+def paths_from_wikilink_list(values: object) -> list[Path]:
+    if not isinstance(values, list):
+        return []
+    paths: list[Path] = []
+    for value in values:
+        link = str(value).strip()
+        if link.startswith("[[") and link.endswith("]]"):
+            target = link[2:-2].split("|", 1)[0].split("#", 1)[0]
+            path = VAULT_ROOT / f"{target}.md"
+            if path.exists():
+                paths.append(path)
+    return paths
+
+
+def quality_gate(data: dict[str, Any], concept_paths: list[Path], linked_source_count: int) -> list[str]:
+    failures: list[str] = []
+    summary = normalize_text(str(data.get("summary", "")))
+    takeaways = data.get("actionable_takeaways", [])
+    concepts = data.get("key_concepts", [])
+    compiler = str(data.get("_compiler", "deterministic"))
+    if compiler == "deterministic":
+        failures.append("deterministic fallback is draft-only; rerun with a real LLM compiler")
+    if not summary:
+        failures.append("missing summary")
+    if len(summary.split()) > 80:
+        failures.append("summary longer than 80 words")
+    if "\n" in str(data.get("summary", "")):
+        failures.append("summary contains line breaks")
+    if re.search(r"\bAbstract[—-]|\bI\.\s+I\s*N\s*T\s*R\s*O\s*D\s*U\s*C\s*T\s*I\s*O\s*N\b", summary, re.I):
+        failures.append("summary appears to copy raw paper text")
+    if not isinstance(takeaways, list) or len([item for item in takeaways if str(item).strip()]) < 3:
+        failures.append("fewer than three takeaways")
+    if not isinstance(concepts, list) or len([item for item in concepts if str(item).strip()]) < 2:
+        failures.append("fewer than two concept candidates")
+    if len(concept_paths) < 2:
+        failures.append("fewer than two concept notes")
+    if linked_source_count < 1:
+        failures.append("missing linked source")
+    return failures
+
+
+def update_raw_note(note: Note, compiled_path: Path, concept_paths: list[Path], status: str, failures: list[str]) -> None:
+    note.frontmatter["capture_status"] = status
+    note.frontmatter["compiled_note"] = wiki_link(compiled_path)
+    note.frontmatter["compiled_on"] = today()
+    note.frontmatter["concept_notes"] = [wiki_link(path) for path in concept_paths]
+    if failures:
+        note.frontmatter["compile_quality"] = "failed"
+        note.frontmatter["compile_failures"] = failures
+    else:
+        note.frontmatter["compile_quality"] = "passed"
+        note.frontmatter.pop("compile_failures", None)
+    write_note(note.path, note.frontmatter, note.body)
+
+
+def mark_raw_failed(note: Note, failures: list[str]) -> None:
+    note.frontmatter["capture_status"] = "needs_compile"
+    note.frontmatter["compile_quality"] = "failed"
+    note.frontmatter["compile_failures"] = failures
+    write_note(note.path, note.frontmatter, note.body)
+
+
+def set_compiled_quality(path: Path, status: str, failures: list[str]) -> None:
+    if not path.exists():
+        return
+    note = read_note(path)
+    note.frontmatter["compile_quality"] = status
+    if failures:
+        note.frontmatter["compile_failures"] = failures
+    else:
+        note.frontmatter.pop("compile_failures", None)
+    write_note(path, note.frontmatter, note.body)
+
+
+def update_raw_note_legacy(note: Note, compiled_path: Path, concept_paths: list[Path]) -> None:
     note.frontmatter["capture_status"] = "compiled"
     note.frontmatter["compiled_note"] = wiki_link(compiled_path)
     note.frontmatter["compiled_on"] = today()
@@ -303,7 +449,7 @@ def create_compiled_note(note: Note, data: dict[str, object], force: bool) -> tu
         relative = existing_link[2:-2] + ".md"
         compiled_path = VAULT_ROOT / relative
         if compiled_path.exists() and not force:
-            return compiled_path, []
+            return compiled_path, paths_from_wikilink_list(note.frontmatter.get("concept_notes"))
         if compiled_path.exists() and force:
             concept_paths = create_or_update_concepts(data, compiled_path)
             target_path = compiled_path
@@ -443,8 +589,15 @@ def process_notes(provider: str, model: str, only_uncompiled: bool, limit: int |
             continue
         data = compile_note(note, provider, model)
         compiled_path, concept_paths = create_compiled_note(note, data, force=force)
-        update_raw_note(note, compiled_path, concept_paths)
-        print(f"compiled\t{note.path.relative_to(VAULT_ROOT)}\t{compiled_path.relative_to(VAULT_ROOT)}")
+        failures = quality_gate(data, concept_paths, linked_source_count=1)
+        if failures:
+            mark_raw_failed(note, failures)
+            set_compiled_quality(compiled_path, "failed", failures)
+            print(f"needs_compile\t{note.path.relative_to(VAULT_ROOT)}\t{'; '.join(failures)}")
+        else:
+            update_raw_note(note, compiled_path, concept_paths, "compiled", failures)
+            set_compiled_quality(compiled_path, "passed", failures)
+            print(f"compiled\t{note.path.relative_to(VAULT_ROOT)}\t{compiled_path.relative_to(VAULT_ROOT)}")
         processed += 1
         if limit and processed >= limit:
             break

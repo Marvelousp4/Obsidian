@@ -23,7 +23,6 @@
 ## Local Initialization
 
 ```bash
-cd "/Users/bai/Documents/Obsidian/Space"
 git init
 git add .
 git commit -m "Initialize Obsidian workspace"
@@ -32,7 +31,6 @@ git commit -m "Initialize Obsidian workspace"
 ## Connect A Private GitHub Repository
 
 ```bash
-cd "/Users/bai/Documents/Obsidian/Space"
 git remote add origin <your-private-repo-url>
 git branch -M main
 git push -u origin main
@@ -55,7 +53,7 @@ git push -u origin main
 ## Optional iCloud Mirror
 
 ```bash
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/sync_space_to_icloud.sh"
+bash "99 System/scripts/sync_space_to_icloud.sh"
 ```
 
 ## Avoid

@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: ""
 site: "Unspecified"
@@ -16,6 +15,7 @@ last_updated_date: "2026-01-29"
 reporter: "U046V4NANGK"
 assignee: ""
 source_id: "1768996976.409419"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: []
 components: ["charger", "dock", "moxa"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: C0602U5PLMS_2026.txt
 - Original source id: 1768996976.409419
 - Site: Unspecified

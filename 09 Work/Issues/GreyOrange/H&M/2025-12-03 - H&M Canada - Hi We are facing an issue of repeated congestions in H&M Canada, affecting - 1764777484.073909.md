@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "H&M"
 site: "H&M"
@@ -16,6 +15,7 @@ last_updated_date: "2025-12-11"
 reporter: "U046XLG7D36"
 assignee: ""
 source_id: "1764777484.073909"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: ["9001", "9002", "9003", "9004", "9005", "9006", "9007", "9008"]
 components: ["dock", "rds", "sto"]
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: C08GU4VBN1G_2025-01-01_to_2026-03-16.txt
 - Original source id: 1764777484.073909
 - Site: H&M

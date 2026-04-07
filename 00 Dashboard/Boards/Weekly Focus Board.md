@@ -2,6 +2,10 @@
 kanban-plugin: board
 ---
 
+%%
+This is a short-horizon staging board, not a second task database. Every durable task should link back to its source daily note, project, issue, or account note.
+%%
+
 ## Inbox
 
 - [ ] Process the current daily note and convert anything real into accounts, projects, meetings, issues, or knowledge notes.

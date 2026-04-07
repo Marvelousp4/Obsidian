@@ -1,7 +1,6 @@
 ---
 type: "issue"
 source_type: "support_history_import"
-client: "GreyOrange"
 account: "GreyOrange"
 project: "Dorman Warsaw"
 site: "Dorman Warsaw"
@@ -16,6 +15,7 @@ last_updated_date: "2026-01-22"
 reporter: "U07KMEF7TH8"
 assignee: ""
 source_id: "1768237549.992129"
+source_file: "wellwit_issue_history_clean.csv"
 bot_ids: ["8266"]
 components: []
 tags: []
@@ -25,7 +25,7 @@ tags: []
 
 ## Source Context
 
-- Imported from: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Imported from: wellwit_issue_history_clean.csv
 - Source channel/file: C0602U5PLMS_2026.txt
 - Original source id: 1768237549.992129
 - Site: Dorman Warsaw

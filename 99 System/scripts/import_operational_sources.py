@@ -15,20 +15,22 @@ from textwrap import dedent
 try:
     from openpyxl import load_workbook
 except ModuleNotFoundError:
-    fallback_python = Path("/Users/bai/anaconda3/bin/python")
+    fallback_python = Path.home() / "anaconda3" / "bin" / "python"
     if Path(sys.executable) != fallback_python and fallback_python.exists():
         os.execv(str(fallback_python), [str(fallback_python), __file__, *sys.argv[1:]])
     raise
 
 
-VAULT = Path("/Users/bai/Documents/Obsidian/Space")
-DOWNLOADS = Path("/Users/bai/Downloads")
-PLAYGROUND = Path("/Users/bai/Documents/Playground")
+VAULT = Path(__file__).resolve().parents[2]
+DOWNLOADS = Path.home() / "Downloads"
+PLAYGROUND = Path.home() / "Documents" / "Playground"
 
 GO_XLSX = next(iter(sorted(DOWNLOADS.glob("GO*.xlsx"))))
 DEVONICS_TRANSCRIPT = DOWNLOADS / "cleaned_meeting_transcript_labeled.txt"
 WELLWIT_ISSUES = PLAYGROUND / "wellwit_issue_history_clean.csv"
 GO_SOURCE_LABEL = "GreyOrange internal workbook"
+DEVONICS_SOURCE_LABEL = "cleaned_meeting_transcript_labeled.txt"
+WELLWIT_ISSUES_LABEL = "wellwit_issue_history_clean.csv"
 
 
 def quote(value):
@@ -171,7 +173,7 @@ DEVONICS_CONTACTS = [
         "title": "Co-founder; sales and marketing",
         "relationship": "active",
         "verification_status": "transcript_derived",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT)],
+        "verification_sources": [DEVONICS_SOURCE_LABEL],
         "notes": [
             "Introduced himself as running sales and marketing.",
             "Said he is a co-founder of Fairino USA and Devonix Automation.",
@@ -185,7 +187,7 @@ DEVONICS_CONTACTS = [
         "title": "CTO; VP Engineering",
         "relationship": "active",
         "verification_status": "transcript_derived",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT)],
+        "verification_sources": [DEVONICS_SOURCE_LABEL],
         "notes": [
             "Joined late in the call and introduced himself as CTO and VP of engineering.",
             "Owns optimization, customization, and support topics.",
@@ -199,7 +201,7 @@ DEVONICS_CONTACTS = [
         "title": "China-based supplier and project coordination",
         "relationship": "active",
         "verification_status": "transcript_derived",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT)],
+        "verification_sources": [DEVONICS_SOURCE_LABEL],
         "notes": [
             "Introduced as the China-side team member coordinating suppliers and projects.",
         ],
@@ -212,7 +214,7 @@ DEVONICS_CONTACTS = [
         "title": "Co-founder",
         "relationship": "active",
         "verification_status": "transcript_derived",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT)],
+        "verification_sources": [DEVONICS_SOURCE_LABEL],
         "notes": [
             "Presented Outland Robotics use cases and requirements for a mobile manipulation platform.",
         ],
@@ -225,7 +227,7 @@ DEVONICS_CONTACTS = [
         "title": "CEO; CTO",
         "relationship": "active",
         "verification_status": "transcript_derived",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT)],
+        "verification_sources": [DEVONICS_SOURCE_LABEL],
         "notes": [
             "Introduced as CEO and CTO of Outland Robotics.",
             "Asked about deployments, applications, and commercialization path.",
@@ -239,7 +241,7 @@ DEVONICS_CONTACTS = [
         "title": "Overseas sales manager",
         "relationship": "active",
         "verification_status": "company_verified_transcript_contact",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT), WELLWIT_PUBLIC["website"]],
+        "verification_sources": [DEVONICS_SOURCE_LABEL, WELLWIT_PUBLIC["website"]],
         "notes": [
             "Introduced as overseas sales manager of Wellwit and owner of the Devonics project.",
         ],
@@ -252,7 +254,7 @@ DEVONICS_CONTACTS = [
         "title": "Software engineer",
         "relationship": "active",
         "verification_status": "company_verified_transcript_contact",
-        "verification_sources": [str(DEVONICS_TRANSCRIPT), WELLWIT_PUBLIC["website"]],
+        "verification_sources": [DEVONICS_SOURCE_LABEL, WELLWIT_PUBLIC["website"]],
         "notes": [
             "Atlanta-based software engineer from the Wellwit team.",
             "Covered power budget, SLAM, maintenance, and integration details.",
@@ -436,7 +438,7 @@ def build_account_note(
         f"```dataview\n"
         f"TABLE site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated\n"
         f'FROM "09 Work/Issues"\n'
-        f'WHERE type = "issue" AND client = "{title}" AND status != "resolved"\n'
+        f'WHERE type = "issue" AND account = "{title}" AND status != "resolved"\n'
         f"SORT last_updated_date DESC\n"
         f"```\n\n"
         f"## Risks\n\n"
@@ -687,7 +689,7 @@ def import_devonics():
             f"- Email:\n"
             f"- Phone:\n"
             f"- Location:\n"
-            f"- Source: {DEVONICS_TRANSCRIPT}\n\n"
+            f"- Source: {DEVONICS_SOURCE_LABEL}\n\n"
             f"## What They Own\n\n"
             f"{note_lines}\n\n"
             f"## Relationship Notes\n\n"
@@ -749,7 +751,7 @@ def import_devonics():
 
         ## Background
 
-        - Source transcript: {DEVONICS_TRANSCRIPT}
+        - Source transcript: {DEVONICS_SOURCE_LABEL}
         - Core organizations: [[09 Work/Accounts/Devonics|Devonics]], [[09 Work/Accounts/Outland Robotics|Outland Robotics]], [[09 Work/Accounts/Wellwit Robotics|Wellwit Robotics]]
         - Candidate base discussed: 300J
         - Arm discussed: FR10
@@ -826,7 +828,7 @@ def import_devonics():
 
         ## Raw Transcript
 
-        - Source file: {DEVONICS_TRANSCRIPT}
+        - Source file: {DEVONICS_SOURCE_LABEL}
         """
     ).strip()
     write_note(
@@ -871,7 +873,6 @@ def import_wellwit_issues():
         fm = {
             "type": "issue",
             "source_type": "support_history_import",
-            "client": "GreyOrange",
             "account": "GreyOrange",
             "project": site if site != "Unspecified" else "",
             "site": site,
@@ -886,6 +887,7 @@ def import_wellwit_issues():
             "reporter": row.get("reporter") or "",
             "assignee": row.get("assignee") or "",
             "source_id": source_id,
+            "source_file": WELLWIT_ISSUES_LABEL,
             "bot_ids": bot_ids,
             "components": components,
             "tags": [],
@@ -896,7 +898,7 @@ def import_wellwit_issues():
 
             ## Source Context
 
-            - Imported from: {WELLWIT_ISSUES}
+            - Imported from: {WELLWIT_ISSUES_LABEL}
             - Source channel/file: {source_channel}
             - Original source id: {row.get("source_id") or ""}
             - Site: {site}
@@ -980,7 +982,7 @@ def import_wellwit_issues():
     summary_body = (
         f"# Wellwit Issue Import Summary\n\n"
         f"## Import Result\n\n"
-        f"- Source file: {WELLWIT_ISSUES}\n"
+        f"- Source file: {WELLWIT_ISSUES_LABEL}\n"
         f"- Imported issue notes: {imported}\n"
         f"- Skipped low-signal rows: {skipped}\n"
         f"- Scope assumption: these support records were integrated as GreyOrange-related field issues because the dominant sites align with GreyOrange deployments.\n\n"

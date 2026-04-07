@@ -9,7 +9,7 @@ tags: []
 
 ## Import Result
 
-- Source file: /Users/bai/Documents/Playground/wellwit_issue_history_clean.csv
+- Source file: wellwit_issue_history_clean.csv
 - Imported issue notes: 207
 - Skipped low-signal rows: 94
 - Scope assumption: these support records were integrated as GreyOrange-related field issues because the dominant sites align with GreyOrange deployments.

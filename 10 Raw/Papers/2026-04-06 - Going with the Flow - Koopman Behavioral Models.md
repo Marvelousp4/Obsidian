@@ -1,26 +1,29 @@
 ---
 type: raw_source
 source_kind: paper
-capture_status: compiled
+capture_status: needs_compile
 captured: 2026-04-06
-source_path: /Users/bai/Library/Mobile Documents/iCloud~md~obsidian/Documents/Space/07 Resources/Papers/835_Going_with_the_Flow_Koopma.pdf
+source_path: 07 Resources/Papers/835_Going_with_the_Flow_Koopma.pdf
 source_url: 
 repo_url: 
 compiled_note: [[05 Knowledge/Compiled/Going with the Flow - Koopman Behavioral Models]]
 tags:
   - raw
   - paper
-compiled_on: 2026-04-06
+compiled_on: 2026-04-07
 concept_notes:
   - [[05 Knowledge/Concepts/Going with the Flow]]
   - [[05 Knowledge/Concepts/Koopman Behavioral Models]]
+compile_quality: failed
+compile_failures:
+  - deterministic fallback is draft-only; rerun with a real LLM compiler
 ---
 
 # Going with the Flow - Koopman Behavioral Models
 
 ## Source
 
-- Original file: `/Users/bai/Library/Mobile Documents/iCloud~md~obsidian/Documents/Space/07 Resources/Papers/835_Going_with_the_Flow_Koopma.pdf`
+- Original file: `07 Resources/Papers/835_Going_with_the_Flow_Koopma.pdf`
 - Why keep this:
 
 ## Raw Markdown

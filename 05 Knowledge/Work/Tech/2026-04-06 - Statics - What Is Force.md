@@ -2,7 +2,7 @@
 type: knowledge
 domain: tech
 source_type: video
-source: "/Users/bai/Documents/Obsidian/Space/07 Resources/Subtitles/2026-04-06 - Statics - What Is Force.srt"
+source: "07 Resources/Subtitles/2026-04-06 - Statics - What Is Force.srt"
 speaker: "1-Minute Lessons in Statics"
 platform: youtube
 watched_on: 2026-04-06

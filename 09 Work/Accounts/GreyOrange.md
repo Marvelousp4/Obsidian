@@ -54,7 +54,7 @@ SORT date DESC
 ```dataview
 TABLE site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated
 FROM "09 Work/Issues"
-WHERE type = "issue" AND client = "GreyOrange" AND status != "resolved"
+WHERE type = "issue" AND account = "GreyOrange" AND status != "resolved"
 SORT last_updated_date DESC
 ```
 

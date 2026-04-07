@@ -1,11 +1,10 @@
 # Local and iCloud Sync
 
-The primary vault should live locally for speed:
+The primary vault should live locally for speed. The current local path is:
 
-- primary path: `/Users/bai/Documents/Obsidian/Space`
-- optional mirror path: `/Users/bai/Library/Mobile Documents/iCloud~md~obsidian/Documents/Space`
+- `Space`
 
-`07 Resources` remains anchored to the iCloud copy through local subdirectory symlinks, so the mirror script syncs markdown and settings but intentionally skips `07 Resources`.
+The optional iCloud mirror can be passed into the sync script. `07 Resources` remains anchored to the mirror through local subdirectory symlinks, so the mirror script syncs markdown and settings but intentionally skips `07 Resources`.
 
 ## Rule
 
@@ -22,7 +21,7 @@ The primary vault should live locally for speed:
 ## Mirror Command
 
 ```bash
-bash "/Users/bai/Documents/Obsidian/Space/99 System/scripts/sync_space_to_icloud.sh"
+bash "99 System/scripts/sync_space_to_icloud.sh"
 ```
 
 ## Before Mirroring

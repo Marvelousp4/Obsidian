@@ -21,7 +21,17 @@ LIMIT 30
 ```dataview
 TABLE area AS Area, domain AS Domain, compiled_from AS "Compiled From", updated AS Updated
 FROM "05 Knowledge/Compiled"
-WHERE type = "knowledge"
+WHERE type = "knowledge" AND compile_quality = "passed"
+SORT file.mtime DESC
+LIMIT 20
+```
+
+## Compile Drafts / Failed Quality
+
+```dataview
+TABLE area AS Area, domain AS Domain, compile_quality AS Quality, compile_failures AS Failures, compiled_from AS "Compiled From"
+FROM "05 Knowledge/Compiled"
+WHERE type = "knowledge" AND compile_quality != "passed"
 SORT file.mtime DESC
 LIMIT 20
 ```
@@ -79,7 +89,7 @@ LIMIT 10
 ## Reusable Work Issue Patterns
 
 ```dataview
-TABLE client AS Account, site AS Site, category AS Category, priority AS Priority, last_updated_date AS Updated
+TABLE account AS Account, site AS Site, category AS Category, priority AS Priority, last_updated_date AS Updated
 FROM "09 Work/Issues"
 WHERE type = "issue" AND status != "resolved"
 SORT last_updated_date DESC

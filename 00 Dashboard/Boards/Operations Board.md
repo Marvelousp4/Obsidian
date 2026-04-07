@@ -27,7 +27,7 @@ SORT file.mtime DESC
 ## Recent Issues
 
 ```dataview
-TABLE client, site, category, status, severity, last_updated_date
+TABLE account AS Account, site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated
 FROM "09 Work/Issues"
 WHERE type = "issue"
 SORT last_updated_date DESC

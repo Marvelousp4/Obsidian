@@ -2,7 +2,7 @@
 type: knowledge
 domain: industry
 source_type: video
-source: "/Users/bai/Documents/Obsidian/Space/07 Resources/Transcripts/2026-04-06 - Tian Wendong - LLM Moats Memory and Agent Impact.txt"
+source: "07 Resources/Transcripts/2026-04-06 - Tian Wendong - LLM Moats Memory and Agent Impact.txt"
 speaker: "Tian Wendong"
 platform: bilibili
 watched_on: 2026-04-06

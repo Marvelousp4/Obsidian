@@ -2,7 +2,7 @@
 type: knowledge
 domain: tech
 source_type: video
-source: "/Users/bai/Documents/Obsidian/Space/07 Resources/Transcripts/2026-04-06 - Video2Sim2Real Presentation.txt"
+source: "07 Resources/Transcripts/2026-04-06 - Video2Sim2Real Presentation.txt"
 speaker: "Yunhai Han"
 platform: presentation
 watched_on: 2026-04-06

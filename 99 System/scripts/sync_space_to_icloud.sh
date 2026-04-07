@@ -2,8 +2,10 @@
 
 set -euo pipefail
 
-LOCAL_VAULT="${1:-/Users/bai/Documents/Obsidian/Space}"
-ICLOUD_VAULT="${2:-/Users/bai/Library/Mobile Documents/iCloud~md~obsidian/Documents/Space}"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DEFAULT_LOCAL_VAULT="$(cd "$SCRIPT_DIR/../.." && pwd)"
+LOCAL_VAULT="${1:-$DEFAULT_LOCAL_VAULT}"
+ICLOUD_VAULT="${2:-${ICLOUD_VAULT:-$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Space}}"
 
 mkdir -p "$ICLOUD_VAULT"
 

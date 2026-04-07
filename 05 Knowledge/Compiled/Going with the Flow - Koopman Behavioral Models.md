@@ -5,29 +5,21 @@ domain: paper_notes
 source: [[10 Raw/Papers/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
 source_type: raw_source
 compiled_from: [[10 Raw/Papers/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
-created: 2026-04-06
-updated: 2026-04-06
+created: 2026-04-07
+updated: 2026-04-07
 tags:
   - knowledge
   - compiled
+compile_quality: failed
+compile_failures:
+  - deterministic fallback is draft-only; rerun with a real LLM compiler
 ---
 
 # Going with the Flow - Koopman Behavioral Models
 
 ## One-Line Summary
 
-Going with the Flow: Koopman Behavioral Models
-as Implicit Planners for Visuo-Motor Dexterity
-Author Names Omitted for Anonymous Review. Paper-ID [xxx]
-Abstract—There has been rapid and dramatic progress in
-robots’ ability to learn complex visuo-motor manipulation skills
-from demonstrations, thanks in part to expressive policy classes
-that employ diffusion- and transformer-based backbones. How-
-ever, these design choices require significant data and compu-
-tational resources and remain far from reliable, particularly
-within the context of multi-fingered dexterous manipulation.
-Fundamentally, they model skills as reactive mappings and rely
-on fixed-horizon action chunking to mitigate jitter,
+Going with the Flow - Koopman Behavioral Models: we introduce Unified Behavioral Models (UBMs) , a framework that learns to represent dexterous skills as coupled dynamical systems that capture how visual features of the environment (visual flow) and proprioceptive states of the robot (action flow) co-evolve.
 
 ## Encyclopedia Entry
 
@@ -44,9 +36,9 @@ This source is worth keeping because it can be turned into reusable knowledge in
 
 ## Actionable Takeaways
 
-- Capture the source faithfully before optimizing it.
-- Promote only reusable conclusions into the compiled wiki.
-- Link the source to concept pages so the graph can grow over time.
+- In this work, we introduce Unified Behavioral Models (UBMs) , a framework that learns to represent dexterous skills as coupled dynamical systems that capture how visual features of the environment (visual flow) and.
+- To enable reactivity and adaptation, we introduce an online replanning strategy in which the model acts as its own runtime monitor that automatically triggers replanning when predicted and observed visual flow diverge.
+- While effective, these strategies introduce a rigid trade-off between deliberate planning (full-horizon predictions) and reactivity (short chunks), and any resulting coherence is a byproduct of averaging rather than a.
 
 ## Linked Source
 

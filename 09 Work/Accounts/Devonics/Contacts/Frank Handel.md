@@ -10,7 +10,7 @@ location: ""
 relationship: "active"
 owner: "bai"
 verification_status: "transcript_derived"
-verification_sources: ["/Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt"]
+verification_sources: ["cleaned_meeting_transcript_labeled.txt"]
 last_contact: "2026-04-05"
 tags: []
 ---
@@ -25,7 +25,7 @@ tags: []
 - Email:
 - Phone:
 - Location:
-- Source: /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+- Source: cleaned_meeting_transcript_labeled.txt
 
 ## What They Own
 
@@ -41,7 +41,7 @@ tags: []
 
 - status: transcript_derived
 - sources:
-  - /Users/bai/Downloads/cleaned_meeting_transcript_labeled.txt
+  - cleaned_meeting_transcript_labeled.txt
 
 ## Related Projects / Sites
 

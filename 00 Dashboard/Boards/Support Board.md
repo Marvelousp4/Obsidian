@@ -3,7 +3,7 @@
 ## Open Issues
 
 ```dataview
-TABLE client, site, category, status, severity, priority, last_updated_date
+TABLE account AS Account, site AS Site, category AS Category, status AS Status, severity AS Severity, priority AS Priority, last_updated_date AS Updated
 FROM "09 Work/Issues"
 WHERE type = "issue" AND status != "resolved"
 SORT last_updated_date DESC

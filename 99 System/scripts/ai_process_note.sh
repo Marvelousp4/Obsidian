@@ -2,7 +2,8 @@
 
 set -euo pipefail
 
-VAULT_ROOT="/Users/bai/Documents/Obsidian/Space"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+VAULT_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 REST_CONFIG="$VAULT_ROOT/.obsidian/plugins/obsidian-local-rest-api/data.json"
 DEFAULT_MODEL="${OPENAI_MODEL:-gpt-5-mini}"
 

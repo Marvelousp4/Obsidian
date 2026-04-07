@@ -2,7 +2,7 @@
 type: knowledge
 domain: industry
 source_type: report
-source: "/Users/bai/Documents/Obsidian/Space/07 Resources/Reports/2026-04-06 - OD4419 - Automated Guided Vehicle Manufacturing in the US Industry Report.pdf"
+source: "07 Resources/Reports/2026-04-06 - OD4419 - Automated Guided Vehicle Manufacturing in the US Industry Report.pdf"
 author: "IBISWorld"
 platform: report
 watched_on: 2026-04-06

@@ -2,7 +2,7 @@
 type: knowledge
 domain: tech
 source_type: video
-source: "/Users/bai/Documents/Obsidian/Space/07 Resources/Subtitles/2026-04-06 - Beginner Electronics - Introduction.srt"
+source: "07 Resources/Subtitles/2026-04-06 - Beginner Electronics - Introduction.srt"
 speaker: "Co[2]morrow"
 platform: youtube
 watched_on: 2026-04-06
