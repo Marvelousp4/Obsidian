@@ -1,12 +1,13 @@
 ---
 type: "project"
+area: work
 account: "GreyOrange"
 project_kind: "site_deployment"
 site: "Dorman Portland"
 status: "active"
 owner: "bai"
 started: ""
-next: "Link the historical site issues here and update the latest operating status, owner, and next follow-up date."
+next: "Review active site issues, confirm owner, and set the next follow-up date."
 tags: []
 ---
 
@@ -40,7 +41,7 @@ Christopher Adcock
 
 ## Next Steps
 
-- [x] Link the historical site issues here and update the latest operating status, owner, and next follow-up date.
+- [ ] Review active site issues, confirm owner, and set the next follow-up date.
 
 ## Open Issues
 

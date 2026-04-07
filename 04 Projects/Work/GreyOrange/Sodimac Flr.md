@@ -1,5 +1,6 @@
 ---
 type: "project"
+area: work
 account: "GreyOrange"
 project_kind: "site_issue_bucket"
 site: "Sodimac Flr"

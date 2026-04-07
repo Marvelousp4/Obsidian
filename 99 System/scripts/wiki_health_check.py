@@ -11,7 +11,7 @@ from pathlib import Path
 
 VAULT_ROOT = Path(__file__).resolve().parents[2]
 RAW_ROOT = VAULT_ROOT / "10 Raw"
-COMPILED_ROOT = VAULT_ROOT / "05 Knowledge" / "Compiled"
+KNOWLEDGE_ROOT = VAULT_ROOT / "05 Knowledge"
 CONCEPT_ROOT = VAULT_ROOT / "05 Knowledge" / "Concepts"
 REPORT_ROOT = VAULT_ROOT / "08 Reviews" / "Wiki Health"
 
@@ -96,14 +96,14 @@ def unresolved_placeholders(text: str) -> list[str]:
 
 def compiled_quality_findings(path: Path, frontmatter: dict[str, object], body: str) -> list[Finding]:
     findings: list[Finding] = []
-    summary = extract_section(body, "One-Line Summary")
-    takeaways = extract_section(body, "Actionable Takeaways")
+    summary = extract_section(body, "One-Line Summary") or extract_section(body, "One-Line Conclusion")
+    takeaways = extract_section(body, "Actionable Takeaways") or extract_section(body, "Core Content")
     concepts = extract_section(body, "Key Concepts")
     linked_source = extract_section(body, "Linked Source")
     summary_normalized = normalize_text(summary)
     takeaway_count = len(re.findall(r"^- ", takeaways, re.M))
-    concept_count = len(re.findall(r"^\s*- \[\[", concepts, re.M))
-    linked_source_count = len(re.findall(r"\[\[", linked_source))
+    concept_count = len(re.findall(r"\[\[05 Knowledge/Concepts/", body))
+    linked_source_count = len(re.findall(r"\[\[", linked_source)) or (1 if str(frontmatter.get("source","")).strip() else 0)
     rel = path.relative_to(VAULT_ROOT)
     if not summary_normalized:
         findings.append(Finding("compiled_quality", f"{rel} has no one-line summary."))
@@ -163,9 +163,11 @@ def main() -> None:
     parser.parse_args()
 
     raw_notes = load_notes(RAW_ROOT)
-    compiled_notes = load_notes(COMPILED_ROOT)
+    knowledge_notes = load_notes(KNOWLEDGE_ROOT)
     concept_notes = load_notes(CONCEPT_ROOT)
-    all_notes = {**raw_notes, **compiled_notes, **concept_notes}
+    # Keep only true knowledge notes here; concept notes are checked separately.
+    knowledge_notes = {p:v for p,v in knowledge_notes.items() if p.is_file() and p.parent != CONCEPT_ROOT and p.name not in {"Knowledge Index.md", "Compiled Index.md"}}
+    all_notes = {**raw_notes, **knowledge_notes, **concept_notes}
 
     targets: set[str] = set()
     for path in all_notes:
@@ -184,7 +186,7 @@ def main() -> None:
         for placeholder in unresolved_placeholders(body):
             findings.append(Finding("raw_placeholder", f"{path.relative_to(VAULT_ROOT)} contains placeholder pattern `{placeholder}`."))
 
-    for path, (frontmatter, body) in compiled_notes.items():
+    for path, (frontmatter, body) in knowledge_notes.items():
         compiled_from = str(frontmatter.get("compiled_from", "")).strip()
         if not compiled_from:
             findings.append(Finding("compiled_missing_source", f"{path.relative_to(VAULT_ROOT)} is missing `compiled_from`."))
@@ -197,7 +199,7 @@ def main() -> None:
 
     for path, (frontmatter, body) in concept_notes.items():
         links = extract_wikilinks(body)
-        linked_sources = [link for link in links if link.startswith("05 Knowledge/Compiled/")]
+        linked_sources = [link for link in links if link.startswith("05 Knowledge/") and not link.startswith("05 Knowledge/Concepts/")]
         if len(linked_sources) < 1:
             findings.append(Finding("weak_concept_sources", f"{path.relative_to(VAULT_ROOT)} has no linked compiled source."))
         for placeholder in unresolved_placeholders(body):

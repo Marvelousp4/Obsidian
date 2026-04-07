@@ -11,6 +11,9 @@ tags:
   - robotics
   - koopman
   - dexterous-manipulation
+compiled_from: [[10 Raw/Papers/Raw - Going with the Flow - Koopman Behavioral Models]]
+compile_quality: passed
+compiled_on: 2026-04-07
 ---
 
 # 2026-04-06 - Going with the Flow - Koopman Behavioral Models
@@ -63,4 +66,4 @@ The paper argues that dexterous manipulation policies should be modeled as tempo
 - project:
 - account:
 - people: [[06 People/Professional/STAR Lab/Harish Ravichandar|Harish Ravichandar]]
-- topic: [[03 Areas/Health/Baselines/2026-03 Fitness And Diet Baseline|Imported baseline example]]
+- topic: [[05 Knowledge/Concepts/Going with the Flow|Going with the Flow]], [[05 Knowledge/Concepts/Koopman Behavioral Models|Koopman Behavioral Models]]

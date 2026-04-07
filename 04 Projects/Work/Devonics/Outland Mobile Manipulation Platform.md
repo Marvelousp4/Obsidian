@@ -1,5 +1,6 @@
 ---
 type: "project"
+area: work
 account: "Devonics"
 project_kind: "solution_opportunity"
 site: ""

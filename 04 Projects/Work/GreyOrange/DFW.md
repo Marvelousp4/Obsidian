@@ -1,5 +1,6 @@
 ---
 type: "project"
+area: work
 account: "GreyOrange"
 project_kind: "site_deployment"
 site: "DFW"

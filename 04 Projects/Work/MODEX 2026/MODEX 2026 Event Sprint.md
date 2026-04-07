@@ -1,5 +1,6 @@
 ---
 type: project
+area: work
 account: bai
 project_kind: event_sprint
 site: Georgia World Congress Center
