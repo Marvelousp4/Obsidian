@@ -149,3 +149,13 @@ Minimum quality gate:
 - at least two concept links
 - at least one linked source
 - no raw absolute source paths
+
+`compile_quality` semantics:
+
+- `passed`: all quality gate checks above are satisfied.
+- `draft`: note exists but does not yet satisfy the full gate.
+- `failed`: compile attempt failed or content is unusable and needs rework.
+
+Rule:
+
+- Do not set `compile_quality: passed` unless the note currently passes the gate.

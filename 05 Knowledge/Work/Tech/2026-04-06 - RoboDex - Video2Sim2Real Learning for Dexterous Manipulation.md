@@ -1,8 +1,11 @@
 ---
 type: knowledge
+area: work
 domain: tech
 source_type: video
 source: "07 Resources/Transcripts/2026-04-06 - Video2Sim2Real Presentation.txt"
+compiled_from: "[[07 Resources/Transcripts/2026-04-06 - Video2Sim2Real Presentation.txt]]"
+compile_quality: passed
 speaker: "Yunhai Han"
 platform: presentation
 watched_on: 2026-04-06
@@ -24,7 +27,11 @@ tags:
 - Speaker: Yunhai Han
 - Source transcript: [[07 Resources/Transcripts/2026-04-06 - Video2Sim2Real Presentation.txt]]
 
-## Key Takeaways
+## One-Line Summary
+
+Video-to-sim-to-real is a practical path to derive task-specific dexterous robot policies from a single human demonstration.
+
+## Actionable Takeaways
 
 - The pipeline starts from only a human manipulation video and aims to end with a real-world dexterous robot policy.
 - The stack combines foundation models, pose estimation, hand retargeting, simulator generation, RL policy training, and transfer to real deployment.
@@ -61,5 +68,5 @@ tags:
 ## Links
 
 - knowledge: [[05 Knowledge/Work/Tech/Tech Index]]
+- concepts: [[05 Knowledge/Concepts/Video-to-Sim-to-Real]], [[05 Knowledge/Concepts/Robot Foundation Models]]
 - resource: [[07 Resources/Transcripts/2026-04-06 - Video2Sim2Real Presentation.txt]]
-

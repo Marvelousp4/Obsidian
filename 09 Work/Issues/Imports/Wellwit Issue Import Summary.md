@@ -1,5 +1,6 @@
 ---
-type: "knowledge"
+type: "import_summary"
+area: "work"
 source_type: "import_summary"
 date: "2026-04-05"
 tags: []

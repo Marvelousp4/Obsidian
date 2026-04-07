@@ -1,8 +1,11 @@
 ---
 type: knowledge
+area: work
 domain: industry
 source_type: video
 source: "07 Resources/Transcripts/2026-04-06 - Saining Xie - World Models OpenAI and AMI Labs.txt"
+compiled_from: "[[07 Resources/Transcripts/2026-04-06 - Saining Xie - World Models OpenAI and AMI Labs.txt]]"
+compile_quality: passed
 speaker: "Saining Xie"
 platform: bilibili
 watched_on: 2026-04-06
@@ -25,7 +28,11 @@ tags:
 - Duration: Long-form bilibili interview transcript
 - Source transcript: [[07 Resources/Transcripts/2026-04-06 - Saining Xie - World Models OpenAI and AMI Labs.txt]]
 
-## Key Takeaways
+## One-Line Summary
+
+This interview frames world models as a strategic bridge between frontier research direction and practical startup positioning.
+
+## Actionable Takeaways
 
 - This is a long-form frontier AI interview that blends biography, research direction, startup context, and world-model thinking.
 - The transcript title and keyword scan indicate the conversation covers world models, OpenAI, AMI Labs, Ilya, Yann LeCun, Li Feifei, and entrepreneurship.
@@ -61,5 +68,5 @@ tags:
 ## Links
 
 - knowledge: [[05 Knowledge/Work/Industry/Industry Index]]
+- concepts: [[05 Knowledge/Concepts/World Models for AI Systems]], [[05 Knowledge/Concepts/Robot Foundation Models]]
 - resource: [[07 Resources/Transcripts/2026-04-06 - Saining Xie - World Models OpenAI and AMI Labs.txt]]
-

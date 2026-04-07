@@ -26,3 +26,24 @@ Before mirroring:
 - Run Git backup first.
 - Close the vault on mobile if possible.
 - Do not edit the local and iCloud copies at the same time.
+
+## 07 Resources Symlink Strategy
+
+Use a symlink so large/raw resource files can live outside the repo while notes keep stable vault paths.
+
+Recommended layout:
+
+- Keep the vault at `/Users/bai/Documents/Obsidian/Space`.
+- Keep real resources at a stable path (for example `/Users/bai/Documents/Obsidian-Resources/07 Resources`).
+- In the vault, create `07 Resources` as a symlink to that stable path.
+
+Setup command:
+
+```bash
+ln -s "/Users/bai/Documents/Obsidian-Resources/07 Resources" "/Users/bai/Documents/Obsidian/Space/07 Resources"
+```
+
+Cross-device rule:
+
+- On every new machine, recreate the same symlink target path or update links to a new stable root before use.
+- If you use iCloud for resources, ensure the iCloud path is identical across devices before creating the symlink.

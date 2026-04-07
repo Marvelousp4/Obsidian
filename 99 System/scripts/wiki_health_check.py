@@ -51,7 +51,7 @@ def parse_frontmatter(text: str) -> tuple[dict[str, object], str]:
 def load_notes(root: Path) -> dict[Path, tuple[dict[str, object], str]]:
     notes: dict[Path, tuple[dict[str, object], str]] = {}
     for path in root.rglob("*.md"):
-        if path.name in {"Raw Index.md", "Compiled Index.md", "Concept Index.md", "README.md"}:
+        if ".obsidian" in path.parts:
             continue
         notes[path] = parse_frontmatter(path.read_text(encoding="utf-8"))
     return notes
@@ -69,6 +69,17 @@ def extract_wikilinks(text: str) -> list[str]:
         target = match.group(1).split("|", 1)[0].split("#", 1)[0]
         matches.append(target)
     return matches
+
+
+def is_templates_note(path: Path) -> bool:
+    return "90 Templates" in path.relative_to(VAULT_ROOT).as_posix()
+
+
+def wiki_link_points_to_existing_file(link: str) -> bool:
+    # If the link explicitly targets a file extension, allow any file type in the vault.
+    if "." not in Path(link).name:
+        return False
+    return (VAULT_ROOT / link).exists()
 
 
 def extract_section(body: str, heading: str) -> str:
@@ -162,12 +173,30 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Run a structural health check on the compiled wiki.")
     parser.parse_args()
 
-    raw_notes = load_notes(RAW_ROOT)
-    knowledge_notes = load_notes(KNOWLEDGE_ROOT)
-    concept_notes = load_notes(CONCEPT_ROOT)
-    # Keep only true knowledge notes here; concept notes are checked separately.
-    knowledge_notes = {p:v for p,v in knowledge_notes.items() if p.is_file() and p.parent != CONCEPT_ROOT and p.name not in {"Knowledge Index.md", "Compiled Index.md"}}
-    all_notes = {**raw_notes, **knowledge_notes, **concept_notes}
+    all_vault_notes = load_notes(VAULT_ROOT)
+    raw_notes = {
+        p: v
+        for p, v in all_vault_notes.items()
+        if str(v[0].get("type", "")).strip() == "raw_source"
+        and not is_templates_note(p)
+    }
+    concept_notes = {
+        p: v
+        for p, v in all_vault_notes.items()
+        if (str(v[0].get("type", "")).strip() == "concept" or CONCEPT_ROOT in p.parents)
+        and not is_templates_note(p)
+        and p.name != "Concept Index.md"
+    }
+    # Only true knowledge notes participate in compiled-quality checks.
+    knowledge_notes = {
+        p: v
+        for p, v in all_vault_notes.items()
+        if str(v[0].get("type", "")).strip() == "knowledge"
+        and RAW_ROOT not in p.parents
+        and CONCEPT_ROOT not in p.parents
+        and not is_templates_note(p)
+    }
+    all_notes = all_vault_notes
 
     targets: set[str] = set()
     for path in all_notes:
@@ -193,7 +222,16 @@ def main() -> None:
         links = extract_wikilinks(body)
         if len(links) < 2:
             findings.append(Finding("weak_compiled_links", f"{path.relative_to(VAULT_ROOT)} links to fewer than two notes."))
-        findings.extend(compiled_quality_findings(path, frontmatter, body))
+        quality_findings = compiled_quality_findings(path, frontmatter, body)
+        findings.extend(quality_findings)
+        quality_status = str(frontmatter.get("compile_quality", "")).strip()
+        if quality_status == "passed" and quality_findings:
+            findings.append(
+                Finding(
+                    "compile_status_mismatch",
+                    f"{path.relative_to(VAULT_ROOT)} is marked `compile_quality: passed` but fails quality checks.",
+                )
+            )
         for placeholder in unresolved_placeholders(body):
             findings.append(Finding("compiled_placeholder", f"{path.relative_to(VAULT_ROOT)} contains placeholder pattern `{placeholder}`."))
 
@@ -205,9 +243,16 @@ def main() -> None:
         for placeholder in unresolved_placeholders(body):
             findings.append(Finding("concept_placeholder", f"{path.relative_to(VAULT_ROOT)} contains placeholder pattern `{placeholder}`."))
 
+    seen_broken: set[tuple[Path, str]] = set()
     for path, (_, body) in all_notes.items():
         for link in extract_wikilinks(body):
+            if wiki_link_points_to_existing_file(link):
+                continue
             if link not in targets:
+                key = (path, link)
+                if key in seen_broken:
+                    continue
+                seen_broken.add(key)
                 findings.append(Finding("broken_link", f"{path.relative_to(VAULT_ROOT)} links to missing note `[[{link}]]`."))
 
     report_path = generate_report(findings)

@@ -1,8 +1,11 @@
 ---
 type: knowledge
+area: work
 domain: tech
 source_type: video
 source: "07 Resources/Subtitles/2026-04-06 - Statics - What Is Force.srt"
+compiled_from: "[[07 Resources/Subtitles/2026-04-06 - Statics - What Is Force.srt]]"
+compile_quality: passed
 speaker: "1-Minute Lessons in Statics"
 platform: youtube
 watched_on: 2026-04-06
@@ -24,7 +27,11 @@ tags:
 - Duration: Short statics lesson subtitle import
 - Source subtitle: [[07 Resources/Subtitles/2026-04-06 - Statics - What Is Force.srt]]
 
-## Key Takeaways
+## One-Line Summary
+
+Statics fundamentals explain how support forces and load paths keep structures and robot hardware stable under real loads.
+
+## Actionable Takeaways
 
 - In mechanics, force is treated as one of the four basic quantities alongside length, time, and mass.
 - Force can act through direct contact or across separation.
@@ -60,5 +67,5 @@ tags:
 ## Links
 
 - knowledge: [[05 Knowledge/Work/Tech/Tech Index]]
+- concepts: [[05 Knowledge/Concepts/Statics and Load Paths]], [[05 Knowledge/Concepts/Site Readiness for Mobile Robots]]
 - resource: [[07 Resources/Subtitles/2026-04-06 - Statics - What Is Force.srt]]
-
