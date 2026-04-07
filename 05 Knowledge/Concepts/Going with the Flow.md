@@ -12,13 +12,13 @@ tags:
 
 ## Definition
 
-Going with the Flow is a concept extracted from [[05 Knowledge/Compiled/Going with the Flow - Koopman Behavioral Models]].
+Going with the Flow is a concept extracted from [[05 Knowledge/Personal/2026-04-06 - Going with the Flow - Koopman Behavioral Models]].
 
 ## Why It Matters
 
-This concept appears in the compiled knowledge note [[05 Knowledge/Compiled/Going with the Flow - Koopman Behavioral Models]] and should accumulate sources over time.
+This concept appears in the curated knowledge note [[05 Knowledge/Personal/2026-04-06 - Going with the Flow - Koopman Behavioral Models]] and should accumulate sources over time.
 
 ## Linked Sources
 
-- [[05 Knowledge/Compiled/Going with the Flow - Koopman Behavioral Models]]
+- [[05 Knowledge/Personal/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
 ## Related Concepts

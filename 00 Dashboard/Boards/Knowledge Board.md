@@ -89,9 +89,9 @@ LIMIT 10
 ## Reusable Work Issue Patterns
 
 ```dataview
-TABLE account AS Account, site AS Site, category AS Category, priority AS Priority, last_updated_date AS Updated
-FROM "09 Work/Issues"
-WHERE type = "issue" AND status != "resolved"
-SORT last_updated_date DESC
-LIMIT 20
+TABLE account AS Account, site AS Site, category AS Category, severity AS Severity, priority AS Priority, last_updated_date AS Updated
+FROM "09 Work/Archive/Completed Issues"
+WHERE type = "issue" AND status = "resolved"
+SORT priority ASC, last_updated_date DESC
+LIMIT 30
 ```

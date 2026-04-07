@@ -45,8 +45,18 @@ Christopher Adcock
 ## Open Issues
 
 ```dataview
-TABLE category, status, severity, last_updated_date
-FROM "09 Work/Issues/GreyOrange"
+TABLE category, status, severity, priority, last_updated_date
+FROM "09 Work/Issues"
+WHERE type = "issue" AND account = "GreyOrange" AND site = "Dorman Portland" AND status != "resolved" AND status != "done" AND status != "closed"
+SORT priority ASC, last_updated_date DESC
+```
+
+## Completed Issue Archive
+
+```dataview
+TABLE category, severity, priority, created_date, last_updated_date
+FROM "09 Work/Archive/Completed Issues/GreyOrange"
 WHERE type = "issue" AND site = "Dorman Portland"
 SORT last_updated_date DESC
+LIMIT 20
 ```

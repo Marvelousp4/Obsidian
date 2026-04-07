@@ -2,7 +2,6 @@
 type: project
 area: health
 account:
-client:
 project_kind: personal_health_reset
 site:
 status: active
@@ -43,14 +42,6 @@ This project now has a usable imported baseline. The next step is not more loggi
 - [ ] Track digestion, sleep, and hydration as first-class health signals.
 - [ ] Review progress weekly in the Health area and monthly review.
 
-## Optional Work Context
-
-- Account:
-- Site:
-- Deployment Type:
-- Fleet Size:
-- Address:
-
 ## Key Resources
 
 - [[03 Areas/Health|Health]]
@@ -60,6 +51,5 @@ This project now has a usable imported baseline. The next step is not more loggi
 
 - area: [[03 Areas/Health|Health]]
 - account:
-- client:
 - people:
 - notes: [[05 Knowledge/Personal/2026-03 Fitness And Diet Baseline]]

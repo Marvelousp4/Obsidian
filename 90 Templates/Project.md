@@ -1,9 +1,6 @@
 ---
 type: project
-area: work
-account:
-project_kind:
-site:
+area:
 status: active
 owner: bai
 started: <% tp.date.now("YYYY-MM-DD") %>
@@ -30,15 +27,7 @@ tags: []
 
 ## Next Steps
 
-- [ ] 
-
-## Optional Work Context
-
-- Account:
-- Site:
-- Deployment Type:
-- Fleet Size:
-- Address:
+- 
 
 ## Key Resources
 
@@ -47,6 +36,5 @@ tags: []
 ## Links
 
 - area:
-- account:
 - people:
 - notes:

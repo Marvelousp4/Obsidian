@@ -104,7 +104,7 @@
               "name": "Capture: Project Card",
               "type": "Template",
               "command": true,
-              "templatePath": "90 Templates/Project.md",
+              "templatePath": "90 Templates/Work Project.md",
               "fileNameFormat": {
                 "enabled": true,
                 "format": "{{VALUE:title}}"
@@ -331,7 +331,7 @@
               "name": "Capture: Personal Project",
               "type": "Template",
               "command": true,
-              "templatePath": "90 Templates/Project.md",
+              "templatePath": "90 Templates/Personal Project.md",
               "fileNameFormat": {
                 "enabled": true,
                 "format": "{{VALUE:title}}"
@@ -447,7 +447,7 @@
           "name": "Capture: Project Card",
           "type": "Template",
           "command": true,
-          "templatePath": "90 Templates/Project.md",
+          "templatePath": "90 Templates/Work Project.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{VALUE:title}}"
@@ -656,7 +656,7 @@
           "name": "Capture: Personal Project",
           "type": "Template",
           "command": true,
-          "templatePath": "90 Templates/Project.md",
+          "templatePath": "90 Templates/Personal Project.md",
           "fileNameFormat": {
             "enabled": true,
             "format": "{{VALUE:title}}"
