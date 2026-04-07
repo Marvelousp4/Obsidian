@@ -44,7 +44,7 @@ Track one live or historical GreyOrange deployment site as an operational object
 
 ```dataview
 TABLE category, status, severity, priority, last_updated_date
-FROM "09 Work/Issues"
+FROM "09 Work/Issues/Active"
 WHERE type = "issue" AND account = "GreyOrange" AND site = "Kerry" AND status != "resolved" AND status != "done" AND status != "closed"
 SORT priority ASC, last_updated_date DESC
 ```
@@ -53,7 +53,7 @@ SORT priority ASC, last_updated_date DESC
 
 ```dataview
 TABLE category, severity, priority, created_date, last_updated_date
-FROM "09 Work/Archive/Completed Issues/GreyOrange"
+FROM "09 Work/Issues/Archive/Completed/GreyOrange"
 WHERE type = "issue" AND site = "Kerry"
 SORT last_updated_date DESC
 LIMIT 20

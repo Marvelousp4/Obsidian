@@ -36,7 +36,7 @@ His broader technical profile combines research taste with systems pragmatism: r
 
 - Education: Georgia Tech MSCS, expected May 2026
 - Research: [[06 People/Professional/STAR Lab|STAR Lab]]
-- Area links: [[03 Areas/Personal|Personal]], [[03 Areas/Research|Research]], [[03 Areas/Work|Work]]
+- Area links: [[03 Areas/Personal/Personal|Personal]], [[03 Areas/Research/Research|Research]], [[03 Areas/Work/Work|Work]]
 
 ## Key Notes
 

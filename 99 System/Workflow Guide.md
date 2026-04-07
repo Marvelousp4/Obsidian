@@ -22,17 +22,17 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 ## Folder Model
 
 1. `03 Areas`
-   Long-lived domains you continuously maintain
+   Long-lived domains you continuously maintain. Each area is a dashboard folder, for example `03 Areas/Health/Health.md`.
 2. `04 Projects`
-   Active and archived initiatives across all areas
+   Active and archived initiatives across all areas.
 3. `05 Knowledge`
-   Reusable knowledge and concept pages across all areas
+   Reusable knowledge and concept pages across all areas. Area-owned operational baselines do not belong here.
 4. `06 People`
-   Non-work people notes
+   Non-work people notes.
 5. `09 Work`
-   CRM, delivery, support, and work-specific operating notes
+   CRM, delivery, support, and work-specific operating notes. Current issues live under `09 Work/Issues/Active`; completed useful history lives under `09 Work/Issues/Archive/Completed`.
 6. `10 Raw`
-   Source material waiting to be compiled into the wiki
+   Source material waiting to be compiled into the wiki.
 
 ## Daily Workflow
 
@@ -48,7 +48,7 @@ The goal is not to build a vague second brain. The goal is to turn daily input i
 
 1. Use weekly reviews to compress scattered notes into area, project, and knowledge shifts
 2. Use monthly reviews to identify repeat patterns across work and life
-3. Use `Work Control Board` for work execution status instead of maintaining a second task board
+3. Use `Start Here` for the global snapshot, `Personal Board` for non-work life operations, and `Work Control Board` for work execution status
 4. Run a periodic wiki health check so the knowledge graph does not rot
 
 ## Note-Taking Rules

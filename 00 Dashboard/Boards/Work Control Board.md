@@ -24,7 +24,7 @@ SORT file.name ASC
 
 ```dataview
 TABLE account AS Account, site AS Site, category AS Category, status AS Status, severity AS Severity, priority AS Priority, assignee AS Assignee, last_updated_date AS Updated
-FROM "09 Work/Issues"
+FROM "09 Work/Issues/Active"
 WHERE type = "issue" AND status != "resolved" AND status != "done" AND status != "closed"
 SORT last_updated_date DESC
 ```
@@ -33,7 +33,7 @@ SORT last_updated_date DESC
 
 ```dataview
 TABLE account AS Account, site AS Site, category AS Category, status AS Status, priority AS Priority, assignee AS Assignee, last_updated_date AS Updated
-FROM "09 Work/Issues"
+FROM "09 Work/Issues/Active"
 WHERE type = "issue" AND status != "resolved" AND status != "done" AND status != "closed" AND (status = "blocked" OR priority = "P0" OR priority = "P1")
 SORT priority ASC, last_updated_date DESC
 ```
@@ -61,7 +61,7 @@ SORT length(rows) DESC
 
 ```dataview
 TABLE account AS Account, site AS Site, category AS Category, status AS Status, priority AS Priority, last_updated_date AS Updated
-FROM "09 Work/Issues"
+FROM "09 Work/Issues/Active"
 WHERE type = "issue" AND status != "resolved" AND status != "done" AND status != "closed" AND assignee
 SORT assignee ASC, priority ASC, last_updated_date DESC
 ```
@@ -80,7 +80,7 @@ LIMIT 20
 
 ```dataview
 TABLE account AS Account, site AS Site, category AS Category, status AS Status, severity AS Severity, priority AS Priority, assignee AS Assignee, last_updated_date AS Updated
-FROM "09 Work/Issues"
+FROM "09 Work/Issues/Active"
 WHERE type = "issue" AND status != "resolved" AND status != "done" AND status != "closed"
 SORT priority ASC, severity ASC, last_updated_date DESC
 LIMIT 50

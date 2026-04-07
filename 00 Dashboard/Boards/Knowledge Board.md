@@ -69,9 +69,9 @@ LIMIT 20
 ## Personal And Research Knowledge
 
 ```dataview
-TABLE domain AS Domain, source_type AS "Source Type", updated AS Updated
-FROM "05 Knowledge/Personal"
-WHERE type = "knowledge"
+TABLE area AS Area, domain AS Domain, source_type AS "Source Type", updated AS Updated
+FROM "05 Knowledge"
+WHERE type = "knowledge" AND area != "work"
 SORT file.mtime DESC
 LIMIT 20
 ```
@@ -90,7 +90,7 @@ LIMIT 10
 
 ```dataview
 TABLE account AS Account, site AS Site, category AS Category, severity AS Severity, priority AS Priority, last_updated_date AS Updated
-FROM "09 Work/Archive/Completed Issues"
+FROM "09 Work/Issues/Archive/Completed"
 WHERE type = "issue" AND status = "resolved"
 SORT priority ASC, last_updated_date DESC
 LIMIT 30

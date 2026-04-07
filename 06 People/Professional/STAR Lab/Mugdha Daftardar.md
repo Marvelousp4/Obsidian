@@ -31,7 +31,7 @@ tags:
 ## Current Context
 
 - Team hub: [[06 People/Professional/STAR Lab|STAR Lab]]
-- Area: [[03 Areas/Research|Research]]
+- Area: [[03 Areas/Research/Research|Research]]
 - Research context: [[05 Knowledge/Personal/2026-04-06 - Going with the Flow - Koopman Behavioral Models]]
 
 ## Follow-Up

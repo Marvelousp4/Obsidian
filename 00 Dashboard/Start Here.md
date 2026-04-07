@@ -1,18 +1,11 @@
-# Operating Hub
+# Start Here
 
-This page is now intentionally light. Use it as a reset point, not as a giant control panel.
+This is the global operating hub. It should stay light: today, global snapshot, and links to the domain boards.
 
-## Start Here
+## Today
 
 - Run `Daily notes: Open today's daily note`
-- [[01 Inbox/Inbox|Inbox]]
-- [[10 Raw/Raw Index|Raw]]
-- [[03 Areas/Areas Index|Areas]]
-- [[04 Projects/Projects Index|Projects]]
-- [[05 Knowledge/Knowledge Index|Knowledge]]
-- [[06 People/People Index|People]]
-- [[08 Reviews/Reviews Index|Reviews]]
-- [[09 Work/Work Index|Work]]
+- Capture everything in the daily note first unless it is already a formal object.
 
 ## Today Important Tasks
 
@@ -23,22 +16,60 @@ WHERE !completed AND file.day = date(today)
 GROUP BY file.link
 ```
 
-## Core Boards
+## Global Snapshot
 
-- [[00 Dashboard/Boards/Life Board|Life Board]]
+### Active Personal Projects
+
+```dataview
+TABLE area AS Area, status AS Status, next AS Next
+FROM "04 Projects"
+WHERE type = "project" AND area != "work" AND status != "archived" AND status != "done" AND status != "closed"
+SORT file.mtime DESC
+LIMIT 10
+```
+
+### Active Work Priorities
+
+```dataview
+TABLE account AS Account, project_kind AS Type, site AS Site, status AS Status, next AS Next
+FROM "04 Projects/Work"
+WHERE type = "project" AND status != "done" AND status != "closed" AND status != "stopped"
+SORT file.mtime DESC
+LIMIT 10
+```
+
+### Current Field Issues
+
+```dataview
+TABLE account AS Account, site AS Site, category AS Category, status AS Status, priority AS Priority, assignee AS Assignee, last_updated_date AS Updated
+FROM "09 Work/Issues/Active"
+WHERE type = "issue"
+SORT priority ASC, last_updated_date DESC
+LIMIT 10
+```
+
+## Domain Boards
+
+- [[00 Dashboard/Boards/Personal Board|Personal Board]]
 - [[00 Dashboard/Boards/Work Control Board|Work Control Board]]
 - [[00 Dashboard/Boards/Knowledge Board|Knowledge Board]]
 - [[00 Dashboard/Boards/Health Board|Health Board]]
 
-## System
+## Core Indices
 
-- [[99 System/System Index|System Index]]
+- [[01 Inbox/Inbox|Inbox]]
+- [[03 Areas/Areas Index|Areas]]
+- [[04 Projects/Projects Index|Projects]]
+- [[05 Knowledge/Knowledge Index|Knowledge]]
+- [[06 People/People Index|People]]
+- [[08 Reviews/Reviews Index|Reviews]]
+- [[09 Work/Work Index|Work]]
+- [[10 Raw/Raw Index|Raw]]
 
 ## Rules
 
-- Daily note is the default capture path.
-- Raw sources belong in `10 Raw`. Structured knowledge belongs in `05 Knowledge`.
-- QuickAdd is only for notes that are clearly formal objects now.
-- Reviews compress direction. Boards are views, not the source of truth.
-- The knowledge pipeline is `raw -> compile -> health check`.
-- `Work` is a domain under the system, not a second system.
+- Start Here is the global view.
+- Personal Board is for non-work life operations.
+- Work Control Board is for customer, project, meeting, and issue execution.
+- Knowledge Board is for raw-to-wiki compilation and reusable knowledge quality.
+- Areas are standards and review dashboards, not dumping folders.

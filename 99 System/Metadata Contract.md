@@ -2,12 +2,46 @@
 
 This page defines the minimum fields that scripts, boards, and templates should agree on.
 
-## Work Project
+## Area
+
+Canonical fields:
+
+- `type: area`
+- `status`
+- `focus`
+- `review_rhythm`
+- `tags`
+
+Rules:
+
+- Area notes live as dashboards under `03 Areas/<Area>/<Area>.md`.
+- Area pages define standards, boundaries, active projects, related knowledge, and review prompts.
+- Area folders may contain area-owned operational data, such as `03 Areas/Health/Logs` and `03 Areas/Health/Baselines`.
+- Do not put reusable knowledge in an area folder unless it is an area-owned baseline or operating record. Reusable conclusions belong in `05 Knowledge`.
+
+## Personal Project
 
 Canonical fields:
 
 - `type: project`
 - `area`
+- `status`
+- `owner`
+- `started`
+- `next`
+- `tags`
+
+Rules:
+
+- Personal projects should not use `account`, `client`, `site`, or `project_kind` unless they are explicitly work projects.
+- Use area values such as `health`, `finance`, `learning`, `research`, `personal`, `relationships`, or `mind`.
+
+## Work Project
+
+Canonical fields:
+
+- `type: project`
+- `area: work`
 - `account`
 - `project_kind`
 - `site`
@@ -49,10 +83,32 @@ Canonical fields:
 
 Rules:
 
+- Current issues live under `09 Work/Issues/Active`.
+- Completed but useful issues live under `09 Work/Issues/Archive/Completed`.
+- Import summaries live under `09 Work/Issues/Imports`.
 - `account` is the canonical account key.
 - `client` should not be used in issue notes. It was a legacy alias and should stay out of new imports.
 - `source` should not be used in issue notes. Use `source_type`, `source_id`, and `source_file`.
 - Source paths should be vault-relative labels or source filenames, not machine-specific absolute paths.
+
+## Health Baseline
+
+Canonical fields:
+
+- `type: health_baseline`
+- `area: health`
+- `domain`
+- `source`
+- `source_type`
+- `created`
+- `updated`
+- `tags`
+
+Rules:
+
+- Health baselines are area-owned operating records, not general knowledge notes.
+- Baseline notes live under `03 Areas/Health/Baselines`.
+- Daily imported or inferred health logs live under `03 Areas/Health/Logs`.
 
 ## Raw Source
 

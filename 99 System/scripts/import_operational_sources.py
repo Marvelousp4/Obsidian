@@ -437,7 +437,7 @@ def build_account_note(
         f"## Open Issues\n\n"
         f"```dataview\n"
         f"TABLE site AS Site, category AS Category, status AS Status, severity AS Severity, last_updated_date AS Updated\n"
-        f'FROM "09 Work/Issues"\n'
+        f'FROM "09 Work/Issues/Active"\n'
         f'WHERE type = "issue" AND account = "{title}" AND status != "resolved"\n'
         f"SORT last_updated_date DESC\n"
         f"```\n\n"
@@ -579,7 +579,6 @@ def import_greyorange():
         fm = {
             "type": "project",
             "account": "GreyOrange",
-            "client": "GreyOrange",
             "project_kind": "site_deployment",
             "site": site,
             "status": status,
@@ -611,7 +610,7 @@ def import_greyorange():
             f"## Open Issues\n\n"
             f"```dataview\n"
             f"TABLE category, status, severity, last_updated_date\n"
-            f'FROM "09 Work/Issues/GreyOrange"\n'
+            f'FROM "09 Work/Issues/Active"\n'
             f'WHERE type = "issue" AND site = "{site}"\n'
             f"SORT last_updated_date DESC\n"
             f"```"
@@ -732,7 +731,6 @@ def import_devonics():
     project_fm = {
         "type": "project",
         "account": "Devonics",
-        "client": "Devonics",
         "project_kind": "solution_opportunity",
         "site": "",
         "status": "discovery",
@@ -789,7 +787,6 @@ def import_devonics():
         "contacts": [c["name"] for c in DEVONICS_CONTACTS],
         "account": "Devonics",
         "project": "Devonics - Outland Mobile Manipulation Platform",
-        "client": "Devonics",
         "tags": [],
     }
     meeting_body = dedent(
@@ -935,7 +932,7 @@ def import_wellwit_issues():
             - Vendor note: [[09 Work/Accounts/Wellwit Robotics|Wellwit Robotics]]
             """
         ).strip()
-        issue_path = VAULT / f"09 Work/Issues/GreyOrange/{safe_name(site)}/{created or 'undated'} - {safe_name(title)} - {safe_name(source_id)}.md"
+        issue_path = VAULT / f"09 Work/Issues/Active/GreyOrange/{safe_name(site)}/{created or 'undated'} - {safe_name(title)} - {safe_name(source_id)}.md"
         write_note(issue_path, fm, body)
 
     for site in sorted(generated_sites):
@@ -945,7 +942,6 @@ def import_wellwit_issues():
         placeholder_fm = {
             "type": "project",
             "account": "GreyOrange",
-            "client": "GreyOrange",
             "project_kind": "site_issue_bucket",
             "site": site,
             "status": "support_only",
@@ -966,7 +962,7 @@ def import_wellwit_issues():
             f"## Open Issues\n\n"
             f"```dataview\n"
             f"TABLE category, status, severity, last_updated_date\n"
-            f'FROM "09 Work/Issues/GreyOrange"\n'
+            f'FROM "09 Work/Issues/Active"\n'
             f'WHERE type = "issue" AND site = "{site}"\n'
             f"SORT last_updated_date DESC\n"
             f"```"
@@ -993,7 +989,7 @@ def import_wellwit_issues():
         f"- Link repeated patterns into site notes, SOPs, or product-quality reviews.\n"
         f"- Use [[09 Work/Issues/Issue Index|Issue Index]] and site pages to review current support surface."
     )
-    write_note(VAULT / "99 System/Wellwit Issue Import Summary.md", summary_fm, summary_body)
+    write_note(VAULT / "09 Work/Issues/Imports/Wellwit Issue Import Summary.md", summary_fm, summary_body)
 
     return {"issues": imported, "skipped": skipped}
 

@@ -1,9 +1,6 @@
 ---
 type: project
 area: health
-account:
-project_kind: personal_health_reset
-site:
 status: active
 owner: bai
 started: 2026-04-06
@@ -21,7 +18,7 @@ Convert ad hoc fitness and food decisions into a repeatable training, nutrition,
 
 ## Background
 
-- Baseline note: [[05 Knowledge/Personal/2026-03 Fitness And Diet Baseline]]
+- Baseline note: [[03 Areas/Health/Baselines/2026-03 Fitness And Diet Baseline]]
 - Imported source dataset: [[07 Resources/Health/gemini_fitness_daily_summary.csv]]
 - Main issues surfaced by the baseline: inconsistency, digestion friction, recovery noise, and uncertain progression rules.
 
@@ -44,12 +41,10 @@ This project now has a usable imported baseline. The next step is not more loggi
 
 ## Key Resources
 
-- [[03 Areas/Health|Health]]
-- [[05 Knowledge/Personal/2026-03 Fitness And Diet Baseline]]
+- [[03 Areas/Health/Health|Health]]
+- [[03 Areas/Health/Baselines/2026-03 Fitness And Diet Baseline]]
 
 ## Links
 
-- area: [[03 Areas/Health|Health]]
-- account:
-- people:
-- notes: [[05 Knowledge/Personal/2026-03 Fitness And Diet Baseline]]
+- area: [[03 Areas/Health/Health|Health]]
+- notes: [[03 Areas/Health/Baselines/2026-03 Fitness And Diet Baseline]]

@@ -59,8 +59,8 @@ The paper argues that dexterous manipulation policies should be modeled as tempo
 
 ## Links
 
-- area: [[03 Areas/Research|Research]]
+- area: [[03 Areas/Research/Research|Research]]
 - project:
 - account:
 - people: [[06 People/Professional/STAR Lab/Harish Ravichandar|Harish Ravichandar]]
-- topic: [[05 Knowledge/Personal/2026-03 Fitness And Diet Baseline|Imported baseline example]]
+- topic: [[03 Areas/Health/Baselines/2026-03 Fitness And Diet Baseline|Imported baseline example]]
